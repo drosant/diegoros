@@ -66,7 +66,16 @@
 }
 
 .rusia{
-    font-size: 300px;
+    font-size: 100px;
     text-align: center;
     font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+@media (min-width: 1000px) {
+
+    .rusia{
+        font-size: 200px;
+        text-align: center;
+        font-family:Georgia, 'Times New Roman', Times, serif
+    }
 }
