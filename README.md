@@ -1,2 +1,0 @@
-# diegoros
-Personal website
