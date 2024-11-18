@@ -1,0 +1,55 @@
+/* Footer */
+footer {
+    background-color: #b7ccc3;
+    font-family: 'TTTravelsMedium';
+    color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    height: 105px;
+    margin-top: 30px;
+    font-size: 11px;
+    text-transform: uppercase; /* Mayúsculas para todo el footer */
+}
+
+/* Estilos comunes para el texto en el footer */
+footer p, footer a {
+    color: #333333;
+    font-size: 11px;
+    letter-spacing: 0.23em;
+    text-decoration: none;
+    font-family: 'TTTravelsMedium';
+    font-weight: 500; /* Aplica un peso de 500 a todos los enlaces y párrafos */
+}
+
+.upper{
+    padding-bottom: 10px;
+}
+
+
+/* Clase para negrita */
+.bold {
+    font-weight: 700;
+}
+
+/* Estructura de columnas en el footer */
+.footer-left {
+    width: 33.33%; /* La columna izquierda ocupa un tercio */
+    text-align: left;
+    gap: 30px;
+}
+
+.footer-right {
+    width: 66.67%; /* La columna derecha ocupa dos tercios */
+    text-align: left;
+}
+
+/* Subrayado permanente para enlaces en footer-right */
+.footer-right a.underline {
+    text-decoration: underline;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}

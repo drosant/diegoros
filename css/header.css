@@ -1,0 +1,55 @@
+/* Estilos del header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: transparent; /* Fondo transparente */
+    color: #333333; /* Letra gris oscuro */
+    height: 28px; /* Altura reducida */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Para asegurarse de que el header esté siempre encima */
+}
+
+.logo a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.logo a:visited,
+.logo a:hover,
+.logo a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+.logo {
+    flex-grow: 1;
+    font-size: 23px;
+}
+
+nav {
+    margin-right: 20px;
+}
+
+nav ul .active{
+    color: #b7ccc3;
+    text-decoration: underline;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 550;
+    font-family: 'TTTravelsMedium';
+    letter-spacing: 0.23em;
+    font-size: 13px;
+}
