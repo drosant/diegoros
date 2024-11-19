@@ -78,10 +78,20 @@ nav ul li a {
     nav ul {
         display: flex; /* Mantiene disposición horizontal */
         flex-direction: row; /* Asegura que estén en línea */
-        gap: 20px; /* Espaciado entre los elementos */
+        gap: 40px; /* Espaciado entre los elementos */
         justify-content: center; /* Centra el menú horizontalmente */
         align-items: center;
         margin: 0;
+    }
+
+    nav ul li a {
+        font-size: 10px; /* Reduce el tamaño de la fuente */
+        letter-spacing: 0.2em; /* Reduce el espaciado entre letras */
+    }
+
+
+    .logo {
+        font-size: 20px; /* Reduce el tamaño del logo */
     }
 }
 
