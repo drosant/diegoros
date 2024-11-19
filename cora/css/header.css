@@ -91,6 +91,10 @@ nav ul li a {
         gap: 30px; /* Reduce el espacio entre elementos */
     }
 
+    nav{
+        margin-right: 0px;
+    }
+
     nav ul li a {
         font-size: 10px; /* Reduce el tamaño de la fuente */
         letter-spacing: 0.2em; /* Reduce el espaciado entre letras */
