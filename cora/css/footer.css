@@ -54,6 +54,19 @@ footer p, footer a {
 }
 
 /* Media query para pantallas pequeñas */
+@media screen and (max-width: 900px) {
+    footer {
+        font-size: 11px; /* Reduce el tamaño de la fuente */
+        padding: 20px; /* Reduce el padding para mantener proporción */
+    }
+
+    footer p, footer a {
+        font-size: 11px; /* Reduce el tamaño de texto en enlaces y párrafos */
+        letter-spacing: 0.4em; /* Ajusta el espaciado entre letras */
+    }
+}
+
+/* Media query para pantallas pequeñas */
 @media screen and (max-width: 600px) {
     footer {
         font-size: 9px; /* Reduce el tamaño de la fuente */
