@@ -68,7 +68,7 @@ section {
 /* Párrafos */
 .right-column p {
     font-family: 'CormorantRegular', Arial, sans-serif;
-    font-size: clamp(0.8rem, 1.5vw, 0.8rem);
+    font-size: clamp(1rem, 1.5vw, 1rem);
     color: #333333;
     width: 100%; /* Ocupa todo el ancho disponible */
     margin: 0;
@@ -205,7 +205,7 @@ section {
 
     .right-column p {
         text-align: left; /* Texto alineado a la izquierda */
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .right-column h2 {
