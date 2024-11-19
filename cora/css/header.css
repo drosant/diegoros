@@ -88,7 +88,7 @@ nav ul li a {
 /* Media Queries para tamaños pequeños */
 @media screen and (max-width: 600px) {
     nav ul {
-        gap: 40px; /* Reduce el espacio entre elementos */
+        gap: 30px; /* Reduce el espacio entre elementos */
     }
 
     nav ul li a {
