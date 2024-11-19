@@ -205,6 +205,7 @@ section {
 
     .right-column p {
         text-align: left; /* Texto alineado a la izquierda */
+        font-size: 0.8rem;
     }
 
     .right-column h2 {
