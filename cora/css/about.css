@@ -135,7 +135,11 @@ section {
     html, body {
         overflow-y: auto; /* Activa scroll vertical */
     }
-    
+
+    section {
+        height: auto; /* Permite que la sección crezca con el contenido */
+    }
+
     .left-column {
         flex: 0.5; /* Reduce progresivamente el tamaño del tercio izquierdo */
         max-width: 20%; /* Limita su ancho a un 20% */
