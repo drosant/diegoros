@@ -132,6 +132,10 @@ section {
 
 /* Media Queries para pantallas medianas */
 @media screen and (max-width: 900px) {
+    html, body {
+        overflow-y: auto; /* Activa scroll vertical */
+    }
+    
     .left-column {
         flex: 0.5; /* Reduce progresivamente el tamaño del tercio izquierdo */
         max-width: 20%; /* Limita su ancho a un 20% */
