@@ -6,130 +6,220 @@
 }
 
 html, body {
-    overflow: hidden;
+    overflow: hidden; /* Evita scroll horizontal en pantallas grandes */
     height: 100%;
     background-color: #efefef;
 }
 
+/* Aplica el degradado en la parte superior del contenedor */
+main::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Ajusta la altura para que el desvanecimiento sea sutil */
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #efefef 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
 /* Sección principal */
 section {
-    height: calc(100vh - 135px); /* Altura total menos la del footer */
-    width: 100vw; /* Ancho completo de la ventana */
-    display: flex; /* Flexbox para las dos columnas principales */
-    padding-top: calc(65px + 30px); 
+    height: calc(100vh - 135px); /* Altura fija para pantallas grandes */
+    width: 100vw;
+    display: flex;
+    padding-top: calc(65px + 30px);
+    overflow: hidden; /* Oculta contenido desbordado */
 }
 
 /* Columna izquierda */
 .left-column {
     flex: 1;
-    max-width: 33.33%;
-    background-color: #dcdcdc; /* Color de ejemplo */
-    padding: 20px;
+    max-width: 33.33%; /* Inicialmente un tercio */
     background-color: transparent;
+    transition: flex 0.5s ease, max-width 0.5s ease; /* Transición suave */
 }
 
 /* Columna derecha */
 .right-column {
-    margin-left: 20px;
     flex: 2;
-    max-width: 66.67%;
-    background-color: #f4f4f4; /* Color de ejemplo */
-    padding: 20px;
-    display: flex;
-    flex-direction: column; /* Elementos dispuestos en vertical */
+    max-width: 66.67%; /* Inicialmente dos tercios */
     background-color: transparent;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    overflow: visible; /* Permite contenido visible */
+    transition: flex 0.5s ease, max-width 0.5s ease; /* Transición suave */
 }
 
 /* Header dentro de la columna derecha */
 .right-column h2 {
-    font-size: 1.4rem;
+    font-size: clamp(1rem, 2vw, 1.4rem);
     letter-spacing: 0.5rem;
     margin-bottom: 10px;
     font-family: 'CormorantRegular', Arial, sans-serif;
     font-weight: normal;
     text-transform: uppercase;
     color: #b7ccc3;
+    text-align: left;
 }
 
+/* Párrafos */
 .right-column p {
     font-family: 'CormorantRegular', Arial, sans-serif;
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 1.5vw, 0.8rem);
     color: #333333;
-    width: 60%;
-    margin: 0 auto; /* Centra el bloque dentro de la columna */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin: 0;
     text-align: left; /* Justifica el texto a la izquierda */
-    margin-left: 30px;
+    line-height: 1.4;
 }
 
-.last{
-    width: 60%;
-    margin: 0 auto; /* Centra el bloque en la columna */
-    text-align: left; /* Justifica el texto a la izquierda */
-    margin-left: 30px;
+.last {
+    width: 100%;
+    margin: 0;
+    text-align: left;
 }
-
 
 /* Separador */
 .separator {
-    height: 1px;
-    background-color: #333;
-    margin: 20px 30px 20px 0; /* Margen: arriba, derecha, abajo, izquierda */
-    padding-right: 60px;
+    height: 1px; /* Define altura explícita */
+    background-color: #333; /* Define color */
+    width: 100%; /* Asegura que ocupa todo el ancho */
+    margin: 20px 0; /* Espaciado superior e inferior */
+    padding-bottom: 1px;
+    display: block; /* Asegura visibilidad */
 }
 
 /* Contenedor para las columnas anidadas */
 .nested-columns {
     display: flex;
-    gap: 20px; /* Espaciado entre las dos columnas internas */
-    flex: 1; /* Ocupa el espacio restante */
+    gap: 20px;
+    flex-wrap: wrap;
+    flex: 1;
+    width: 80%;
 }
 
 .nested-left {
     flex: 1;
-    max-width: 40%; /* Ajusta la proporción de la columna izquierda */
-    position: relative; /* Necesario para el posicionamiento de la imagen */
-    height: 90%; /* Altura ajustada al 80% del contenedor padre */
-    width: calc(90% * 0.8); /* Ancho calculado para mantener la proporción 4:5 */
-    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
-    background-color: #ddd; /* Fondo visible mientras carga */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    background-color: transparent;
+    margin: 0;
 }
 
 .nested-left img {
-    position: absolute; /* Permite que la imagen se ajuste dentro del contenedor */
-    top: 0; /* Alinea la imagen al borde superior del contenedor */
-    left: 0; /* Alinea la imagen al borde izquierdo */
-    width: 100%; /* Ajusta la imagen al ancho del contenedor */
-    height: 100%; /* Ajusta la imagen al alto del contenedor */
-    object-fit: cover; /* Mantiene la proporción de la imagen y recorta si es necesario */
-    object-position: top; /* Asegura que la parte superior de la imagen sea visible */
+    position: relative; /* Cambia a relativo para que la imagen se vea */
+    width: 100%; /* Imagen ocupa todo el ancho disponible */
+    height: auto; /* Mantiene la proporción */
+    object-fit: contain; /* Se asegura de que la imagen sea visible completa */
 }
-
 
 /* Columna derecha anidada */
 .nested-right {
     flex: 2;
     display: flex;
-    flex-direction: column; /* Disposición vertical */
-    justify-content: space-between; /* Distribución equitativa */
-}
-
-.nested-right {
-    flex: 2;
-    display: flex;
-    flex-direction: column; /* Organiza los elementos en columna */
-    gap: 20px; /* Espaciado entre los párrafos y el h2 */
-    justify-content: flex-start; /* Alinea los elementos al inicio */
-    align-items: flex-start; /* Mantiene el texto alineado a la izquierda */
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
     background-color: transparent;
+    
 }
 
+/* Media Queries para pantallas medianas */
+@media screen and (max-width: 900px) {
+    .left-column {
+        flex: 0.5; /* Reduce progresivamente el tamaño del tercio izquierdo */
+        max-width: 20%; /* Limita su ancho a un 20% */
+    }
 
-.nested-right p {
-    margin-bottom: 10px; /* Separación entre párrafos */
+    .right-column {
+        flex: 2.5; /* El contenido derecho gana espacio */
+        max-width: 80%;
+    }
+
+    .nested-columns {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
 }
 
-.nested-right h2 {
-    margin-top: 20px; /* Separación respecto al último párrafo */
-    font-size: 1.5rem;
+/* Media Queries para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    html, body {
+        overflow-y: auto; /* Activa scroll vertical */
+    }
+
+    section {
+        flex-direction: column;
+        height: auto; /* Permite que la sección crezca con el contenido */
+    }
+
+    .left-column {
+        display: none; /* Oculta la columna izquierda */
+    }
+
+    .right-column {
+        flex: 1;
+        max-width: 100%; /* Ocupa todo el ancho */
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .nested-columns {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nested-left {
+        width: 100%; /* Imagen ocupa todo el ancho */
+        background-color: transparent;
+    }
+
+    .nested-left img {
+        position: relative;
+        width: 100%; /* Imagen ocupa todo el ancho disponible */
+        height: auto; /* Mantiene la proporción */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .right-column p,
+    .right-column h2,
+    .separator {
+        width: 100%; /* Ocupan todo el ancho */
+        margin-left: 0px; /* Separación con el borde izquierdo */
+    }
+
+    .right-column p {
+        text-align: left; /* Texto alineado a la izquierda */
+    }
+
+    .right-column h2 {
+        text-align: left; /* Título alineado a la izquierda */
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+
+    .separator {
+        height: 1px;
+        background-color: #333;
+    }
+}
+
+/* Footer en su posición natural */
+footer {
+    background-color: #b7ccc3;
+    height: 105px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-family: 'TTTravelsMedium';
+    color: #333333;
 }

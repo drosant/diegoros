@@ -6,11 +6,18 @@ header {
     padding: 30px;
     background-color: transparent; /* Fondo transparente */
     color: #333333; /* Letra gris oscuro */
-    height: 28px; /* Altura reducida */
+    height: auto; /* Altura ajustable según contenido */
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000; /* Para asegurarse de que el header esté siempre encima */
+}
+
+/* Logo */
+.logo {
+    flex-grow: 1;
+    font-size: 23px;
+    text-align: left; /* Alineado a la izquierda en pantallas grandes */
 }
 
 .logo a {
@@ -25,24 +32,23 @@ header {
     text-decoration: none;
 }
 
-.logo {
-    flex-grow: 1;
-    font-size: 23px;
-}
-
+/* Navegación */
 nav {
     margin-right: 20px;
-}
-
-nav ul .active{
-    color: #b7ccc3;
-    text-decoration: underline;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 35px;
+    justify-content: flex-end; /* Alineado a la derecha en pantallas grandes */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul .active {
+    color: #b7ccc3;
+    text-decoration: underline;
 }
 
 nav ul li a {
@@ -52,4 +58,45 @@ nav ul li a {
     font-family: 'TTTravelsMedium';
     letter-spacing: 0.23em;
     font-size: 13px;
+}
+
+/* Media Queries para tamaños medianos */
+@media screen and (max-width: 900px) {
+    header {
+        flex-direction: column; /* Cambia a diseño vertical */
+        justify-content: center; /* Centra contenido verticalmente */
+        align-items: center; /* Centra contenido horizontalmente */
+        padding: 20px; /* Reduce padding */
+        height: auto; /* Ajusta altura dinámicamente */
+    }
+
+    .logo {
+        text-align: center; /* Centra el logo */
+        margin-bottom: 10px; /* Espaciado entre el logo y el menú */
+    }
+
+    nav ul {
+        display: flex; /* Mantiene disposición horizontal */
+        flex-direction: row; /* Asegura que estén en línea */
+        gap: 20px; /* Espaciado entre los elementos */
+        justify-content: center; /* Centra el menú horizontalmente */
+        align-items: center;
+        margin: 0;
+    }
+}
+
+/* Media Queries para tamaños pequeños */
+@media screen and (max-width: 600px) {
+    nav ul {
+        gap: 10px; /* Reduce el espacio entre elementos */
+    }
+
+    nav ul li a {
+        font-size: 11px; /* Reduce el tamaño de la fuente */
+        letter-spacing: 0.2em; /* Reduce el espaciado entre letras */
+    }
+
+    .logo {
+        font-size: 15px; /* Reduce el tamaño del logo */
+    }
 }
