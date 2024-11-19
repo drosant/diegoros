@@ -167,6 +167,7 @@ section {
         max-width: 100%; /* Ocupa todo el ancho */
         padding-right: 40px;
         padding-left: 40px;
+        padding-top: 10px;
     }
 
     .nested-columns {
@@ -210,16 +211,3 @@ section {
     }
 }
 
-/* Footer en su posición natural */
-footer {
-    background-color: #b7ccc3;
-    height: 105px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px;
-    font-size: 11px;
-    text-transform: uppercase;
-    font-family: 'TTTravelsMedium';
-    color: #333333;
-}
