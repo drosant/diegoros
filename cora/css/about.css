@@ -7,6 +7,7 @@
 
 html, body {
     overflow: hidden; /* Evita scroll horizontal en pantallas grandes */
+    overflow-y: auto; /* Activa scroll vertical */
     height: 100%;
     background-color: #efefef;
 }
@@ -18,7 +19,7 @@ main::before {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px; /* Ajusta la altura para que el desvanecimiento sea sutil */
+    height: 10%; /* Ajusta la altura para que el desvanecimiento sea sutil */
     background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #efefef 100%);
     pointer-events: none;
     z-index: 1;
@@ -26,11 +27,16 @@ main::before {
 
 /* Sección principal */
 section {
-    height: calc(100vh - 135px); /* Altura fija para pantallas grandes */
+    height: auto; /* Permite que la sección crezca con el contenido */
+    /* height: calc(100vh - 135px); /* Altura fija para pantallas grandes */
     width: 100vw;
     display: flex;
     padding-top: calc(65px + 30px);
     overflow: hidden; /* Oculta contenido desbordado */
+}
+
+.second-section{
+    padding-top: 0px;
 }
 
 /* Columna izquierda */
@@ -55,7 +61,7 @@ section {
 
 /* Header dentro de la columna derecha */
 .right-column h2 {
-    font-size: clamp(1rem, 2vw, 1.4rem);
+    font-size: 1.6em;
     letter-spacing: 0.5rem;
     margin-bottom: 10px;
     font-family: 'CormorantRegular', Arial, sans-serif;
@@ -68,7 +74,7 @@ section {
 /* Párrafos */
 .right-column p {
     font-family: 'CormorantRegular', Arial, sans-serif;
-    font-size: clamp(1rem, 1.5vw, 1rem);
+    font-size: 1em;
     color: #333333;
     width: 100%; /* Ocupa todo el ancho disponible */
     margin: 0;
@@ -76,10 +82,24 @@ section {
     line-height: 1.4;
 }
 
-.last {
+.inside {
     width: 100%;
     margin: 0;
     text-align: left;
+}
+
+.inside.mini{
+    font-size: 1.4em;
+    text-transform: none;
+    letter-spacing: 0.1em;
+    text-align: right;
+    padding-bottom: 10px;
+    font-weight: normal;
+}
+
+.inside.maxi{
+    font-size: 1.4em;
+
 }
 
 /* Separador */
@@ -98,11 +118,11 @@ section {
     gap: 20px;
     flex-wrap: wrap;
     flex: 1;
-    width: 80%;
+    width: 90%;
 }
 
 .nested-left {
-    flex: 1;
+    flex: 1.8;
     width: 100%; /* Ocupa todo el ancho disponible */
     position: relative;
     height: auto;
@@ -120,7 +140,7 @@ section {
 
 /* Columna derecha anidada */
 .nested-right {
-    flex: 2;
+    flex: 2.2;
     display: flex;
     flex-direction: column;
     gap: 10px;
