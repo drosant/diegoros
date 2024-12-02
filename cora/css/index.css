@@ -198,19 +198,49 @@ main::before {
       gap: 0px;
     }
   
-    .left-side,
+    #section-2 .left-side,
     .right-side {
       width: 100%; /* Asegura que ocupen todo el ancho */
       padding-left: 30px;
       padding-right: 30px;
     }
 
-    .left-side{
+    #section-2 .left-side{
         padding-top: 0px;
     }
 
-    .right-side{
+    #section-2 .right-side{
         padding-top: 30px;
     }
   }
+
+
+  @media (max-width: 600px) {
+    #section-2 .right-side {
+      width: 100%; /* Asegura que ocupen todo el ancho */
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    #section-2 .left-side {
+        width: 100%; /* Asegura que ocupen todo el ancho */
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+
+    #division{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    #division-final{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    #section-2 {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+}
 
