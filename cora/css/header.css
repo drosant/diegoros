@@ -61,7 +61,7 @@ nav ul li a {
 }
 
 /* Media Queries para tamaños medianos */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
     header {
         flex-direction: column; /* Cambia a diseño vertical */
         justify-content: center; /* Centra contenido verticalmente */

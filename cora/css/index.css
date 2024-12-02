@@ -8,32 +8,54 @@
 /* Activar scroll vertical */
 body, html {
     height: 100%;
+    width: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+    background-color: #efefef;
+    font-size: 12px;
 }
 
 /* Aplicar CormorantRegular en los textos principales */
-body, p, h2 {
+p, h2 {
     font-family: 'CormorantRegular', Arial, sans-serif;
+}
+
+p{
+    background-color: transparent;
+    font-size: 1.4rem;
+}
+
+#manifest{
+    font-size: 1.7rem;
+    text-transform: uppercase;
 }
 
 h2 {
     font-size: 2rem; /* Tamaño común para todos los h2 */
+    letter-spacing: 0.5rem;
     font-weight: normal;
     text-transform: uppercase;
     color: #b7ccc3; /* Color usado en ambas secciones */
 }
 
-/* Layout general */
+h3{
+    color: #333333;
+    font-size: 1.6rem;
+    font-family: 'TTTravelsMedium';
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: left;
+    width: 100%;
+    letter-spacing: 0.23em;
+    padding-bottom: 20px;
+}
+
 body {
     display: flex;
     flex-direction: column;
-    background-color: #efefef;
-    color: #333333;
     width: 100%;
 }
 
-/* Sección principal */
 main {
     width: 100%;
     position: relative;
@@ -52,18 +74,24 @@ main::before {
     z-index: 1;
 }
 
+.separator {
+    height: 1px; /* Define altura explícita */
+    background-color: #333; /* Define color */
+    width: 100%; /* Asegura que ocupa todo el ancho */
+    margin: 20px 0; /* Espaciado superior e inferior */
+    padding-bottom: 1px;
+    display: block; /* Asegura visibilidad */
+}
 
-/* Sección 1 */
 #section-1 {
     display: flex;
     justify-content: right;
     align-items: center;
     height: 100vh;
     width: 100%;
-    background-color: #ddd;
 }
 
-.image-container {
+#image1-container {
     width: 70vw;
     padding-top: calc(50vw * 2 / 3);
     position: relative;
@@ -82,6 +110,7 @@ main::before {
 
 /* Separador de secciones */
 #division {
+    background-color: #b7ccc3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,186 +121,59 @@ main::before {
 /* Sección 2 - Estructura de dos lados */
 #section-2 {
     display: flex;
-    height: 100vh;
-    background-color: #ddd;
+    height: auto;
     width: 100%;
-    gap: 20px;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 30px;
+    padding-top: 10vw;
+    padding-bottom: 5vw;
 }
 
-/* Fuente, estilo y color para el título en la sección 2 */
-#section-2 h2 {
-    font-family: 'CormorantRegular', Arial, sans-serif;
-    font-weight: normal;
-    letter-spacing: 0.5rem;
-    text-transform: uppercase;
-    color: #b7ccc3;
-    padding-bottom: 15px;
-}
-
-#section-2 p {
-    font-family: 'CormorantRegular', Arial, sans-serif;
-}
-
-/* Columna izquierda con imagen, ocupa el 70% */
 #section-2 .left-side {
     flex-basis: 66%;
+    height: auto;
     display: flex;
     justify-content: left;
-    align-items: flex-start;
-    padding-top: calc(68px + 30px); /* Ajuste para la altura del header */
     padding-left: 30px;
+    height: 100%;
+    align-items: flex-start;
 }
 
-/* Contenedor de la imagen con proporción 10:6 en la sección 2 */
-.image-container-section-2 {
-    width: 95%;
-    padding-top: calc(95% * 6 / 10);
+#image-container-section-2 {
+    width: 100%;
+    height: 70vh;
     position: relative;
     overflow: hidden;
 }
 
-.image-container-section-2 img {
-    position: absolute;
-    top: 0;
-    left: 0;
+#image-container-section-2 img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
+    object-position: center center;
 }
 
-#section-2 h2{
-    font-weight: 600;
-}
-
-/* Columna derecha con texto, ocupa el 30% */
 #section-2 .right-side {
     flex-basis: 33%;
-    padding-right: 30px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-top: calc(65px + 30px); /* Ajuste para la altura del header */
-}
-
-/* Limitar el ancho de los textos dentro de .right-side */
-#section-2 .right-side h2,
-#section-2 .right-side p {
-    width: 100%;
-}
-
-/* Sección 3 - Estructura de tres columnas similar a la sección 2 */
-#section-3 {
-    display: flex;
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
-    width: 100%;
-    padding: 0px;
-    background-color: #ddd;
-    gap: 20px;
-}
-
-/* Fuente, estilo y color para el título en la sección 2 */
-#section-3 h2 {
-    font-family: 'CormorantRegular', Arial, sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #b7ccc3;
-}
-
-#section-3 p {
-    font-family: 'CormorantRegular', Arial, sans-serif;
-}
-
-
-/* Columnas de la sección 3 */
-#section-3 .column {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: left;
-    padding-top: calc(28px + 30px); /* Ajuste para la altura del header */
-}
-
-/* Estilos para la columna izquierda en la sección 3 */
-#section-3 .left-column {
-    font-family: 'CormorantRegular', Arial, sans-serif;
-    font-size: 20px;
-    letter-spacing: 0.23em;
-    padding-left: 30px;
-    font-weight: bold;
-    color: #b7ccc3; /* Mismo color que los títulos de la sección 2 */
-    text-transform: uppercase;
-}
-
-/* Estilos para la columna central en la sección 3 */
-#section-3 .middle-column {
-    font-family: 'CormorantRegular', Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333333;
-    width: 70%; /* Limita el ancho del texto en la columna central */
-}
-
-/* Estilos para la columna derecha con la imagen en la sección 3 */
-#section-3 .right-column {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
     padding-right: 30px;
+    /*padding-top: calc(65px + 30px); */
 }
 
-/* Contenedor de la imagen en la sección 3, ajustado al 70% de la altura de la ventana */
-.image-container-section-3 {
-    width: 100%; /* Ajusta el ancho al 70% de la columna derecha */
-    overflow: hidden;
-}
-
-/* Imagen dentro del contenedor en sección 3 */
-.image-container-section-3 img {
-    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
-    height: 100%; /* La imagen también ocupa todo el alto del contenedor */
-    object-fit: cover; /* Ajuste de proporción sin distorsión */
-}
-
-
-/* Fondo específico para los divs con id division y division-final */
-#division, #division-final {
+#division-final{
     background-color: #b7ccc3;
     width: 100%;
-}
-
-#division p {
-    text-transform: uppercase;
-}
-
-#division p, #division-final p {
-    font-size: 23px;
-    font-weight: 500;
-}
-
-#division-final {
-    background-color: #b7ccc3;
-    width: 100%;
-    padding: 30px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 50px;
-}
-
-#division-final h2 {
-    color: #333333;
-    font-size: 20px;
-    font-family: 'TTTravelsMedium';
-    font-weight: 500;
-    text-transform: uppercase;
-    text-align: left;
-    width: 100%;
-    letter-spacing: 0.23em;
-    padding-bottom: 20px;
+    padding: 30px;
 }
 
 #division-final .column-container {
@@ -288,8 +190,27 @@ main::before {
     justify-content: flex-start;
 }
 
-#division-final p {
-    font-size: 16px;
-    font-weight: 500;
-    width: 100%;
-}
+/* Media query para pantallas más pequeñas */
+@media (max-width: 1400px) {
+    #section-2 {
+      flex-direction: column; /* Cambia las columnas a orientación vertical */
+      width: 100%;
+      gap: 0px;
+    }
+  
+    .left-side,
+    .right-side {
+      width: 100%; /* Asegura que ocupen todo el ancho */
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .left-side{
+        padding-top: 0px;
+    }
+
+    .right-side{
+        padding-top: 30px;
+    }
+  }
+
