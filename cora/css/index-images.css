@@ -1,0 +1,43 @@
+/* Estilos generales para los contenedores */
+#img-container-1 {
+    position: absolute; /* Posicionamiento relativo a la sección */
+    width: 50%; /* 65% del ancho de la sección */
+    aspect-ratio: 12 / 8; /* Proporción de 12:8 */
+    background-color: white; /* Fondo blanco para ocultarlo */
+    bottom: 30px; /* 30px desde el borde inferior */
+    right: 30px; /* 30px desde el borde derecho */
+}
+
+#img-container-2 {
+    position: absolute; /* Posicionamiento relativo a la sección */
+    width: 50%; /* 65% del ancho de la sección */
+    aspect-ratio: 12 / 8; /* Proporción de 12:8 */
+    background-color: gray; /* Fondo gris para visualizarlo */
+    top: 12%; /* 30px desde el borde superior */
+    left: 30px; /* 30px desde el borde izquierdo */
+}
+
+/* Adaptaciones para pantallas menores de 1000px */
+@media (max-width: 960px) {
+    #img-container-1 {
+        width: calc(100% - 80px); /* 30px de distancia a derecha e izquierda */
+        left: 40px; /* Mantiene la distancia desde el borde izquierdo */
+        right: 40px; /* Mantiene la distancia desde el borde derecho */
+        bottom: 40px; /* Mantiene 30px desde el borde inferior */
+        top: auto; /* Elimina el centrado vertical en términos de top */
+        transform: none; /* Elimina el ajuste de traslación */
+    }
+
+    #img-container-2 {
+        width: calc(100% - 80px); /* 30px de distancia a derecha e izquierda */
+        left: 40px; /* Mantiene la distancia desde el borde izquierdo */
+        right: 40px; /* Mantiene la distancia desde el borde derecho */
+        bottom: auto; /* Centra en el eje vertical */
+        transform: none; /* Ajuste para centrar verticalmente */
+    }
+}
+
+/* Sección para posicionamiento relativo */
+#section-1 {
+    position: relative; /* Necesario para que los contenedores se posicionen correctamente */
+}
