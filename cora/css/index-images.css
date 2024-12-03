@@ -1,0 +1,18 @@
+#section-1 {
+    position: relative; /* Necesario para que los elementos hijos absolutos se posicionen respecto a esta sección */
+}
+
+.image_container img {
+    width: 100px; /* Fijar el ancho a 100px */
+    height: auto; /* Mantener la proporción de la imagen */
+    position: absolute; /* Permitir posicionamiento mediante coordenadas */
+    top: 50%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustar el origen para que quede exactamente centrado */
+    z-index: 1;
+}
+
+#division {
+    position: relative; /* Asegura que tenga un contexto de apilamiento */
+    z-index: 2; /* Coloca esta sección encima de las imágenes */
+}

@@ -71,7 +71,7 @@ main::before {
     height: 13%; /* Ajusta la altura para que el desvanecimiento sea sutil */
     background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #efefef 100%);
     pointer-events: none;
-    z-index: 1;
+    z-index: 3;
 }
 
 .separator {
@@ -84,9 +84,6 @@ main::before {
 }
 
 #section-1 {
-    display: flex;
-    justify-content: right;
-    align-items: center;
     height: 100vh;
     width: 100%;
 }
@@ -96,16 +93,6 @@ main::before {
     padding-top: calc(50vw * 2 / 3);
     position: relative;
     overflow: hidden;
-}
-
-#section-1 img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    padding-right: 30px;
 }
 
 /* Separador de secciones */
