@@ -1,0 +1,27 @@
+/* Importar fuentes */
+@font-face {
+    font-family: 'TTTravelsBold';
+    src: url('../fonts/TTTravelsNextTrialBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TTTravelsMedium';
+    src: url('../fonts/TTTravelsNextTrialMedium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'CormorantRegular';
+    src: url('../fonts/CormorantGaramond-Regular.ttf') format('truetype');
+}
+
+.bold {
+    font-weight: bold;
+    font-family: 'TTTravelsBold'; /* Fuente para "CORA" */
+    letter-spacing: 0.23em; /* Separación calculada: 52/300 */
+}
+
+.medium {
+    font-weight: 500;
+    font-family: 'TTTravelsMedium'; /* Fuente para "Travel Studio" */
+    letter-spacing: 0.23em; /* Aplicar el mismo spacing */
+}
