@@ -4,7 +4,7 @@
     width: 50%; /* 65% del ancho de la sección */
     aspect-ratio: 12 / 8; /* Proporción de 12:8 */
     background-color: white; /* Fondo blanco para ocultarlo */
-    bottom: 30px; /* 30px desde el borde inferior */
+    bottom: 45px; /* 30px desde el borde inferior */
     right: 30px; /* 30px desde el borde derecho */
 }
 
@@ -17,13 +17,43 @@
     left: 30px; /* 30px desde el borde izquierdo */
 }
 
-/* Adaptaciones para pantallas menores de 1000px */
+#img-container-3, #img-container-4 {
+    position: absolute;
+    height: 65%; /* 20% del ancho de la sección */
+    aspect-ratio: 32 / 50; /* Proporción vertical 32:50 */
+    background-color: #d9d9d9; /* Gris claro */
+}
+
+/* Posicionamiento específico para los contenedores */
+#img-container-3 {
+    top: 55%; /* Centrado verticalmente */
+    left: 25%; /* Centrado en la mitad izquierda */
+    transform: translate(-35%, -50%); /* Ajuste para centrar completamente */
+}
+
+#img-container-4 {
+    top: 55%; /* Centrado verticalmente */
+    left: 75%; /* Centrado en la mitad derecha */
+    transform: translate(-65%, -50%); /* Ajuste para centrar completamente */
+}
+
+@media (max-width: 1200px){
+    #img-container-3{
+        left: 20%
+    }
+    #img-container-4{
+        left: 80%; /* Cambia el ancho al 25% */
+    }
+
+}
+
+/* Adaptaciones para pantallas menores de 960px */
 @media (max-width: 960px) {
     #img-container-1 {
         width: calc(100% - 80px); /* 30px de distancia a derecha e izquierda */
         left: 40px; /* Mantiene la distancia desde el borde izquierdo */
         right: 40px; /* Mantiene la distancia desde el borde derecho */
-        bottom: 40px; /* Mantiene 30px desde el borde inferior */
+        bottom: 80px; /* Mantiene 30px desde el borde inferior */
         top: auto; /* Elimina el centrado vertical en términos de top */
         transform: none; /* Elimina el ajuste de traslación */
     }
@@ -35,7 +65,32 @@
         bottom: auto; /* Centra en el eje vertical */
         transform: none; /* Ajuste para centrar verticalmente */
     }
+
+    #img-container-3{
+        height: 60%
+    }
+    #img-container-4{
+        height: 60%
+    }
+
 }
+
+@media (max-width: 750px){
+    #img-container-3{
+        top: 66%;
+        height: 50%;
+        left: 30%; 
+        
+    }
+    #img-container-4{
+        top: 41%;
+        height: 50%;
+        left: 70%;
+    }
+
+}
+
+
 
 /* Sección para posicionamiento relativo */
 #section-1 {
