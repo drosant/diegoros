@@ -1,18 +1,45 @@
+/* Animación para transiciones */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn var(--fade-in-time, 1s) ease-in forwards;
+}
+
+/* Definición de la animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animación para fade-out */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
 /* Estilos generales para los contenedores */
 #img-container-1 {
-    position: absolute; /* Posicionamiento relativo a la sección */
-    width: 50%; /* 65% del ancho de la sección */
-    aspect-ratio: 12 / 8; /* Proporción de 12:8 */
-    background-color: white; /* Fondo blanco para ocultarlo */
-    bottom: 45px; /* 30px desde el borde inferior */
-    right: 30px; /* 30px desde el borde derecho */
+    position: absolute;
+    width: 50%; /* O el tamaño que hayas definido */
+    aspect-ratio: 12 / 8;
+    background-color: transparent; /* Para que no esté oculto */
+    background-size: cover;
+    background-position: center;
+    bottom: 45px;
+    right: 30px;
 }
 
 #img-container-2 {
     position: absolute; /* Posicionamiento relativo a la sección */
     width: 50%; /* 65% del ancho de la sección */
     aspect-ratio: 12 / 8; /* Proporción de 12:8 */
-    background-color: gray; /* Fondo gris para visualizarlo */
+    background-color: transparent; /* Fondo gris para visualizarlo */
     top: 12%; /* 30px desde el borde superior */
     left: 30px; /* 30px desde el borde izquierdo */
 }
@@ -21,7 +48,7 @@
     position: absolute;
     height: 65%; /* 20% del ancho de la sección */
     aspect-ratio: 32 / 50; /* Proporción vertical 32:50 */
-    background-color: #d9d9d9; /* Gris claro */
+    background-color: transparent; /* Gris claro */
 }
 
 /* Posicionamiento específico para los contenedores */
