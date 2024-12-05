@@ -31,7 +31,8 @@ section {
     /* height: calc(100vh - 135px); /* Altura fija para pantallas grandes */
     width: 100vw;
     display: flex;
-    padding-top: calc(65px + 30px);
+    padding-top: 95px;
+    padding-left: 10px;
     overflow: hidden; /* Oculta contenido desbordado */
 }
 
@@ -52,18 +53,18 @@ section {
     flex: 2;
     max-width: 66.67%; /* Inicialmente dos tercios */
     background-color: transparent;
-    padding: 50px;
     display: flex;
     flex-direction: column;
     overflow: visible; /* Permite contenido visible */
     transition: flex 0.5s ease, max-width 0.5s ease; /* Transición suave */
+    padding-top: 50px;
+    padding-right: 30px;
 }
 
 /* Header dentro de la columna derecha */
 .right-column h2 {
     font-size: 1.6em;
     letter-spacing: 0.5rem;
-    margin-bottom: 10px;
     font-family: 'CormorantRegular', Arial, sans-serif;
     font-weight: normal;
     text-transform: uppercase;

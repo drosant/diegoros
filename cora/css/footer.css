@@ -1,4 +1,8 @@
 /* Footer */
+* {
+    user-select: none; /* Desactiva la selección de texto */
+  }
+
 footer {
     background-color: #b7ccc3;
     font-family: 'TTTravelsMedium';
@@ -31,6 +35,11 @@ footer p, footer a {
 .bold {
     font-weight: 700;
 }
+
+.salmon-background{
+    background-color:  #e6866d;
+}
+
 
 /* Estructura de columnas en el footer */
 .footer-left {

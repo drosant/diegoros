@@ -20,6 +20,10 @@ header {
     text-align: left; /* Alineado a la izquierda en pantallas grandes */
 }
 
+.active.salmon{
+    color:  #e6866d;
+}
+
 .logo a {
     color: inherit;
     text-decoration: none;
