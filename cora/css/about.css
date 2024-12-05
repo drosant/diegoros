@@ -196,7 +196,6 @@ section {
         max-width: 100%; /* Ocupa todo el ancho */
         padding-right: 40px;
         padding-left: 40px;
-        padding-top: 10px;
     }
 
     .nested-columns {
@@ -231,7 +230,7 @@ section {
 
     .right-column h2 {
         text-align: left; /* Título alineado a la izquierda */
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         margin-top: 20px;
     }
 
