@@ -29,6 +29,8 @@ p{
 #manifest {
     text-transform: none;
     letter-spacing: 0.05em;
+    width: 80%;
+    text-align: left;
 }
 
 
@@ -101,8 +103,8 @@ main::before {
 #division {
     background-color: #b7ccc3;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     padding: 30px;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -118,7 +120,7 @@ main::before {
     justify-content: center;
     align-items: flex-start;
     padding-bottom: 60px;
-    padding-top: 60px;
+    padding-top: 93px;
 }
 
 #section-2 .left-side {
@@ -164,6 +166,8 @@ main::before {
     flex-direction: column;
     align-items: center;
     padding: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 #division-final .column-container {
@@ -204,6 +208,19 @@ main::before {
     }
   }
 
+  @media (max-width:1200px){
+    #division{
+        justify-content: center;
+        align-items: center;
+    }
+
+    #manifest{
+        width: 100%;
+        text-align: center;
+    }
+    
+  }
+
 
   @media (max-width: 600px) {
     #section-2 .right-side {
@@ -231,6 +248,10 @@ main::before {
     #section-2 {
       padding-left: 40px;
       padding-right: 40px;
+    }
+
+    #manifest{
+        width: 100%;
     }
 }
 
