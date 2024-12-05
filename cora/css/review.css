@@ -53,7 +53,7 @@ h2 {
 
 p{
     font-family: 'CormorantRegular', Arial, sans-serif;
-    font-size: 0.8em;
+    font-size: 1em;
     color: #333333;
     width: 100%; /* Ocupa todo el ancho disponible */
     margin: 0;
@@ -77,9 +77,10 @@ p{
     height: 1px; /* Define altura explícita */
     background-color: #333; /* Define color */
     width: 100%; /* Asegura que ocupa todo el ancho */
-    display: block; /* Asegura visibilidad */
+    display: block;
     padding-right: 100px;
     margin-bottom: 20px;
+    margin-top: 1px;
 }
 
 .review {
