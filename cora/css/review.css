@@ -88,7 +88,6 @@ p{
     flex-direction: row; /* Asegura que las columnas estén en fila horizontal */
     justify-content: space-between; /* Distribuye el espacio entre los elementos */
     align-items: flex-start; /* Alinea los elementos en la parte superior */
-    font-family: 'Times New Roman', serif; /* Fuente clásica */
     color: #333; /* Color del texto */
     padding-top: 20px;
     padding-bottom: 20px;
@@ -117,7 +116,7 @@ p{
   }
 
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 900px) {
 
     h2{
         font-size: 1.3em; 
