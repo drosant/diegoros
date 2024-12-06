@@ -49,6 +49,7 @@
     height: 65%; /* 20% del ancho de la sección */
     aspect-ratio: 32 / 50; /* Proporción vertical 32:50 */
     background-color: transparent; /* Gris claro */
+    min-height: 300px;
 }
 
 /* Posicionamiento específico para los contenedores */
