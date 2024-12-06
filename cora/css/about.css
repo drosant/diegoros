@@ -99,74 +99,99 @@ p{
     max-width: 60%;
 }
 
-  .entry-left img {
-    position: relative; /* Cambia a relativo para que la imagen se vea */
-    width: 95%; /* Imagen ocupa todo el ancho disponible */
-    height: auto; /* Mantiene la proporción */
-    object-fit: contain; /* Se asegura de que la imagen sea visible completa */
+  
+  
+.entry-left {
+flex: 1; /* Ocupa una parte del espacio */
+max-width: 80%; /* Ancho máximo */
+}
+
+.entry-left img {
+position: relative; /* Cambia a relativo para que la imagen se vea */
+width: 95%; /* Imagen ocupa todo el ancho disponible */
+height: auto; /* Mantiene la proporción */
+object-fit: contain; /* Se asegura de que la imagen sea visible completa */
 }
   
-  .entry-left {
-    flex: 1; /* Ocupa una parte del espacio */
-    max-width: 80%; /* Ancho máximo */
-  }
+
   
-  .entry-left p {
-    width: 100%; /* Ocupa todo el ancho disponible */
-    margin: 0;
-    text-align: left; /* Justifica el texto a la izquierda */
-  }
-  
-  .entry-right {
-    flex: 1.2; /* Ocupa el doble de espacio que la izquierda */
-    max-width: 90%; /* Ancho máximo */
-  }
-  
-  .entry-right p {
+.entry-right {
+flex: 1.2; /* Ocupa el doble de espacio que la izquierda */
+max-width: 90%; /* Ancho máximo */
+}
+
+.entry-right p {
+text-align: left;
+width: 90%;
+margin-left: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+.entry-left img {
+
+    width: 100%; /* Imagen ocupa todo el ancho disponible */
+
+}
+}
+
+@media screen and (max-width: 900px) {
+
+h2{
+    font-size: 1.3em; 
+}
+
+section{
+    width: 100%; /* La sección ocupa el 66% del ancho del main */
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.entry-right p {
     text-align: left;
     width: 90%;
     margin-left: 30px;
-  }
-
-  @media screen and (max-width: 1200px) {
-    .entry-left img {
-
-        width: 100%; /* Imagen ocupa todo el ancho disponible */
-
-    }
-  }
-
-  @media screen and (max-width: 900px) {
-
-    h2{
-        font-size: 1.3em; 
     }
 
-    section{
-        width: 100%; /* La sección ocupa el 66% del ancho del main */
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-    .entry-right p {
-        text-align: left;
-        width: 90%;
-        margin-left: 30px;
-      }
+.entry-left img {
 
-    .entry-left img {
+    width: 100%; /* Imagen ocupa todo el ancho disponible */
 
-        width: 100%; /* Imagen ocupa todo el ancho disponible */
+}
 
-    }
+p{
+    font-size: 1.1em;
+}
+}
 
-    p{
-        font-size: 1.1em;
-    }
-  }
+@media screen and (max-width: 600px) {
+p{
+    font-size: 0.8em;
+}
 
-  @media screen and (max-width: 600px) {
-    p{
-        font-size: 0.8em;
-    }
+.entry{
+    flex-direction: column;
+    width: 100%;
+}
 
-  }
+.entry-left {
+    max-width: 100%; /* Ancho máximo */
+}
+
+.entry-right {
+    max-width: 100%; /* Ancho máximo */
+}
+.entry-right p{
+    width: 100%; /* Ancho máximo */
+    padding: 0px;
+    padding-top: 20px;
+    margin: 0px;
+}
+
+.underquote{
+    font-size: 1.4em;
+    padding-top: 30px;
+    padding-left: 0px;
+    max-width: 100%;
+}
+
+
+}
