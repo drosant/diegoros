@@ -58,7 +58,6 @@ p{
     width: 100%; /* Ocupa todo el ancho disponible */
     margin: 0;
     text-align: left; /* Justifica el texto a la izquierda */
-    line-height: 1.4;
 }
 
 .separator {

@@ -12,7 +12,6 @@ body, html {
     overflow-x: hidden;
     overflow-y: auto;
     background-color: #efefef;
-    font-size: 12px;
 }
 
 /* Aplicar CormorantRegular en los textos principales */
@@ -22,7 +21,7 @@ p, h2 {
 
 p{
     background-color: transparent;
-    font-size: 1.4rem;
+    font-size: 1em;
     letter-spacing: 0em;
 }
 
@@ -35,7 +34,7 @@ p{
 
 
 h2 {
-    font-size: 2rem; /* Tamaño común para todos los h2 */
+    font-size: 1,6rem; /* Tamaño común para todos los h2 */
     letter-spacing: 0.5rem;
     font-weight: normal;
     text-transform: uppercase;
