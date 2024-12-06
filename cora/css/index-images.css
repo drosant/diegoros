@@ -40,8 +40,9 @@
     width: 50%; /* 65% del ancho de la sección */
     aspect-ratio: 12 / 8; /* Proporción de 12:8 */
     background-color: transparent; /* Fondo gris para visualizarlo */
-    top: 12%; /* 30px desde el borde superior */
+    top: 95px; /* 30px desde el borde superior */
     left: 30px; /* 30px desde el borde izquierdo */
+    z-index: 1;
 }
 
 #img-container-3, #img-container-4 {

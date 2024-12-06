@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #efefef;
+}
+
+/* Aplica el degradado en la parte superior del contenedor */
+main::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 13%; /* Ajusta la altura para que el desvanecimiento sea sutil */
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #efefef 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+main {
+    display: flex; /* Flexbox para organizar los elementos */
+}
+  
+section {
+    padding-top: 145px;
+    padding-right: 30px;
+    padding-left: 12px;
+    height: auto;
+    width: 66.67%; /* La sección ocupa el 66% del ancho del main */
+    margin-left: auto; /* Desplaza la sección hacia la derecha */
+    display: flex; /* Flexbox en la sección para alinear los hijos */
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    background-color:#efefef;
+}
+  
+h2 {
+    font-size: 1.6em;
+    letter-spacing: 0.5rem;
+    padding-bottom: 20px;
+    font-family: 'CormorantRegular', Arial, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    color:  #e6866d;
+    text-align: left;
+}
+
+p{
+    font-family: 'CormorantRegular', Arial, sans-serif;
+    font-size: 1em;
+    color: #333333;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin: 0;
+    text-align: left; /* Justifica el texto a la izquierda */
+    padding-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 100%;
+    
+}
+
+.separator {
+    height: 1px; /* Define altura explícita */
+    background-color: #333; /* Define color */
+    width: 100%; /* Asegura que ocupa todo el ancho */
+    display: block;
+    padding-right: 100px;
+    margin-bottom: 20px;
+    margin-top: 1px;
+}
+
+.fine-line{
+    height: 1px; /* Define altura explícita */
+    background-color: #333; /* Define color */
+    width: 100%;
+    display: block;
+}
+
+.entry {
+    width: 90%;
+    display: flex;
+    flex-direction: column; /* Asegura que las columnas estén en fila horizontal */
+    justify-content: start; /* Distribuye el espacio entre los elementos */
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    color: #333; /* Color del texto */
+    padding-top: 20px;
+    padding-bottom: 90px;
+  }
+
+  label{
+    font-size: 1.1em;
+    padding-top: 20px;
+    font-family: 'CormorantRegular', Arial, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  input{
+    font-family: 'CormorantRegular', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 1em;
+    margin-top: 10px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    height: 20px;
+    outline: none;
+  }
+
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
+    box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
+    -webkit-text-fill-color: inherit !important; /* Asegura que el color del texto se mantenga */
+    background-color: transparent !important;
+    transition: background-color 5000s ease-in-out 0s; /* Solución para Chrome */
+}
+
+input:-moz-autofill {
+    box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
+    background-color: transparent !important;
+    color: inherit !important;
+}
+
+input:-ms-autofill {
+    box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
+    background-color: transparent !important;
+    color: inherit !important;
+}
+
+.form-section{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.send-section{
+    display: flex;
+    justify-content: flex-end; /* Envía el contenido a la derecha */
+    align-items: flex-end; /* Envía el contenido hacia abajo */
+    height: 100%; /* Asegúrate de que el contenedor tenga altura */
+    width: 40%;
+}
+
+button{
+    font-size: 1.1em;
+    font-family: 'TTTravelsMedium', Arial, sans-serif;
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    font-weight: bold; /* Negrita */
+    text-decoration: underline; /* Subrayado */
+    color: inherit; /* Usa el color de texto del diseño actual */
+    cursor: pointer; /* Muestra el puntero de clic */
+    padding: 0; /* Elimina cualquier padding */
+
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+    form{
+        flex-direction: column;
+    }
+    
+    .form-section{
+        width: 100%;
+    }
+    
+    .send-section{
+        display: flex;
+        justify-content: flex-end; /* Envía el contenido a la derecha */
+        align-items: flex-end; /* Envía el contenido hacia abajo */
+        width: 100%;
+        padding-top: 60px;
+    }
+    
+    button{
+        font-size: 1.1em;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+
+    h2{
+        font-size: 1.3em; 
+    }
+
+    section{
+        width: 100%; /* La sección ocupa el 66% del ancho del main */
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .entry{
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    form{
+        flex-direction: column;
+    }
+    
+    .form-section{
+        width: 100%;
+    }
+    
+    .send-section{
+        display: flex;
+        justify-content: flex-end; /* Envía el contenido a la derecha */
+        align-items: flex-end; /* Envía el contenido hacia abajo */
+        width: 100%;
+        padding-top: 60px;
+    }
+    
+    button{
+        font-size: 1.1em;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+.entry{
+    flex-direction: column;
+    width: 100%;
+}
+
+form{
+    flex-direction: column;
+}
+
+.form-section{
+    width: 100%;
+}
+
+.send-section{
+    display: flex;
+    justify-content: flex-end; /* Envía el contenido a la derecha */
+    align-items: flex-end; /* Envía el contenido hacia abajo */
+    width: 100%;
+    padding-top: 60px;
+}
+
+button{
+    font-size: 1.1em;
+}
+
+
+
+}

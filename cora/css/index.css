@@ -108,6 +108,7 @@ main::before {
     padding-top: 60px;
     padding-bottom: 60px;
     width: 100%;
+    z-index: 3;
 }
 
 /* Sección 2 - Estructura de dos lados */
