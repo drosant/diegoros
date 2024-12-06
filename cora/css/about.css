@@ -72,6 +72,7 @@ p{
 }
 
 .entry {
+    width: 90%;
     display: flex;
     flex-direction: row; /* Asegura que las columnas estén en fila horizontal */
     justify-content: space-between; /* Distribuye el espacio entre los elementos */
@@ -100,14 +101,14 @@ p{
 
   .entry-left img {
     position: relative; /* Cambia a relativo para que la imagen se vea */
-    width: 60%; /* Imagen ocupa todo el ancho disponible */
+    width: 95%; /* Imagen ocupa todo el ancho disponible */
     height: auto; /* Mantiene la proporción */
     object-fit: contain; /* Se asegura de que la imagen sea visible completa */
 }
   
   .entry-left {
     flex: 1; /* Ocupa una parte del espacio */
-    max-width: 50%; /* Ancho máximo */
+    max-width: 80%; /* Ancho máximo */
   }
   
   .entry-left p {
@@ -117,20 +118,20 @@ p{
   }
   
   .entry-right {
-    flex: 2; /* Ocupa el doble de espacio que la izquierda */
-    max-width: 50%; /* Ancho máximo */
+    flex: 1.2; /* Ocupa el doble de espacio que la izquierda */
+    max-width: 90%; /* Ancho máximo */
   }
   
   .entry-right p {
     text-align: left;
-    width: 70%;
+    width: 90%;
     margin-left: 30px;
   }
 
   @media screen and (max-width: 1200px) {
     .entry-left img {
 
-        width: 80%; /* Imagen ocupa todo el ancho disponible */
+        width: 100%; /* Imagen ocupa todo el ancho disponible */
 
     }
   }
@@ -159,7 +160,13 @@ p{
     }
 
     p{
-        font-size: 0.7em;
+        font-size: 1.1em;
     }
   }
 
+  @media screen and (max-width: 600px) {
+    p{
+        font-size: 0.8em;
+    }
+
+  }

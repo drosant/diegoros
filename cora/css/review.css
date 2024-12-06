@@ -84,6 +84,7 @@ p{
 }
 
 .review {
+    width: 90%;
     display: flex;
     flex-direction: row; /* Asegura que las columnas estén en fila horizontal */
     justify-content: space-between; /* Distribuye el espacio entre los elementos */
@@ -95,7 +96,7 @@ p{
   
   .review-left {
     flex: 1; /* Ocupa una parte del espacio */
-    max-width: 50%; /* Ancho máximo */
+    max-width: 80%; /* Ancho máximo */
   }
   
   .review-left p {
@@ -105,13 +106,13 @@ p{
   }
   
   .review-right {
-    flex: 2; /* Ocupa el doble de espacio que la izquierda */
-    max-width: 50%; /* Ancho máximo */
+    flex: 1.2; /* Ocupa el doble de espacio que la izquierda */
+    max-width: 90%; /* Ancho máximo */
   }
   
   .review-right p {
     text-align: left;
-    width: 70%;
+    width: 90%;
     margin-left: 30px;
   }
 
@@ -134,7 +135,14 @@ p{
       }
 
     p{
-        font-size: 0.7em;
+        font-size: 1.1em;
     }
+  }
+
+  @media screen and (max-width: 600px) {
+    p{
+        font-size: 0.8em;
+    }
+
   }
 
