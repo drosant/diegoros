@@ -156,15 +156,9 @@ section{
 
 }
 
-p{
-    font-size: 1.1em;
-}
 }
 
 @media screen and (max-width: 600px) {
-p{
-    font-size: 0.8em;
-}
 
 .entry{
     flex-direction: column;
