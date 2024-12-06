@@ -137,6 +137,25 @@ p{
   }
 
   @media screen and (max-width: 600px) {
+    .review{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .review-left{
+        max-width: 100%;
+    }
+
+    .review-right{
+        max-width: 100%;
+    }
+
+    .review-right p {
+        width: 100%; /* Ancho máximo */
+        padding: 0px;
+        padding-top: 20px;
+        margin: 0px;
+      }
  
   }
 
