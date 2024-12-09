@@ -67,9 +67,9 @@ const verticalImages = [
 ];
 
 // Parámetros iniciales
-const initialDelay = 0.5; // Tiempo antes de cargar la primera imagen
-const fadeInTime = 0.8; // Duración de la transición de fade-in
-const fadeOutTime = 0.8; // Duración de la transición de fade-out
+const initialDelay = 0.8; // Tiempo antes de cargar la primera imagen
+const fadeInTime = 1; // Duración de la transición de fade-in
+const fadeOutTime = 1; // Duración de la transición de fade-out
 const holdTime = 5; // Tiempo que la imagen permanece visible antes de desaparecer
 const overlapTime = 0; // Tiempo en segundos de solapamiento entre fade-out y fade-in
 
@@ -126,6 +126,8 @@ function startCycle() {
 
     // Paso 1: Imagen en container 1
     const image1 = getRandomImage(horizontalImages);
+    setTimeout(() => {
+    }, 500); 
     showImage(container1, image1);
 
     setTimeout(() => {
