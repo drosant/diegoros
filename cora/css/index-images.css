@@ -109,12 +109,18 @@
         top: 66%;
         height: 50%;
         left: 30%; 
+        margin-bottom: 30px;
         
     }
     #img-container-4{
         top: 41%;
         height: 50%;
         left: 70%;
+        margin-bottom: 30px;
+    }
+
+    #img-container-1{
+        margin-bottom: 30px;
     }
 
 }
