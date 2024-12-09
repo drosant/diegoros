@@ -1,3 +1,14 @@
+function setViewportHeight() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// Llama a la función al cargar la página
+setViewportHeight();
+
+// Asegúrate de actualizar cuando la pantalla cambia de tamaño
+window.addEventListener('resize', setViewportHeight);
+
 // Arrays de imágenes disponibles
 const horizontalImages = [
     "images/index/horizontal/viaje-acantilado.webp",
