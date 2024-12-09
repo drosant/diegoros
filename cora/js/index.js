@@ -67,7 +67,7 @@ const verticalImages = [
 ];
 
 // Parámetros iniciales
-const initialDelay = 1.5; // Tiempo antes de cargar la primera imagen
+const initialDelay = 1; // Tiempo antes de cargar la primera imagen
 const fadeInTime = 1; // Duración de la transición de fade-in
 const fadeOutTime = 1; // Duración de la transición de fade-out
 const holdTime = 5; // Tiempo que la imagen permanece visible antes de desaparecer
