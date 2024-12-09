@@ -27,8 +27,9 @@ p{
 
 #manifest {
     text-transform: none;
+    font-size: 1.6em;
     letter-spacing: 0.05em;
-    width: 50%;
+    width: 100%;
     text-align: left;
 }
 
@@ -107,10 +108,9 @@ main::before {
     align-items: flex-start;
     padding: 30px;
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
     margin-left: auto;
     width: 100%;
-    z-index: 3;
 }
 
 /* Sección 2 - Estructura de dos lados */
