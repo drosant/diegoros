@@ -153,7 +153,7 @@ function startCycle() {
                         hideImage(container4);
 
                         // Reiniciar el ciclo con solapamiento
-                        setTimeout(startCycle, overlapTime * 1000);
+                        setTimeout(startCycle, fadeOutTime);
                     }, holdTime * 1000 - overlapTime * 1000);
                 }, fadeInTime * 1000 - overlapTime * 1000);
             }, holdTime * 1000 - overlapTime * 1000);
