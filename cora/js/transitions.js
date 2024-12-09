@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
     const transitionDuration = 500; // Duración de la transición en milisegundos
 

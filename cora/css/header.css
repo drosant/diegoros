@@ -1,3 +1,7 @@
+:root {
+    --vh: 100vh; /* Valor inicial de la altura del viewport */
+}
+
 /* Estilos del header */
 header {
     display: flex;

@@ -89,7 +89,7 @@ main::before {
 }
 
 #section-1 {
-    height: 100vh;
+    height: calc(var(--vh) * 1);
     width: 100%;
 }
 
