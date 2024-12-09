@@ -124,3 +124,15 @@ nav ul li a {
         font-size: 15px; /* Reduce el tamaño del logo */
     }
 }
+
+
+@media screen and (max-width: 400px) {
+    nav ul {
+        gap: 15px; /* Reduce el espacio entre elementos */
+    }
+    nav ul li a {
+        font-size: 10px; /* Reduce el tamaño de la fuente */
+        letter-spacing: 0.2em; /* Reduce el espaciado entre letras */
+    }
+
+}
