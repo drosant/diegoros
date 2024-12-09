@@ -94,7 +94,7 @@ form {
     align-items: flex-start; /* Alinea los elementos en la parte superior */
     color: #333; /* Color del texto */
     padding-top: 20px;
-    padding-bottom: 90px;
+    padding-bottom: 30px;
   }
 
   label{
@@ -140,11 +140,17 @@ button{
     text-decoration: underline; /* Subrayado */
     color: inherit; /* Usa el color de texto del diseño actual */
     cursor: pointer; /* Muestra el puntero de clic */
-
 }
 
-
-
+.success-message{
+    display: none;
+    font-size: 1em;
+    font-family: 'CormorantRegular', Arial, sans-serif;
+    font-weight: normal;
+    color: #e6866d;
+    text-align: left;
+    padding-top: 30px;
+}
 
 @media screen and (max-width: 1200px) {
     form{
