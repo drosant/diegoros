@@ -4,6 +4,34 @@
     box-sizing: border-box;
 }
 
+/* Eliminar el fondo y aplicar estilos personalizados al autocompletar */
+input:-webkit-autofill {
+    background-color: transparent !important; /* Fondo transparente */
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important; /* Fondo transparente */
+    -webkit-text-fill-color: inherit !important; /* Hereda el color del texto */
+    font-family: 'CormorantRegular' !important; /* Hereda la fuente del formulario */
+    font-size: 1em !important; /* Hereda el tamaño de la fuente */
+    transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s; /* Previene parpadeos */
+}
+
+/* Compatibilidad con otros navegadores */
+input:-moz-autofill {
+    background-color: transparent !important;
+    -moz-box-shadow: 0 0 0px 1000px transparent inset !important;
+    color: inherit !important; /* Hereda el color del texto */
+    font-family: 'CormorantRegular' !important; /* Hereda la fuente del formulario */
+    font-size: 1em !important; /* Hereda el tamaño de la fuente */
+}
+
+input:-ms-autofill {
+    background-color: transparent !important;
+    -ms-box-shadow: 0 0 0px 1000px transparent inset !important;
+    color: inherit !important; /* Hereda el color del texto */
+    font-family: 'CormorantRegular' !important; /* Hereda la fuente del formulario */
+    font-size: 1em !important; /* Hereda el tamaño de la fuente */
+}
+
+
 html, body {
     height: 100%;
     overflow-x: hidden;
@@ -32,7 +60,7 @@ section {
     padding-top: 145px;
     padding-right: 30px;
     padding-left: 12px;
-    height: auto;
+    min-height: calc(100vh - 135px);
     width: 66.67%; /* La sección ocupa el 66% del ancho del main */
     margin-left: auto; /* Desplaza la sección hacia la derecha */
     display: flex; /* Flexbox en la sección para alinear los hijos */
@@ -61,6 +89,7 @@ p{
 }
 
 form {
+    font-family: 'CormorantRegular', Arial, sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -146,7 +175,7 @@ button{
     display: none;
     font-size: 1em;
     font-family: 'CormorantRegular', Arial, sans-serif;
-    font-weight: normal;
+    font-weight: bold;
     color: #e6866d;
     text-align: left;
     padding-top: 30px;
