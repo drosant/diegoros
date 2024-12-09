@@ -6,7 +6,6 @@
 
 html, body {
     height: 100%;
-    width: 100%;
     overflow-x: hidden;
     overflow-y: auto;
     background-color: #efefef;
@@ -59,7 +58,6 @@ p{
     width: 100%; /* Ocupa todo el ancho disponible */
     margin: 0;
     text-align: left; /* Justifica el texto a la izquierda */
-    padding-bottom: 30px;
 }
 
 form {
@@ -67,6 +65,7 @@ form {
     flex-direction: row;
     justify-content: start;
     width: 100%;
+    padding-top: 50px;
     
 }
 
@@ -118,25 +117,6 @@ form {
     outline: none;
   }
 
-  input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
-    box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
-    -webkit-text-fill-color: inherit !important; /* Asegura que el color del texto se mantenga */
-    background-color: transparent !important;
-    transition: background-color 5000s ease-in-out 0s; /* Solución para Chrome */
-}
-
-input:-moz-autofill {
-    box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
-    background-color: transparent !important;
-    color: inherit !important;
-}
-
-input:-ms-autofill {
-    box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
-    background-color: transparent !important;
-    color: inherit !important;
-}
 
 .form-section{
     width: 60%;
@@ -160,7 +140,6 @@ button{
     text-decoration: underline; /* Subrayado */
     color: inherit; /* Usa el color de texto del diseño actual */
     cursor: pointer; /* Muestra el puntero de clic */
-    padding: 0; /* Elimina cualquier padding */
 
 }
 
