@@ -26,9 +26,9 @@
 /* Estilos generales para los contenedores */
 #img-container-1 {
     position: absolute;
-    width: 50%; /* O el tamaño que hayas definido */
+    width: 50%; 
     aspect-ratio: 12 / 8;
-    background-color: transparent; /* Para que no esté oculto */
+    background-color: transparent; 
     background-size: cover;
     background-position: center;
     bottom: 60px;
