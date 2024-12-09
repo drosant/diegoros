@@ -79,8 +79,19 @@ function getRandomImage(images) {
     return images[index];
 }
 
+function preloadImage(url) {
+    return new Promise((resolve) => {
+        const img = new Image();
+        img.src = url;
+        img.onload = () => resolve(url); // Resolver la promesa cuando la imagen esté cargada
+    });
+}
+
 // Función para mostrar una imagen con transición
-function showImage(container, imageUrl) {
+async function showImage(container, imageUrl) {
+    // Esperar a que la imagen se precargue
+    await preloadImage(imageUrl);
+
     container.style.backgroundImage = `url(${imageUrl})`;
     container.style.backgroundSize = "cover";
     container.style.backgroundPosition = "center";
@@ -106,7 +117,7 @@ function hideImage(container) {
     }, fadeOutTime * 1000);
 }
 
-// Función para manejar el ciclo con solapamiento
+// Función para manejar el ciclo con solapamiento (sin cambios mayores)
 function startCycle() {
     const container1 = document.getElementById("img-container-1");
     const container2 = document.getElementById("img-container-2");
