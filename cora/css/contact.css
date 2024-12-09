@@ -98,6 +98,34 @@ form {
     
 }
 
+textarea {
+    font-family: 'CormorantRegular', Arial, sans-serif;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 20px; /* Altura inicial */
+    padding: 0px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 0px; /* Bordes redondeados */
+    font-size: 1em; /* Tamaño de fuente consistente */
+    resize: none; /* Permite redimensionar solo verticalmente */
+    box-shadow: none;
+    background-color: transparent; /* Fondo transparente */
+    margin-top: 8px;
+}
+
+/* Estilo del textarea cuando está en foco */
+textarea:focus {
+    border-color: transparent; /* Cambia el color del borde al enfocar */
+    outline: none; /* Elimina el contorno predeterminado */
+    box-shadow: none;
+}
+
+/* Estilo de la línea fina */
+.fine-line {
+    margin-top: 10px;
+    height: 1px;
+    background-color: #ddd;
+}
+
 .separator {
     height: 1px; /* Define altura explícita */
     background-color: #333; /* Define color */
