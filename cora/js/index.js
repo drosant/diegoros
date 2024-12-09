@@ -80,10 +80,14 @@ function getRandomImage(images) {
 }
 
 function preloadImage(url) {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
         const img = new Image();
         img.src = url;
         img.onload = () => resolve(url); // Resolver la promesa cuando la imagen esté cargada
+        img.onerror = () => {
+            console.error(`Error loading image: ${url}`);
+            reject(url); // Rechazar la promesa si hay error
+        };
     });
 }
 
