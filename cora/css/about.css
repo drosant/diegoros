@@ -60,6 +60,8 @@ p{
     text-align: left; /* Justifica el texto a la izquierda */
 }
 
+
+
 .separator {
     height: 1px; /* Define altura explícita */
     background-color: #333; /* Define color */
@@ -81,14 +83,27 @@ p{
     padding-bottom: 60px;
   }
 
-  .quote{
+.quote{
     font-size: 1em;
     text-transform: none;
     letter-spacing: 0.1em;
     text-align: right;
     padding-bottom: 10px;
     padding-right: 40px;
+    padding-top: 10px;
     font-weight: normal;
+}
+
+.entry-right a{
+    font-size: 0.9em;
+    font-family: 'TTTravelsMedium', Arial, sans-serif;
+    letter-spacing: 0.1em;
+    font-weight: bold; /* Negrita */
+    text-decoration: underline; /* Subrayado */
+    color: inherit; /* Usa el color de texto del diseño actual */
+    padding-left: 30px;
+    padding-top: 60px;
+    text-align: right;
 }
 
 .underquote{
@@ -97,12 +112,10 @@ p{
     padding-left: 30px;
     max-width: 60%;
 }
-
-  
   
 .entry-left {
-flex: 1; /* Ocupa una parte del espacio */
-max-width: 80%; /* Ancho máximo */
+    flex: 1; /* Ocupa una parte del espacio */
+    max-width: 80%; /* Ancho máximo */
 }
 
 .entry-left img {
@@ -115,8 +128,11 @@ object-fit: contain; /* Se asegura de que la imagen sea visible completa */
 
   
 .entry-right {
-flex: 1.2; /* Ocupa el doble de espacio que la izquierda */
-max-width: 90%; /* Ancho máximo */
+    flex: 1.2; /* Ocupa el doble de espacio que la izquierda */
+    display: flex;
+    flex-direction: column;
+    max-width: 90%; /* Ancho máximo */
+    align-items: stretch;
 }
 
 .entry-right p {
