@@ -65,6 +65,10 @@ main {
     position: relative;
 }
 
+.underline{
+    text-decoration: underline;
+}
+
 
 /* Aplica el degradado en la parte superior del contenedor */
 main::before {
