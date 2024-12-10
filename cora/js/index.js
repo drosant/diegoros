@@ -70,7 +70,7 @@ const verticalImages = [
 const initialDelay = 1; // Tiempo antes de cargar la primera imagen
 const fadeInTime = 1; // Duración de la transición de fade-in
 const fadeOutTime = 1; // Duración de la transición de fade-out
-const holdTime = 5; // Tiempo que la imagen permanece visible antes de desaparecer
+const holdTime = 3; // Tiempo que la imagen permanece visible antes de desaparecer
 const overlapTime = 0; // Tiempo en segundos de solapamiento entre fade-out y fade-in
 
 // Función para seleccionar una imagen aleatoria de un array

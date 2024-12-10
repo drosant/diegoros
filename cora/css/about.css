@@ -123,7 +123,9 @@ height: auto; /* Mantiene la proporción */
 object-fit: contain; /* Se asegura de que la imagen sea visible completa */
 }
   
-
+.italic {
+    font-style: italic; /* Aplica estilo cursiva */
+}
   
 .entry-right {
     flex: 1.2; /* Ocupa el doble de espacio que la izquierda */
