@@ -137,6 +137,10 @@ p{
   }
 
   @media screen and (max-width: 600px) {
+    p{
+        font-size: 1em;
+    }
+
     .review{
         flex-direction: column;
         width: 100%;
