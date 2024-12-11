@@ -119,13 +119,6 @@ textarea:focus {
     box-shadow: none;
 }
 
-/* Estilo de la línea fina */
-.fine-line {
-    margin-top: 10px;
-    height: 1px;
-    background-color: #ddd;
-}
-
 .separator {
     height: 1px; /* Define altura explícita */
     background-color: #333; /* Define color */
