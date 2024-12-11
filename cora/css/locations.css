@@ -17,6 +17,19 @@ main{
     padding-left: 30px;
 }
 
+/* Aplica el degradado en la parte superior del contenedor */
+main::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 13%; /* Ajusta la altura para que el desvanecimiento sea sutil */
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #efefef 100%);
+    pointer-events: none;
+    z-index: 3;
+}
+
 h2{
     padding-top: 145px;
     width: 66.67%; /* La sección ocupa el 66% del ancho del main */
