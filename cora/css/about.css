@@ -110,6 +110,15 @@ p{
     padding-left: 30px;
     max-width: 60%;
 }
+
+div .image-container {
+    display: flex;
+    aspect-ratio: 4/1; /* Relación de aspecto 2:1 */;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}
   
 .entry-left {
     flex: 1; /* Ocupa una parte del espacio */
@@ -118,9 +127,10 @@ p{
 
 .entry-left img {
 position: relative; /* Cambia a relativo para que la imagen se vea */
-width: 95%; /* Imagen ocupa todo el ancho disponible */
+width: 100%; /* Imagen ocupa todo el ancho disponible */
 height: auto; /* Mantiene la proporción */
-object-fit: contain; /* Se asegura de que la imagen sea visible completa */
+object-fit: cover; /* Se asegura de que la imagen sea visible completa */
+opacity: 1;
 }
   
 .italic {
