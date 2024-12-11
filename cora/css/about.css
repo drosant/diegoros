@@ -113,7 +113,7 @@ p{
 
 div .image-container {
     display: flex;
-    aspect-ratio: 4/1; /* Relación de aspecto 2:1 */;
+    aspect-ratio: 1/1.2; /* Relación de aspecto 2:1 */;
     width: 100%;
     justify-content: center;
     align-items: center;
