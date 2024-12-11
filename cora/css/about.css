@@ -136,24 +136,27 @@ object-fit: contain; /* Se asegura de que la imagen sea visible completa */
 }
 
 .entry-right p {
-text-align: left;
-width: 90%;
-margin-left: 30px;
+    text-align: left;
+    width: 90%;
+    margin-left: 30px;
 }
 
 @media screen and (max-width: 1200px) {
 .entry-left img {
 
     width: 100%; /* Imagen ocupa todo el ancho disponible */
-
 }
-}
-
-@media screen and (max-width: 900px) {
 
 h2{
     font-size: 1.3em; 
 }
+
+p{
+    font-size: 1em;
+}
+
+@media screen and (max-width: 900px) {
+
 
 section{
     width: 100%; /* La sección ocupa el 66% del ancho del main */
@@ -176,6 +179,14 @@ section{
 
 @media screen and (max-width: 600px) {
 
+h2{
+    font-size: 1.2em; 
+}
+
+p{
+    font-size: 0.9em;
+}
+
 .entry{
     flex-direction: column;
     width: 100%;
@@ -196,7 +207,7 @@ section{
 }
 
 .underquote{
-    font-size: 1.4em;
+    font-size: 1.2em;
     padding-top: 30px;
     padding-left: 0px;
     max-width: 100%;

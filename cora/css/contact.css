@@ -210,6 +210,15 @@ button{
 }
 
 @media screen and (max-width: 1200px) {
+    h2{
+        font-size: 1.3em; 
+    }
+    
+    p{
+        font-size: 1em;
+    }
+
+
     form{
         flex-direction: column;
     }
@@ -230,9 +239,6 @@ button{
 
 @media screen and (max-width: 900px) {
 
-    h2{
-        font-size: 1.3em; 
-    }
 
     section{
         width: 100%; /* La sección ocupa el 66% del ancho del main */
@@ -264,6 +270,14 @@ button{
 }
 
 @media screen and (max-width: 600px) {
+
+h2{
+    font-size: 1.2em; 
+}
+
+p{
+    font-size: 0.9em;
+}
 
 .entry{
     flex-direction: column;
