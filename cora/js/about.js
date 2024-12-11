@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Aplica estilo al contenedor para las transiciones
     imageContainer.style.position = "relative";
     imageContainer.style.overflow = "hidden";
-    imageContainer.style.transition = "opacity 1s";
+    imageContainer.style.transition = "opacity 2s";
     imageContainer.style.opacity = 1;
 
     // Función para cambiar la imagen
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Restaura la opacidad para hacer visible la nueva imagen
             imageContainer.style.opacity = 1;
-        }, 1000); // La duración de la transición (1 segundo)
+        }, 2000); // La duración de la transición (1 segundo)
     }
 
     // Inicializa la primera imagen
