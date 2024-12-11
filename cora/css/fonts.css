@@ -20,6 +20,10 @@
     letter-spacing: 0.23em; /* Separación calculada: 52/300 */
 }
 
+.special{
+    font-weight: bold;
+}
+
 .medium {
     font-weight: 500;
     font-family: 'TTTravelsMedium'; /* Fuente para "Travel Studio" */
