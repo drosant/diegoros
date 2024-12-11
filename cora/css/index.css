@@ -106,7 +106,7 @@ main::before {
 
 /* Separador de secciones */
 #division {
-    background-color: #a0ccb9;;
+    background-color: #a0ccb9;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;

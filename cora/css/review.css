@@ -75,7 +75,7 @@ p{
 
 .separator {
     height: 1px; /* Define altura explícita */
-    background-color: #333; /* Define color */
+    background-color: #333333; /* Define color */
     width: 100%; /* Asegura que ocupa todo el ancho */
     display: block;
     padding-right: 100px;
