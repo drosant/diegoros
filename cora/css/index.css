@@ -39,7 +39,7 @@ h2 {
     letter-spacing: 0.5rem;
     font-weight: normal;
     text-transform: uppercase;
-    color: #b7ccc3; /* Color usado en ambas secciones */
+    color: #a0ccb9; /* Color usado en ambas secciones */
 }
 
 h3{
@@ -106,7 +106,7 @@ main::before {
 
 /* Separador de secciones */
 #division {
-    background-color: #b7ccc3;
+    background-color: #a0ccb9;;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -166,7 +166,7 @@ main::before {
 }
 
 #division-final{
-    background-color: #b7ccc3;
+    background-color: #a0ccb9;;
     width: 100%;
     text-align: center;
     display: flex;
