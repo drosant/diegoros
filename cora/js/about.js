@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const images = ["viaje-baile.jpg", "viaje-safari.jpg"];
     
     // Tiempo de permanencia en milisegundos
-    const displayTime = 3000; // 5 segundos
+    const displayTime = 4000; // 5 segundos
 
     // Selecciona el contenedor de la imagen
     const imageContainer = document.querySelector(".down .image-container");
