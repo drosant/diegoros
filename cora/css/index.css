@@ -78,11 +78,7 @@ main::before {
 }
 
 .black{
-    color: black;
-    font-family: 'CormorantRegular', Arial, sans-serif;
-    font-weight: bold;
-    width: 70%;
-    text-align: left;
+    color:#333;
 }
 
 #section-1 {
@@ -101,35 +97,41 @@ main::before {
 #division {
     background-color: #adc4b9;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
-    padding-top: 40px;
-    padding-bottom: 60px;
+    padding-top: 110px;
+    padding-bottom: 110px;
     width: 100%;
 }
 
 #division h2 {
-    font-family: 'TTTravelsBold';
-    font-weight: Bold;
-    font-size: 1.4em;
-    letter-spacing: 0.25em;
+    font-family: 'CormorantBold';
+    font-weight: bold;
+    font-size: clamp(1.7em, 2.3vw, 3.1em);
+    letter-spacing: 0.35em;
     width: 100%;
     text-align: left;
-    padding-left: 30px;
-    width: 33%;
+    padding-left: 50px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+#division .separator {
+    width: 62%;
+    margin-left: 50px;
 }
 
 #manifest {
-    width: 66%;
+    font-size: clamp(0.9em, 1.5vw, 2.5em);
+    font-family: 'CormorantMedium', Arial, sans-serif;
     text-transform: none;
-    font-size: 1.3em;
-    letter-spacing: 0.15em;
-    width: 100%;
+    letter-spacing: 0.05em;
+    width: 66%;
     text-align: left;
-    padding-left: 190px;
+    padding-left: 50px;
     padding-right: 30px;
-    padding-top: 10px;
+    padding-top: 30px;
     padding-bottom: 10px;
 }
 
@@ -142,16 +144,16 @@ main::before {
     gap: 30px;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-bottom: 60px;
-    padding-top: 60px;
+    padding-bottom: 90px;
+    padding-top: 90px;
 }
 
 #section-2 .left-side {
-    flex-basis: 50%;
+    flex-basis: 66%;
     height: auto;
     display: flex;
     justify-content: left;
-    padding-left: 30px;
+    padding-left: 50px;
     height: 100%;
     align-items: flex-start;
 }
@@ -160,7 +162,7 @@ main::before {
     width: 100%;
     height: auto; /* El contenedor tiene altura fija */
     position: relative;
-    overflow: hidden;
+    padding-right: 20px;
 }
 
 #image-container-section-2 img {
@@ -172,18 +174,34 @@ main::before {
 
 
 #section-2 .right-side {
-    flex-basis: 30%;
+    flex-basis: 33%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-right: 30px;
+    padding-right: 50px;
     /*padding-top: calc(65px + 30px); */
 }
 
+#section-2 .right-side h2 {
+    font-size: clamp(1.7em, 2.3vw, 3.1em);
+    letter-spacing: 0.35em;
+    width: 100%;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+#section-2 .right-side p {
+    font-size: clamp(0.9em, 1.5vw, 2.5em);
+    letter-spacing: 0.05em;
+    width: 100%;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
 #section-2 .right-side h2, #section-2 .right-side p {
-    width: 85%;
+    width: 100%;
     text-align: left;
 }
 
@@ -194,17 +212,18 @@ main::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
-    padding-top: 40px;
+    padding: 50px;
+    padding-top: 50px;
     padding-bottom: 60px;
 }
 
 #division-final h2{
     font-family: 'TTTravelsBold';
+    font-size: clamp(1em, 2.3vw, 3.1em);
+    color: #333;
     font-weight: Bold;
-    font-size: 1.4em;
     letter-spacing: 0.25em;
-    width: 70%;
+    width: 100%;
 }
 
 #division-final .column-container {
@@ -226,31 +245,20 @@ main::before {
 }
 
 #division-final p {
-    font-size: 1em;
-    width: 100%;
-    letter-spacing: 0.15em;
-    align-items: center;
-    text-align: justify;
+    font-size: clamp(0.9em, 1.5vw, 2.5em);
+    letter-spacing: 0.05em;
+    width: 80%;
+    align-items: left;
 }
 
 #division-final .column video{
-    width: 70%;
+    width: 100%;
     margin-left: auto;
 }
 
 /* Media query para pantallas más pequeñas */
   @media (max-width: 1400px) {
-    #section-2 .left-side {
-        flex-basis: 48%;
-    }
-    #section-2 .right-side {
-        flex-basis: 52%;
-        width: 70%;
-    } 
 
-    .separator {
-        width: 90%;
-    } 
     }
 
   @media (max-width:1200px){
@@ -259,19 +267,6 @@ main::before {
         justify-content: flex-start;
         align-items: flex-start;
     }
-
-    #division h2 {
-        padding-bottom: 30px;
-        width: 100%;
-    }
-
-    #manifest {
-        font-size: 1.4em;
-        letter-spacing: 0.15em;
-        width: 95%;
-        padding-left: 30px;
-    }
-
 
     #division-final .column-container {
 
@@ -298,89 +293,17 @@ main::before {
         padding-left: auto;
     }
 
-    #section-2 .right-side {
-        width: 100%;
-        padding-left: 30px;
-    } 
-
-    .separator {
-        width: 100%;
-    } 
-
-    #section-2 .right-side p {
-        width: 100%;
-        text-align: left;
-    }
-
-    #section-2{
-        flex-direction: column;
-        padding-top: 60px;
-        padding-bottom: 60px;
-        padding-right: 30px;
-    }
-    
   }
 
   @media (max-width: 900px){
-    #section-2 {
-        flex-direction: column; /* Cambia las columnas a orientación vertical */
-        width: 100%;
-        gap: 0px;
-        padding-right: 0px;
-      }
-    
-      #section-2 .left-side,
-      .right-side {
-        width: 100%; /* Asegura que ocupen todo el ancho */
-        padding-left: 30px;
-        padding-right: 30px;
-      }
-  
-      #section-2 .left-side{
-          padding-top: 0px;
-      }
-  
-      #section-2 .right-side{
-          padding-top: 30px;
-      }
-  
-      #image-container-section-2 {
-          width: 100%;
-  
-      }
 
-      #section-2 .right-side h2, #section-2 .right-side p {
-        width: 100%;
-        text-align: left;
-    }
-
-    #manifest {
-        font-size: 1.3em;
-        letter-spacing: 0.15em;
-        width: 100%;
-    }
 
   }
 
 
   @media (max-width: 600px) {
 
-    #section-2 .right-side h2, #section-2 .right-side p {
-        width: 100%;
-        text-align: left;
-    }
-    
-    #section-2 .right-side {
-      width: 100%; /* Asegura que ocupen todo el ancho */
-      padding-left: 0px;
-      padding-right: 0px;
-    }
 
-    #section-2 .left-side {
-        width: 100%; /* Asegura que ocupen todo el ancho */
-        padding-left: 0px;
-        padding-right: 0px;
-      }
 
     #division{
         padding-left: 20px;
@@ -392,16 +315,6 @@ main::before {
         padding-right: 40px;
     }
 
-    #section-2 {
-      padding-left: 40px;
-      padding-right: 40px;
-    }
-
-    #manifest{
-        font-size: 1.3em;
-        width: 100%;
-    }
-
     #division-final .column-container {
         flex-direction: column;
     }
@@ -411,17 +324,6 @@ main::before {
         width: 100%;
         padding-top: 30px;
         padding-left: auto;
-    }
-
-
-    .black{
-        padding-bottom: 30px;
-    }
-
-    #manifest {
-        font-size: 1.2em;
-        letter-spacing: 0.15em;
-        width: 100%;
     }
 
     #division-final .column p{

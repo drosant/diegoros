@@ -14,6 +14,18 @@
     src: url('../fonts/CormorantGaramond-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'CormorantBold';
+    src: url('../fonts/CormorantGaramond-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CormorantMedium';
+    src: url('../fonts/CormorantGaramond-Medium.ttf') format('truetype');
+}
+
 .bold {
     font-weight: bold;
     font-family: 'TTTravelsBold'; /* Fuente para "CORA" */

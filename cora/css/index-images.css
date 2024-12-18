@@ -32,7 +32,7 @@
     background-size: cover;
     background-position: center;
     bottom: 60px;
-    right: 30px;
+    right: 50px;
 }
 
 #img-container-2 {
@@ -41,7 +41,7 @@
     aspect-ratio: 12 / 8; /* Proporción de 12:8 */
     background-color: transparent; /* Fondo gris para visualizarlo */
     top: 95px; /* 30px desde el borde superior */
-    left: 30px; /* 30px desde el borde izquierdo */
+    left: 50px; /* 30px desde el borde izquierdo */
     z-index: 1;
 }
 
