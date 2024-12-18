@@ -230,6 +230,7 @@ main::before {
     width: 100%;
     letter-spacing: 0.15em;
     align-items: center;
+    text-align: justify;
 }
 
 #division-final .column video{
