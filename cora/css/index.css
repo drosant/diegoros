@@ -428,6 +428,7 @@ main::before {
         padding-top: 0px;
         padding-bottom: 0px;
         width: 100%;
+        text-align: left;
     }
     
 }
