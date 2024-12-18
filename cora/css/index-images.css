@@ -67,6 +67,11 @@
 }
 
 @media (max-width: 1200px){
+
+    #img-container-2{
+        top: 110px;
+    }
+
     #img-container-3{
         left: 20%
     }
@@ -119,6 +124,10 @@
 
     #img-container-1{
         margin-bottom: 40px;
+    }
+
+    #img-container-2{
+        top: 100px;
     }
 
 }

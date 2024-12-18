@@ -34,19 +34,18 @@ h2{
     padding-top: 145px;
     width: 66.67%; /* La sección ocupa el 66% del ancho del main */
     margin-left: auto; /* Desplaza la sección hacia la derecha */
-    font-size: 1.6em;
     letter-spacing: 0.5rem;
     font-family: 'CormorantRegular', Arial, sans-serif;
     font-weight: normal;
     text-transform: uppercase;
-    color:#a0ccb9;
+    color: #adc4b9;
     text-align: left;
     padding-bottom: 20px;
 }
 
-p{
+h4{
     font-family: 'CormorantRegular', Arial, sans-serif;
-    font-size: 1em;
+    font-weight: normal;
     color: #333333;
 }
 
@@ -68,7 +67,7 @@ section{
     width: 100%;
 }
 
-.section-1 p{
+.section-1 h4{
     width: 100%;
     max-width: 33.33%; /* Asegura que no exceda el 66.67% */
     width: 100%; /* Ocupa todo el ancho disponible */
@@ -85,14 +84,14 @@ section{
 }
 
 .section-1 img{
-    width: 70%;
+    width: 100%;
     height: auto;
     display: block;
 }
 
-.section-2 p{
+.section-2 h4{
     width: 100%;
-    max-width: 50%; /* Asegura que no exceda el 66.67% */
+    max-width: 33.33%; /* Asegura que no exceda el 66.67% */
     margin: 0;
     text-align: left; /* Justifica el texto a la izquierda */
     padding-left: 30px;
@@ -101,7 +100,7 @@ section{
 
 .section-2 .image-container{
     width: 100%;
-    max-width: 50%; /* Asegura que no exceda el 66.67% */
+    max-width: 60%; /* Asegura que no exceda el 66.67% */
     align-items: flex-start;
     background-color: transparent;
 }
@@ -115,14 +114,14 @@ section{
 
 .section-3 .grid {
     display: grid;
-    width: 80%;
-    grid-template-columns: 1fr 1.4fr 1fr 1.4fr; /* 4 columnas iguales */
-    gap: 20px; /* Espaciado entre elementos */
+    width: 92.66%;
+    grid-template-columns: 1fr 1.7fr 1fr 1.7fr; /* 4 columnas iguales */
+    gap: 67px; /* Espaciado entre elementos */
     align-items: center; /* Alinear elementos verticalmente */
     justify-items: stretch; /* Centrar contenido en cada celda */
 }
 
-.section-3 p{
+.section-3 h4{
     width: 100%; /* Ocupa todo el ancho disponible */
     margin: 0;
     text-align: left; /* Justifica el texto a la izquierda */
@@ -133,7 +132,7 @@ section{
 
 .section-3 .image-container{
     width: 100%;
-    aspect-ratio: 1.3 / 1.9; /* Relación de aspecto 1:2 (ancho:alto) */
+    aspect-ratio: 1.0 / 1.5; /* Relación de aspecto 1:2 (ancho:alto) */
     align-items: flex-start;
     background-color: transparent;
 }
@@ -147,33 +146,10 @@ section{
 
 /* Media Queries para tamaños medianos */
 @media screen and (max-width: 1200px) {
-    h2{
-        font-size: 1.3em;
-    }
-
-    p{
-        font-size: 1em;
-    }
-    .section-1 img{
-        width: 85%;
-        height: auto;
-        display: block;
-    }
-
-    .section-2 p{
-        max-width: 40%; /* Asegura que no exceda el 66.67% */
-    }
     
-    .section-2 .image-container{
-        max-width: 60%; /* Asegura que no exceda el 66.67% */
-    }
 
     .section-3 .grid {
-        width: 100%;
-    }
-
-    .section-3 .grid {
-        grid-template-columns: 1fr 1.9fr 1fr 1.9fr; /* 4 columnas iguales */
+        grid-template-columns: 1fr 2.7fr 1fr 2.7fr; /* 4 columnas iguales */
     }
 }
 
@@ -181,36 +157,6 @@ section{
     main{
         padding-right: 40px;
         padding-left: 40px;
-    }
-}
-
-/* Media Queries para tamaños pequeños */
-@media screen and (max-width: 600px) {
-    h2{
-        font-size: 1.2em;
-        width: 100%; 
-    }
-    
-    p{
-        font-size: 1em;
-    }
-
-    .separator {
-
-        width: 100%; /* Asegura que ocupa todo el ancho */
-    }
-    
-    .section-1 img{
-        width: 100%;
-        padding-left: 20px;
-    }
-
-    .section-2 p{
-        max-width: 30%; /* Asegura que no exceda el 66.67% */
-    }
-    
-    .section-2 .image-container{
-        max-width: 70%; /* Asegura que no exceda el 66.67% */
     }
 
     .section-3 .grid {
@@ -243,7 +189,32 @@ section{
     .section-3 .grid > :nth-child(4) {
         grid-area: img2; /* Tercera celda (imagen de la fila 2) */
     }
+}
+
+/* Media Queries para tamaños pequeños */
+@media screen and (max-width: 600px) {
+    h2{
+        width: 100%; 
+    }
+
+    .separator {
+
+        width: 100%; /* Asegura que ocupa todo el ancho */
+    }
     
+    .section-1 img{
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .section-2 h4{
+        max-width: 30%; /* Asegura que no exceda el 66.67% */
+    }
+    
+    .section-2 .image-container{
+        max-width: 70%; /* Asegura que no exceda el 66.67% */
+    }
+
 
 }
 

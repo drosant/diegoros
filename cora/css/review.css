@@ -41,19 +41,27 @@ section {
 }
   
 h2 {
-    font-size: 1.6em;
     letter-spacing: 0.5rem;
     padding-bottom: 20px;
     font-family: 'CormorantRegular', Arial, sans-serif;
     font-weight: normal;
     text-transform: uppercase;
-    color: #e6866d;
+    color: #e6876e;
+    text-align: left;
+}
+
+h3 {
+    letter-spacing: 0.5rem;
+    padding-bottom: 20px;
+    font-family: 'CormorantRegular', Arial, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #333333;
     text-align: left;
 }
 
 p{
     font-family: 'CormorantRegular', Arial, sans-serif;
-    font-size: 1em;
     color: #333333;
     width: 100%; /* Ocupa todo el ancho disponible */
     margin: 0;
@@ -66,7 +74,7 @@ p{
 }
 
 .month{
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
 
 .type{
@@ -79,8 +87,8 @@ p{
     width: 100%; /* Asegura que ocupa todo el ancho */
     display: block;
     padding-right: 100px;
-    margin-bottom: 20px;
     margin-top: 1px;
+    margin-bottom: 30px;
 }
 
 .review {
@@ -91,7 +99,7 @@ p{
     align-items: flex-start; /* Alinea los elementos en la parte superior */
     color: #333; /* Color del texto */
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
   
   .review-left {
@@ -119,10 +127,6 @@ p{
 
   @media screen and (max-width: 900px) {
 
-    h2{
-        font-size: 1.3em; 
-    }
-
     section{
         width: 100%; /* La sección ocupa el 66% del ancho del main */
         padding-left: 40px;
@@ -137,9 +141,6 @@ p{
   }
 
   @media screen and (max-width: 600px) {
-    p{
-        font-size: 1em;
-    }
 
     .review{
         flex-direction: column;

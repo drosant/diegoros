@@ -41,19 +41,17 @@ section {
 }
   
 h2 {
-    font-size: 1.6em;
     letter-spacing: 0.5rem;
     padding-bottom: 20px;
     font-family: 'CormorantRegular', Arial, sans-serif;
     font-weight: normal;
     text-transform: uppercase;
-    color:#a0ccb9;
+    color:  #adc4b9;
     text-align: left;
 }
 
 p{
     font-family: 'CormorantRegular', Arial, sans-serif;
-    font-size: 1em;
     color: #333333;
     width: 100%; /* Ocupa todo el ancho disponible */
     margin: 0;
@@ -117,7 +115,7 @@ div .image-container {
     width: 100%;
     justify-content: center;
     align-items: center;
-    background-color: blue;
+    background-color:transparent;
 }
   
 .entry-left {
@@ -155,18 +153,9 @@ opacity: 1;
 .entry-left img {
 
     width: 100%; /* Imagen ocupa todo el ancho disponible */
-}
-
-h2{
-    font-size: 1.3em; 
-}
-
-p{
-    font-size: 1em;
-}
+}}
 
 @media screen and (max-width: 900px) {
-
 
 section{
     width: 100%; /* La sección ocupa el 66% del ancho del main */
@@ -188,14 +177,6 @@ section{
 }
 
 @media screen and (max-width: 600px) {
-
-h2{
-    font-size: 1.2em; 
-}
-
-p{
-    font-size: 1em;
-}
 
 .entry{
     flex-direction: column;

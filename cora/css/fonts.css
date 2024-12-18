@@ -29,3 +29,86 @@
     font-family: 'TTTravelsMedium'; /* Fuente para "Travel Studio" */
     letter-spacing: 0.23em; /* Aplicar el mismo spacing */
 }
+
+
+h2{
+
+    font-size: 1.4em; 
+}
+
+h3{
+
+    font-size: 1.4em; 
+}
+
+h4{
+
+    font-size: 0.9em; 
+}
+
+p{
+    font-size: 1em;
+}
+
+@media screen and (max-width: 1200px) {
+    h2{
+
+        font-size: 1.3em; 
+    }
+    
+    h3{
+    
+        font-size: 1.3em; 
+    }
+
+    h4{
+
+        font-size: 0.8em; 
+    }
+    
+    p{
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    h2{
+
+        font-size: 1.2em; 
+    }
+    
+    h3{
+    
+        font-size: 1.2em; 
+    }
+
+    h4{
+
+        font-size: 0.8em; 
+    }
+    
+    p{
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h2{
+
+        font-size: 1.1em; 
+    }
+    
+    h3{
+    
+        font-size: 1.1em; 
+    }
+
+    h4{
+
+        font-size: 0.8em; 
+    }
+    
+    p{
+        font-size: 0.9em;
+    }
+}

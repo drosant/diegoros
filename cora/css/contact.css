@@ -69,19 +69,17 @@ section {
 }
   
 h2 {
-    font-size: 1.6em;
     letter-spacing: 0.5rem;
     padding-bottom: 20px;
     font-family: 'CormorantRegular', Arial, sans-serif;
     font-weight: normal;
     text-transform: uppercase;
-    color:  #e6866d;
+    color: #e6876e;
     text-align: left;
 }
 
 p{
     font-family: 'CormorantRegular', Arial, sans-serif;
-    font-size: 1em;
     color: #333333;
     width: 100%; /* Ocupa todo el ancho disponible */
     margin: 0;
@@ -197,21 +195,12 @@ button{
     font-size: 1em;
     font-family: 'CormorantRegular', Arial, sans-serif;
     font-weight: bold;
-    color: #e6866d;
+    color:#e6876e;
     text-align: left;
     padding-top: 30px;
 }
 
 @media screen and (max-width: 1200px) {
-    h2{
-        font-size: 1.3em; 
-    }
-    
-    p{
-        font-size: 1em;
-    }
-
-
     form{
         flex-direction: column;
     }
@@ -231,8 +220,6 @@ button{
 }
 
 @media screen and (max-width: 900px) {
-
-
     section{
         width: 100%; /* La sección ocupa el 66% del ancho del main */
         padding-left: 40px;
@@ -263,14 +250,6 @@ button{
 }
 
 @media screen and (max-width: 600px) {
-
-h2{
-    font-size: 1.2em; 
-}
-
-p{
-    font-size: 1em;
-}
 
 .entry{
     flex-direction: column;
