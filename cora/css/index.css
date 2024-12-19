@@ -100,8 +100,8 @@ main::before {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-top: 110px;
-    padding-bottom: 110px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     width: 100%;
 }
 
@@ -214,7 +214,7 @@ main::before {
     align-items: center;
     padding: 50px;
     padding-top: 50px;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
 }
 
 #division-final h2{

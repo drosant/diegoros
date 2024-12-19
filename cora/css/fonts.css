@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: 'CormorantBold';
-    src: url('../fonts/CormorantGaramond-Bold.ttf') format('truetype');
+    src: url('../fonts/Cormorant-Bold.woff2') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
