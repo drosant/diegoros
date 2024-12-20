@@ -108,7 +108,7 @@ main::before {
 #division h2 {
     font-family: 'CormorantBold';
     font-weight: bold;
-    font-size: clamp(1.7em, 2.3vw, 3.1em);
+    font-size: clamp(1.2em, 2.3vw, 3.1em);
     letter-spacing: 0.35em;
     width: 100%;
     text-align: left;
@@ -127,11 +127,10 @@ main::before {
     font-family: 'CormorantMedium', Arial, sans-serif;
     text-transform: none;
     letter-spacing: 0.05em;
-    width: 66%;
+    width: 62%;
     text-align: left;
-    padding-left: 50px;
-    padding-right: 30px;
-    padding-top: 30px;
+    margin-left: 50px;
+    padding-top: 5px;
     padding-bottom: 10px;
 }
 
@@ -141,7 +140,7 @@ main::before {
     height: auto;
     flex-direction: row;
     width: 100%;
-    gap: 30px;
+    gap: 0px;
     justify-content: flex-start;
     align-items: flex-start;
     padding-bottom: 90px;
@@ -149,11 +148,11 @@ main::before {
 }
 
 #section-2 .left-side {
-    flex-basis: 66%;
+    flex-basis: 64%;
     height: auto;
     display: flex;
     justify-content: left;
-    padding-left: 50px;
+    margin-left: 50px;
     height: 100%;
     align-items: flex-start;
 }
@@ -162,7 +161,7 @@ main::before {
     width: 100%;
     height: auto; /* El contenedor tiene altura fija */
     position: relative;
-    padding-right: 20px;
+    padding-right: 0px;
 }
 
 #image-container-section-2 img {
@@ -174,18 +173,18 @@ main::before {
 
 
 #section-2 .right-side {
-    flex-basis: 33%;
+    flex-basis: 36%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     padding-right: 50px;
-    /*padding-top: calc(65px + 30px); */
+    padding-left: 50px;
 }
 
 #section-2 .right-side h2 {
-    font-size: clamp(1.7em, 2.3vw, 3.1em);
+    font-size: clamp(1.2em, 2.3vw, 3.1em);
     letter-spacing: 0.35em;
     width: 100%;
     text-align: left;
@@ -231,7 +230,7 @@ main::before {
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
-    gap: 0px;
+    gap: 50px;
 }
 
 #division-final .column {
@@ -245,9 +244,9 @@ main::before {
 }
 
 #division-final p {
-    font-size: clamp(0.9em, 1.5vw, 2.5em);
+    font-size: clamp(1em, 1.5vw, 2.5em);
     letter-spacing: 0.05em;
-    width: 80%;
+    width: 100%;
     align-items: left;
 }
 
@@ -257,81 +256,88 @@ main::before {
 }
 
 /* Media query para pantallas más pequeñas */
-  @media (max-width: 1400px) {
+@media (max-width: 1400px) {
+    #division {
+        padding-top: 80px;
+        padding-bottom: 80px;
 
     }
+}
 
   @media (max-width:1200px){
     #division{
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-    }
-
-    #division-final .column-container {
-
-        flex-direction: row;
-        width: 100%;
-        justify-content: center;
-    }
-    
-    #division-final .column {
-        flex: 1;
-        width: 100%;
-        text-align: left;
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-    }
-    
-    #division-final p {
-        width: 80%;
-    }
-    
-    #division-final .column video{
-        width: 100%;
-        padding-left: auto;
+        padding-top: 70px;
+        padding-bottom: 70px;
     }
 
   }
 
-  @media (max-width: 900px){
+  @media (max-width: 1000px){
 
+    #division{
+        padding: 40px;
+        margin: 0px;
+    }
+
+    #division h2{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #division .separator {
+        width: 100%;
+        margin-left: 0px;
+    }
+    #division p{
+        width: 100%;
+        text-align: left;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 0px;
+    }
+
+    #section-2{
+        width: 100%;
+        flex-direction: column;
+        padding: 0px;
+        margin: 0px;
+        padding: 40px;
+        gap: 40px;
+    }
+
+    #section-2 .left-side{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #section-2 .right-side{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #division-final{
+        padding: 40px;
+        margin: 0px;
+    }
+
+    #division-final .column-container{
+        flex-direction: column;
+        padding: 0px;
+        margin: 0px;
+        gap: 30px;
+    }
 
   }
 
 
   @media (max-width: 600px) {
 
-
-
-    #division{
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    #division-final{
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    #division-final .column-container {
-        flex-direction: column;
-    }
-    
-
-    #division-final .column video{
-        width: 100%;
-        padding-top: 30px;
-        padding-left: auto;
-    }
-
-    #division-final .column p{
-        padding-top: 0px;
-        padding-bottom: 0px;
-        width: 100%;
-        text-align: left;
-    }
     
 }
 
