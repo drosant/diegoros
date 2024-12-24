@@ -8,8 +8,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
     background-color: transparent; /* Fondo transparente */
     color: #333333; /* Letra gris oscuro */
     height: auto; /* Altura ajustable según contenido */
@@ -113,6 +113,7 @@ nav ul li a {
 
     nav{
         margin-right: 0px;
+        margin-left: 0px;
     }
 
     nav ul li a {
