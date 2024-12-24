@@ -50,11 +50,11 @@ h4{
 }
 
 .separator {
-    height: 1px; /* Define altura explícita */
+    border-top: 1px solid #333; /* Borde delgado exacto */
     background-color: #333; /* Define color */
     width: 66.67%; /* Asegura que ocupa todo el ancho */
     margin-bottom: 30px;
-    padding-bottom: 1px;
+    padding-bottom: 0px;
     padding-right: 30px;
     display: block; /* Asegura visibilidad */
     margin-left: auto;
