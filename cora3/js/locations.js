@@ -74,7 +74,6 @@ preloadImages();
 countries.forEach(country => {
     country.addEventListener('click', event => {
         event.preventDefault(); // Evita que el enlace sea clicable
-        console.log('Click prevenido para:', country.textContent);
     });
 });
 
