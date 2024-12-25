@@ -1,0 +1,126 @@
+/* Importar fuentes */
+@font-face {
+    font-family: 'TTTravelsBold';
+    src: url('../fonts/TTTravelsNextTrialBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TTTravelsMedium';
+    src: url('../fonts/TTTravelsNextTrialMedium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'CormorantRegular';
+    src: url('../fonts/CormorantGaramond-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'CormorantBold';
+    src: url('../fonts/Cormorant-Bold.woff2') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CormorantMedium';
+    src: url('../fonts/CormorantGaramond-Medium.ttf') format('truetype');
+}
+
+.bold {
+    font-weight: bold;
+    font-family: 'TTTravelsBold'; /* Fuente para "CORA" */
+    letter-spacing: 0.23em; /* Separación calculada: 52/300 */
+}
+
+.special{
+    font-weight: bold;
+}
+
+.medium {
+    font-weight: 500;
+    font-family: 'TTTravelsMedium'; /* Fuente para "Travel Studio" */
+    letter-spacing: 0.23em; /* Aplicar el mismo spacing */
+}
+
+
+h2{
+
+    font-size: 1.4em; 
+}
+
+h3{
+
+    font-size: 1.4em; 
+}
+
+h4{
+
+    font-size: 0.9em; 
+}
+
+p{
+    font-size: 1em;
+}
+
+@media screen and (max-width: 1200px) {
+    h2{
+
+        font-size: 1.3em; 
+    }
+    
+    h3{
+    
+        font-size: 1.3em; 
+    }
+
+    h4{
+
+        font-size: 0.8em; 
+    }
+    
+    p{
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    h2{
+
+        font-size: 1.2em; 
+    }
+    
+    h3{
+    
+        font-size: 1.2em; 
+    }
+
+    h4{
+
+        font-size: 0.8em; 
+    }
+    
+    p{
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h2{
+
+        font-size: 1.1em; 
+    }
+    
+    h3{
+    
+        font-size: 1.1em; 
+    }
+
+    h4{
+
+        font-size: 0.8em; 
+    }
+    
+    p{
+        font-size: 0.9em;
+    }
+}
