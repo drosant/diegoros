@@ -36,7 +36,7 @@ h2{
     font-family: 'CormorantRegular', Arial, sans-serif;
     font-weight: normal;
     text-transform: uppercase;
-    color: var(--green-text-color);
+    color: var(--salmon-color);
     text-align: left;
     padding-bottom: 20px;
 }
@@ -47,10 +47,14 @@ a{
     color: var(--text-color);
 }
 
+
+
 .countries {
     list-style: none;
     padding: 0;
     margin: 0;
+    column-count: 1; /* Divide la lista en dos columnas */
+    gap: 60px; /* Espaciado entre elementos */
 }
 
 .countries li a {
@@ -59,8 +63,14 @@ color: var(--text-color); /* Color del texto */
 }
 
 .countries li a:hover {
-    color: var(--green-text-color);
+    color: var(--text-color); /* Cambia a tu color preferido */
   }
+
+.countries a:hover, 
+.countries a.hover {
+    color: var(--text-color);
+    background-color: var(--green-color);
+}
 
 
 .separator {
@@ -74,12 +84,13 @@ color: var(--text-color); /* Color del texto */
     margin-left: auto;
 }
 
-section{
+.section-1{
+    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: row;
     padding-top: 145px;
-    padding-bottom: 60px;
-    width: 100%;
+    gap: 50px;
 }
 
 .left-column{
@@ -91,12 +102,13 @@ section{
     justify-content: flex-start;
 }
 .right-column{
-    width: 66.66%; /* Asegura que no exceda el 33.33% */
+    width: 72%; /* Asegura que no exceda el 33.33% */
+    height: 80%;
     padding-left: 0px;
+    position: relative;
 }
 
 .section-1 h4{
-    width: 100%;
     max-width: 33.33%; /* Asegura que no exceda el 66.67% */
     width: 100%; /* Ocupa todo el ancho disponible */
     margin: 0;
@@ -104,17 +116,35 @@ section{
 
 }
 .section-1 .image-container{
-
+    position: absolute;
     width: 100%;
-    align-items: flex-start;
-    background-color: transparent;
+    aspect-ratio: 15 / 9; /* Define la proporción de ancho a alto */
+    background-color:transparent;
+    top: 0px;
+    z-index: 1;
+
 }
 
 .section-1 img{
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%; /* La imagen ocupa la altura completa del contenedor */
+    object-fit: cover; /* La imagen llena el contenedor manteniendo su proporción */
 }
+
+.image-container-v1, .image-container-v2 {
+    position: absolute;
+    width: 38.5%;
+    aspect-ratio: 32 / 50; /* Proporción vertical 32:50 */
+    background-color: transparent; /* Gris claro */
+    min-height: 300px;
+    z-index: 2;
+}
+
+.image-container-v2 {
+    transform: translate(160%, 0%); /* Ajuste para centrar completamente */
+}
+
+
 
 .section-2 h4{
     width: 100%;
