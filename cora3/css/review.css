@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: var(--background-color);
+}
+
+/* Aplica el degradado en la parte superior del contenedor */
+main::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 13%; /* Ajusta la altura para que el desvanecimiento sea sutil */
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, var(--background-color) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+main {
+    display: flex; /* Flexbox para organizar los elementos */
+}
+  
+section {
+    padding-top: 145px;
+    padding-right: 50px;
+    padding-left: 12px;
+    height: auto;
+    width: 66.67%; /* La sección ocupa el 66% del ancho del main */
+    margin-left: auto; /* Desplaza la sección hacia la derecha */
+    display: flex; /* Flexbox en la sección para alinear los hijos */
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+}
+  
+h2 {
+    letter-spacing: 0.5rem;
+    padding-bottom: 20px;
+    font-family: 'CormorantRegular', Arial, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--salmon-color);
+    text-align: left;
+}
+
+h3 {
+    letter-spacing: 0.5rem;
+    padding-bottom: 20px;
+    font-family: 'CormorantRegular', Arial, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--text-color);
+    text-align: left;
+}
+
+p{
+    font-family: 'CormorantRegular', Arial, sans-serif;
+    color: var(--text-color);
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin: 0;
+    text-align: left; /* Justifica el texto a la izquierda */
+    line-height: 1.4;
+}
+
+.name{
+    color: var(--text-color);
+}
+
+.month{
+    padding-bottom: 30px;
+}
+
+.type{
+    padding-bottom: 30px;
+}
+
+.separator {
+    border-top: 1px solid var(--text-color); /* Borde delgado exacto */
+    background-color: var(--text-color); /* Define color */
+    width: 100%; /* Asegura que ocupa todo el ancho */
+    display: block;
+    padding-right: 100px;
+    margin-top: 1px;
+    margin-bottom: 30px;
+}
+
+.review {
+    width: 90%;
+    display: flex;
+    flex-direction: row; /* Asegura que las columnas estén en fila horizontal */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    color: var(--text-color); /* Color del texto */
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  
+  .review-left {
+    flex: 1; /* Ocupa una parte del espacio */
+    max-width: 80%; /* Ancho máximo */
+  }
+  
+  .review-left p {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin: 0;
+    text-align: left; /* Justifica el texto a la izquierda */
+  }
+  
+  .review-right {
+    flex: 1.2; /* Ocupa el doble de espacio que la izquierda */
+    max-width: 90%; /* Ancho máximo */
+  }
+  
+  .review-right p {
+    text-align: left;
+    width: 90%;
+    margin-left: 30px;
+  }
+
+
+  @media screen and (max-width: 900px) {
+
+    section{
+        width: 100%; /* La sección ocupa el 66% del ancho del main */
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .review-right p {
+        text-align: left;
+        width: 90%;
+        margin-left: 30px;
+      }
+
+  }
+
+  @media screen and (max-width: 600px) {
+
+    .review{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .review-left{
+        max-width: 100%;
+    }
+
+    .review-right{
+        max-width: 100%;
+    }
+
+    .review-right p {
+        width: 100%; /* Ancho máximo */
+        padding: 0px;
+        padding-top: 20px;
+        margin: 0px;
+      }
+ 
+  }
+

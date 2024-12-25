@@ -1,11 +1,17 @@
+:root {
+    --vh: 100vh; /* Valor inicial de la altura del viewport */
+}
+
 /* Estilos del header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
     background-color: transparent; /* Fondo transparente */
-    color: #333333; /* Letra gris oscuro */
+    color: var(--text-color); /* Letra gris oscuro */
     height: auto; /* Altura ajustable según contenido */
     position: fixed;
     top: 0;
@@ -16,8 +22,12 @@ header {
 /* Logo */
 .logo {
     flex-grow: 1;
-    font-size: 23px;
+    font-size: 1.3em;
     text-align: left; /* Alineado a la izquierda en pantallas grandes */
+}
+
+.active.salmon{
+    color: var(--salmon-color);
 }
 
 .logo a {
@@ -47,17 +57,17 @@ nav ul {
 }
 
 nav ul .active {
-    color: #b7ccc3;
+    color: var(--green-text-color);
     text-decoration: underline;
 }
 
 nav ul li a {
+    font-size: 0.75em;
     text-decoration: none;
-    color: #333333;
+    color: var(--text-color);
     font-weight: 550;
     font-family: 'TTTravelsMedium';
     letter-spacing: 0.23em;
-    font-size: 13px;
 }
 
 /* Media Queries para tamaños medianos */
@@ -85,24 +95,25 @@ nav ul li a {
     }
 
     nav ul li a {
-        font-size: 10px; /* Reduce el tamaño de la fuente */
+        font-size: 0.75em; /* Reduce el tamaño de la fuente */
         letter-spacing: 0.2em; /* Reduce el espaciado entre letras */
     }
 
 
     .logo {
-        font-size: 20px; /* Reduce el tamaño del logo */
+        font-size: 1.2em; /* Reduce el tamaño del logo */
     }
 }
 
 /* Media Queries para tamaños pequeños */
 @media screen and (max-width: 600px) {
     nav ul {
-        gap: 30px; /* Reduce el espacio entre elementos */
+        gap: 20px; /* Reduce el espacio entre elementos */
     }
 
     nav{
         margin-right: 0px;
+        margin-left: 0px;
     }
 
     nav ul li a {
@@ -111,6 +122,18 @@ nav ul li a {
     }
 
     .logo {
-        font-size: 15px; /* Reduce el tamaño del logo */
+        font-size: 1em; /* Reduce el tamaño del logo */
     }
+}
+
+
+@media screen and (max-width: 400px) {
+    nav ul {
+        gap: 15px; /* Reduce el espacio entre elementos */
+    }
+    nav ul li a {
+        font-size: 10px; /* Reduce el tamaño de la fuente */
+        letter-spacing: 0.2em; /* Reduce el espaciado entre letras */
+    }
+
 }

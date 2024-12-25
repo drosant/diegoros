@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: var(--background-color);
+}
+
+main{
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+/* Aplica el degradado en la parte superior del contenedor */
+main::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 13%; /* Ajusta la altura para que el desvanecimiento sea sutil */
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, var(--background-color) 100%);
+    pointer-events: none;
+    z-index: 3;
+}
+
+h2{
+    width: 100%; /* La sección ocupa el 66% del ancho del main */
+    letter-spacing: 0.5rem;
+    font-family: 'CormorantRegular', Arial, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--green-text-color);
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+a{
+    font-family: 'CormorantRegular', Arial, sans-serif;
+    font-weight: normal;
+    color: var(--text-color);
+}
+
+.countries {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.countries li a {
+text-decoration: none; /* Elimina subrayado */
+color: var(--text-color); /* Color del texto */
+}
+
+.countries li a:hover {
+    color: var(--green-text-color);
+  }
+
+
+.separator {
+    border-top: 1px solid var(--text-color); /* Borde delgado exacto */
+    background-color: var(--text-color); /* Define color */
+    width: 66.67%; /* Asegura que ocupa todo el ancho */
+    margin-bottom: 30px;
+    padding-bottom: 0px;
+    padding-right: 30px;
+    display: block; /* Asegura visibilidad */
+    margin-left: auto;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    padding-top: 145px;
+    padding-bottom: 60px;
+    width: 100%;
+}
+
+.left-column{
+    width: 33.33%; /* Asegura que no exceda el 33.33% */
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.right-column{
+    width: 66.66%; /* Asegura que no exceda el 33.33% */
+    padding-left: 0px;
+}
+
+.section-1 h4{
+    width: 100%;
+    max-width: 33.33%; /* Asegura que no exceda el 66.67% */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin: 0;
+    text-align: left; /* Justifica el texto a la izquierda */
+
+}
+.section-1 .image-container{
+
+    width: 100%;
+    align-items: flex-start;
+    background-color: transparent;
+}
+
+.section-1 img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.section-2 h4{
+    width: 100%;
+    max-width: 33.33%; /* Asegura que no exceda el 66.67% */
+    margin: 0;
+    text-align: left; /* Justifica el texto a la izquierda */
+    padding-left: 30px;
+
+}
+
+.section-2 .image-container{
+    width: 100%;
+    max-width: 60%; /* Asegura que no exceda el 66.67% */
+    align-items: flex-start;
+    background-color: transparent;
+}
+
+.section-2 img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.section-3 .grid {
+    display: grid;
+    width: 92.66%;
+    grid-template-columns: 1fr 1.7fr 1fr 1.7fr; /* 4 columnas iguales */
+    gap: 67px; /* Espaciado entre elementos */
+    align-items: center; /* Alinear elementos verticalmente */
+    justify-items: stretch; /* Centrar contenido en cada celda */
+}
+
+.section-3 h4{
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin: 0;
+    text-align: left; /* Justifica el texto a la izquierda */
+    justify-self: start; /* Posiciona el texto al extremo derecho de su celda */
+    align-self: start;
+
+}
+
+.section-3 .image-container{
+    width: 100%;
+    aspect-ratio: 1.0 / 1.5; /* Relación de aspecto 1:2 (ancho:alto) */
+    align-items: flex-start;
+    background-color: transparent;
+}
+
+.section-3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Media Queries para tamaños medianos */
+@media screen and (max-width: 1200px) {
+    
+
+    .section-3 .grid {
+        grid-template-columns: 1fr 2.7fr 1fr 2.7fr; /* 4 columnas iguales */
+    }
+}
+
+@media screen and (max-width: 900px){
+    main{
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .section-3 .grid {
+        width: 100%;
+    }
+
+    .section-3 .grid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr; /* Define dos columnas con diferentes anchos */
+        grid-template-rows: 1fr 1fr; /* Ajusta automáticamente la altura de las filas */
+        gap: 50px; /* Espaciado entre elementos */
+        grid-template-areas: 
+            "text1 img1"  /* Primera fila: texto y su imagen */
+            "img2 text2"; /* Segunda fila: imagen y su texto (swapeados) */;
+    }
+    
+    .section-3 .grid > :nth-child(1) {
+        grid-area: text1; /* Primera celda (texto de la fila 1) */
+    }
+    
+    .section-3 .grid > :nth-child(2) {
+        grid-area: img1; /* Segunda celda (imagen de la fila 1) */
+    }
+    
+    .section-3 .grid > :nth-child(3) {
+        grid-area: text2; /* Cuarta celda (texto de la fila 2) */
+    }
+    
+    .section-3 .grid > :nth-child(4) {
+        grid-area: img2; /* Tercera celda (imagen de la fila 2) */
+    }
+}
+
+/* Media Queries para tamaños pequeños */
+@media screen and (max-width: 600px) {
+    h2{
+        width: 100%; 
+    }
+
+    .separator {
+
+        width: 100%; /* Asegura que ocupa todo el ancho */
+    }
+    
+    .section-1 img{
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .section-2 h4{
+        max-width: 30%; /* Asegura que no exceda el 66.67% */
+    }
+    
+    .section-2 .image-container{
+        max-width: 70%; /* Asegura que no exceda el 66.67% */
+    }
+
+
+}
+
+
+@media screen and (max-width: 400px) {
+
+
+}
+
+
+

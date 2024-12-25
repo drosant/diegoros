@@ -1,103 +1,175 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const imageContainer = document.querySelector(".image_container");
+// Arrays de imágenes disponibles
+const horizontalImages = [
+    "images/index/horizontal/viaje-acantilado.webp",
+    "images/index/horizontal/viaje-arena.webp",
+    "images/index/horizontal/viaje-atardecer.webp",
+    "images/index/horizontal/viaje-canoa.webp",
+    "images/index/horizontal/viaje-catarata.webp",
+    "images/index/horizontal/viaje-duna.webp",
+    "images/index/horizontal/viaje-fiordos.webp",
+    "images/index/horizontal/viaje-hotel.webp",
+    "images/index/horizontal/viaje-medellin.webp",
+    "images/index/horizontal/viaje-playa.webp",
+    "images/index/horizontal/viaje-surf.webp",
+    "images/index/horizontal/viaje-toldo.webp"
+];
 
-    const imageList = [
-        "canoa-viaje.jpg",
-        "casa-viaje.jpg",
-        "duna-playa.jpg",
-        "flores-viaje.jpg",
-        "fruta-viaje.jpg",
-        "jirafa-viaje.jpg",
-        "korea-viaje.jpg",
-        "pajaros-viaje.jpg",
-        "palmeras-negro.jpg",
-        "palmeras-viaje.jpg",
-        "pared-viaje.jpg",
-        "pinos-viaje.jpg",
-        "piscina-viaje.jpg",
-        "pueblo-viaje.jpg",
-        "selva-viaje.jpg",
-        "tren-viaje.jpg",
-        "velero-viaje.jpg"
-    ];
+const verticalImages = [
+    "images/index/vertical/viaje-agua.webp",
+    "images/index/vertical/viaje-aguila.webp",
+    "images/index/vertical/viaje-alcoba.webp",
+    "images/index/vertical/viaje-arbol.webp",
+    "images/index/vertical/viaje-bahia.webp",
+    "images/index/vertical/viaje-ballena.webp",
+    "images/index/vertical/viaje-bruma.webp",
+    "images/index/vertical/viaje-caballo.webp",
+    "images/index/vertical/viaje-carpa.webp",
+    "images/index/vertical/viaje-cesped.webp",
+    "images/index/vertical/viaje-cielo.webp",
+    "images/index/vertical/viaje-ciudad.webp",
+    "images/index/vertical/viaje-colgante.webp",
+    "images/index/vertical/viaje-cueva.webp",
+    "images/index/vertical/viaje-cupula.webp",
+    "images/index/vertical/viaje-elefante.webp",
+    "images/index/vertical/viaje-escalada.webp",
+    "images/index/vertical/viaje-escalera.webp",
+    "images/index/vertical/viaje-espuma.webp",
+    "images/index/vertical/viaje-fachada.webp",
+    "images/index/vertical/viaje-fuente.webp",
+    "images/index/vertical/viaje-hielo.webp",
+    "images/index/vertical/viaje-hoja.webp",
+    "images/index/vertical/viaje-india.webp",
+    "images/index/vertical/viaje-isla.webp",
+    "images/index/vertical/viaje-ladera.webp",
+    "images/index/vertical/viaje-mar.webp",
+    "images/index/vertical/viaje-mediopunto.webp",
+    "images/index/vertical/viaje-mexico.webp",
+    "images/index/vertical/viaje-montana.webp",
+    "images/index/vertical/viaje-mujer.webp",
+    "images/index/vertical/viaje-natural.webp",
+    "images/index/vertical/viaje-nubes.webp",
+    "images/index/vertical/viaje-ola.webp",
+    "images/index/vertical/viaje-palmeras.webp",
+    "images/index/vertical/viaje-piedra.webp",
+    "images/index/vertical/viaje-piscina.webp",
+    "images/index/vertical/viaje-playa.webp",
+    "images/index/vertical/viaje-primavera.webp",
+    "images/index/vertical/viaje-rapido.webp",
+    "images/index/vertical/viaje-salto.webp",
+    "images/index/vertical/viaje-selva.webp",
+    "images/index/vertical/viaje-sol.webp",
+    "images/index/vertical/viaje-sombrillas.webp",
+    "images/index/vertical/viaje-tienda.webp",
+    "images/index/vertical/viaje-tumbonas.webp",
+    "images/index/vertical/viaje-valle.webp",
+    "images/index/vertical/viaje-verde.webp",
+    "images/index/vertical/viaje-vigo.webp"
+];
 
-    const initialDelay = 3000; // Tiempo inicial en milisegundos (3 segundos)
-    const imageFadeInTime = 1000; // Duración del fade-in en milisegundos (1 segundo)
-    const imageHoldTime = 14000; // Tiempo que la imagen se mantiene visible (5 segundos)
-    const imageInterval = 2000; // Intervalo entre imágenes en milisegundos (2 segundos)
+// Parámetros iniciales
+const initialDelay = 1; // Tiempo antes de cargar la primera imagen
+const fadeInTime = 1; // Duración de la transición de fade-in
+const fadeOutTime = 1; // Duración de la transición de fade-out
+const holdTime = 3; // Tiempo que la imagen permanece visible antes de desaparecer
+const overlapTime = 0; // Tiempo en segundos de solapamiento entre fade-out y fade-in
 
-    const minInitialSize = 100; // Tamaño mínimo en px
-    const maxInitialSize = 300; // Tamaño máximo en px
+// Función para seleccionar una imagen aleatoria de un array
+function getRandomImage(images) {
+    const index = Math.floor(Math.random() * images.length);
+    return images[index];
+}
 
-    const leftInit = 10;
-    const rightInit = 90;
-    const topInit = 25;
-    const bottomInit = 75;
+function preloadImage(url) {
+    return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = url;
+        img.onload = () => resolve(url); // Resolver la promesa cuando la imagen esté cargada
+        img.onerror = () => {
+            console.error(`Error loading image: ${url}`);
+            reject(url); // Rechazar la promesa si hay error
+        };
+    });
+}
 
-    const initXOffset = 0;
-    const initYOffset = 0;
+// Función para mostrar una imagen con transición
+async function showImage(container, imageUrl) {
+    // Esperar a que la imagen se precargue
+    await preloadImage(imageUrl);
 
-    let currentImageIndex = Math.floor(Math.random() * imageList.length); // Imagen inicial aleatoria
+    container.style.backgroundImage = `url(${imageUrl})`;
+    container.style.backgroundSize = "cover";
+    container.style.backgroundPosition = "center";
 
-    function getRandomInRange(min, max) {
-        return Math.random() * (max - min) + min;
-    }
+    // Aplicar la clase para el fade-in
+    container.classList.remove("fade-in");
+    void container.offsetWidth; // Forzar reflow para reiniciar la animación
+    container.classList.add("fade-in");
 
-    function getPositionWithOffset(min, max, offset) {
-        const basePosition = (min + max) / 2;
-        const offsetPosition = basePosition + (offset * (max - min)) / 100;
-        const range = (max - min) / 2;
+    // Ajustar la duración del fade-in
+    container.style.setProperty("--fade-in-time", `${fadeInTime}s`);
+}
 
-        const finalMin = Math.max(min, offsetPosition - range);
-        const finalMax = Math.min(max, offsetPosition + range);
+// Función para ocultar una imagen con transición
+function hideImage(container) {
+    container.classList.remove("fade-in");
+    container.style.animation = `fadeOut ${fadeOutTime}s ease-out forwards`;
 
-        return getRandomInRange(finalMin, finalMax);
-    }
-
-    function createAndShowImage() {
-        const img = document.createElement("img");
-        const currentImage = imageList[currentImageIndex]; // Obtener la imagen actual
-        img.src = `images/index/${currentImage}`;
-        img.alt = "Image";
-        img.style.width = `${getRandomInRange(minInitialSize, maxInitialSize)}px`;
-        img.style.opacity = "0"; // Inicialmente invisible
-        img.style.transition = `opacity ${imageFadeInTime / 1000}s ease-in-out`;
-        img.style.position = "absolute";
-        img.style.zIndex = "1";
-
-        const randomLeft = getPositionWithOffset(leftInit, rightInit, initXOffset);
-        const randomTop = getPositionWithOffset(topInit, bottomInit, initYOffset);
-        img.style.left = `${randomLeft}%`;
-        img.style.top = `${randomTop}%`;
-
-        // Añadir la imagen al contenedor
-        imageContainer.appendChild(img);
-
-        // Forzar al navegador a procesar el estado inicial antes de aplicar el fade-in
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-                img.style.opacity = "1"; // Cambiar a opacidad visible
-            });
-        });
-
-        setTimeout(() => {
-            img.style.opacity = "0"; // Desaparece con fade-out
-            setTimeout(() => {
-                img.remove(); // Elimina la imagen del DOM después de fade-out
-            }, imageFadeInTime);
-        }, imageHoldTime);
-
-        // Actualizar el índice de la imagen para la próxima
-        currentImageIndex = (currentImageIndex + 1) % imageList.length;
-    }
-
-    // Primer imagen después del delay inicial
+    // Eliminar la imagen del DOM al final del fade-out
     setTimeout(() => {
-        createAndShowImage();
+        container.style.backgroundImage = ""; // Eliminar la imagen
+        container.style.animation = ""; // Limpiar la animación
+    }, fadeOutTime * 1000);
+}
 
-        // Generar nuevas imágenes en intervalos definidos
-        setInterval(() => {
-            createAndShowImage();
-        }, imageInterval);
-    }, initialDelay);
+// Función para manejar el ciclo con solapamiento (sin cambios mayores)
+function startCycle() {
+    const container1 = document.getElementById("img-container-1");
+    const container2 = document.getElementById("img-container-2");
+    const container3 = document.getElementById("img-container-3");
+    const container4 = document.getElementById("img-container-4");
+
+    // Paso 1: Imagen en container 1
+    const image1 = getRandomImage(horizontalImages);
+    setTimeout(() => {
+    }, 500); 
+    showImage(container1, image1);
+
+    setTimeout(() => {
+        hideImage(container1);
+
+        // Paso 2: Imagen en container 2
+        setTimeout(() => {
+            const image2 = getRandomImage(horizontalImages);
+            showImage(container2, image2);
+
+            setTimeout(() => {
+                hideImage(container2);
+
+                // Paso 3: Imágenes en containers 3 y 4
+                setTimeout(() => {
+                    const image3 = getRandomImage(verticalImages);
+                    const image4 = getRandomImage(verticalImages);
+                    showImage(container3, image3);
+                    showImage(container4, image4);
+
+                    setTimeout(() => {
+                        hideImage(container3);
+                        hideImage(container4);
+
+                        // Reiniciar el ciclo con solapamiento
+                        setTimeout(startCycle, fadeOutTime * 1000);
+                    }, holdTime * 1000 - overlapTime * 1000);
+                }, fadeInTime * 1000 - overlapTime * 1000);
+            }, holdTime * 1000 - overlapTime * 1000);
+        }, fadeInTime * 1000 - overlapTime * 1000);
+    }, holdTime * 1000 - overlapTime * 1000);
+}
+
+// Iniciar el ciclo después de que el DOM esté cargado
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        startCycle();
+    }, initialDelay * 1000);
 });
+
+
