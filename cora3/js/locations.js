@@ -35,6 +35,28 @@ function handleHover(country) {
     lastHoveredCountry = country;
 }
 
+// Función para precargar imágenes
+function preloadImages() {
+    const imageUrls = [];
+
+    countries.forEach(country => {
+        const images = country.getAttribute('data-country').split(',');
+        const isHorizontal = country.classList.contains('horizontal');
+
+        if (isHorizontal) {
+            imageUrls.push(`images/locations/horizontal/${images[0]}.webp`);
+        } else {
+            imageUrls.push(`images/locations/vertical/${images[0]}.webp`);
+            imageUrls.push(`images/locations/vertical/${images[1]}.webp`);
+        }
+    });
+
+    imageUrls.forEach(url => {
+        const img = new Image();
+        img.src = url;
+    });
+}
+
 // Iteramos sobre cada enlace para añadir eventos
 countries.forEach(country => {
     country.addEventListener('mouseenter', () => handleHover(country));
@@ -44,3 +66,6 @@ countries.forEach(country => {
 if (countries.length > 0) {
     handleHover(countries[0]);
 }
+
+// Precargar todas las imágenes al cargar la página
+preloadImages();
