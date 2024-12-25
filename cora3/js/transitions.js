@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     const transitionDuration = 500; // Duración de la transición en milisegundos
 
@@ -7,6 +6,11 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // Función que maneja el fade out y luego el fade in
     function fadeOutAndIn(event) {
+        // Evitar la transición si el enlace pertenece a la lista de países
+        if (event.currentTarget.closest('.countries')) {
+            return; // No hacemos nada
+        }
+
         event.preventDefault(); // Evitar la navegación instantánea
         const targetUrl = event.currentTarget.href; // Capturamos la URL del enlace principal
 
@@ -37,6 +41,3 @@ window.addEventListener('pageshow', (event) => {
         window.location.reload();
     }
 });
-
-
-

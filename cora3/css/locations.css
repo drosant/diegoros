@@ -41,13 +41,12 @@ h2{
     padding-bottom: 20px;
 }
 
-a{
+.countries a{
     font-family: 'CormorantRegular', Arial, sans-serif;
     font-weight: normal;
     color: var(--text-color);
+    cursor: default; /* Esto fuerza el puntero estándar, desactivando la mano */
 }
-
-
 
 .countries {
     list-style: none;

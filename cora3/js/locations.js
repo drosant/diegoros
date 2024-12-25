@@ -69,3 +69,12 @@ if (countries.length > 0) {
 
 // Precargar todas las imágenes al cargar la página
 preloadImages();
+
+// Deshabilitar el clic en los enlaces
+countries.forEach(country => {
+    country.addEventListener('click', event => {
+        event.preventDefault(); // Evita que el enlace sea clicable
+        console.log('Click prevenido para:', country.textContent);
+    });
+});
+
