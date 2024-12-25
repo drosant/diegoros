@@ -1,16 +1,12 @@
 /* Footer */
-* {
-    user-select: none; /* Desactiva la selección de texto */
-  }
-
 footer {
-    background-color: #adc4b9;
+    background-color: #b7ccc3;
     font-family: 'TTTravelsMedium';
     color: #333333;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
+    padding: 30px;
     height: 105px;
     margin-top: 30px;
     font-size: 11px;
@@ -35,11 +31,6 @@ footer p, footer a {
 .bold {
     font-weight: 700;
 }
-
-.salmon-background{
-    background-color: #e6876e;
-}
-
 
 /* Estructura de columnas en el footer */
 .footer-left {
@@ -79,7 +70,7 @@ footer p, footer a {
 @media screen and (max-width: 600px) {
     footer {
         font-size: 9px; /* Reduce el tamaño de la fuente */
-        padding: 40px; /* Reduce el padding para mantener proporción */
+        padding: 20px; /* Reduce el padding para mantener proporción */
     }
 
     footer p, footer a {

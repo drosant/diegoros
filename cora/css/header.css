@@ -11,7 +11,7 @@ header {
     padding-left: 50px;
     padding-right: 50px;
     background-color: transparent; /* Fondo transparente */
-    color: #333333; /* Letra gris oscuro */
+    color: var(--text-color); /* Letra gris oscuro */
     height: auto; /* Altura ajustable según contenido */
     position: fixed;
     top: 0;
@@ -27,7 +27,7 @@ header {
 }
 
 .active.salmon{
-    color: #e6876e;
+    color: var(--salmon-color);
 }
 
 .logo a {
@@ -57,14 +57,14 @@ nav ul {
 }
 
 nav ul .active {
-    color: #adc4b9;
+    color: var(--green-text-color);
     text-decoration: underline;
 }
 
 nav ul li a {
     font-size: 0.75em;
     text-decoration: none;
-    color: #333333;
+    color: var(--text-color);
     font-weight: 550;
     font-family: 'TTTravelsMedium';
     letter-spacing: 0.23em;

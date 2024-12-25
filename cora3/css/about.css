@@ -1,3 +1,4 @@
+/* General */
 * {
     margin: 0;
     padding: 0;
@@ -5,10 +6,9 @@
 }
 
 html, body {
+    overflow: hidden; /* Evita scroll horizontal en pantallas grandes */
+    overflow-y: auto; /* Activa scroll vertical */
     height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
     background-color: #efefef;
 }
 
@@ -25,183 +25,218 @@ main::before {
     z-index: 1;
 }
 
-main {
-    display: flex; /* Flexbox para organizar los elementos */
-}
-  
+/* Sección principal */
 section {
-    padding-top: 145px;
-    padding-right: 50px;
-    padding-left: 12px;
-    height: auto;
-    width: 66.67%; /* La sección ocupa el 66% del ancho del main */
-    margin-left: auto; /* Desplaza la sección hacia la derecha */
-    display: flex; /* Flexbox en la sección para alinear los hijos */
-    flex-direction: column; /* Asegura que los elementos estén en columna */
+    height: auto; /* Permite que la sección crezca con el contenido */
+    /* height: calc(100vh - 135px); /* Altura fija para pantallas grandes */
+    width: 100vw;
+    display: flex;
+    padding-top: calc(65px + 30px);
+    overflow: hidden; /* Oculta contenido desbordado */
 }
-  
-h2 {
+
+.second-section{
+    padding-top: 0px;
+}
+
+/* Columna izquierda */
+.left-column {
+    flex: 1;
+    max-width: 33.33%; /* Inicialmente un tercio */
+    background-color: transparent;
+    transition: flex 0.5s ease, max-width 0.5s ease; /* Transición suave */
+}
+
+/* Columna derecha */
+.right-column {
+    flex: 2;
+    max-width: 66.67%; /* Inicialmente dos tercios */
+    background-color: transparent;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    overflow: visible; /* Permite contenido visible */
+    transition: flex 0.5s ease, max-width 0.5s ease; /* Transición suave */
+}
+
+/* Header dentro de la columna derecha */
+.right-column h2 {
+    font-size: 1.6em;
     letter-spacing: 0.5rem;
-    padding-bottom: 20px;
+    margin-bottom: 10px;
     font-family: 'CormorantRegular', Arial, sans-serif;
     font-weight: normal;
     text-transform: uppercase;
-    color:  #adc4b9;
+    color: #b7ccc3;
     text-align: left;
 }
 
-p{
+/* Párrafos */
+.right-column p {
     font-family: 'CormorantRegular', Arial, sans-serif;
+    font-size: 1em;
     color: #333333;
     width: 100%; /* Ocupa todo el ancho disponible */
     margin: 0;
     text-align: left; /* Justifica el texto a la izquierda */
+    line-height: 1.4;
 }
 
-.separator {
-    border-top: 1px solid #333; /* Borde delgado exacto */
-    background-color: #333; /* Define color */
-    width: 100%; /* Asegura que ocupa todo el ancho */
-    display: block;
-    padding-right: 100px;
-    margin-bottom: 20px;
-    margin-top: 1px;
+.inside {
+    width: 100%;
+    margin: 0;
+    text-align: left;
 }
 
-.entry {
-    width: 90%;
-    display: flex;
-    flex-direction: row; /* Asegura que las columnas estén en fila horizontal */
-    justify-content: space-between; /* Distribuye el espacio entre los elementos */
-    align-items: flex-start; /* Alinea los elementos en la parte superior */
-    color: #333; /* Color del texto */
-    padding-top: 20px;
-    padding-bottom: 60px;
-  }
-
-.quote{
-    font-size: 1em;
+.inside.mini{
+    font-size: 1.4em;
     text-transform: none;
     letter-spacing: 0.1em;
     text-align: right;
-    padding-bottom: 30px;
-    padding-right: 40px;
-    padding-top: 15px;
+    padding-bottom: 10px;
     font-weight: normal;
 }
 
-.entry-right a{
-    font-size: 0.9em;
-    font-family: 'TTTravelsMedium', Arial, sans-serif;
-    letter-spacing: 0.1em;
-    font-weight: bold; /* Negrita */
-    text-decoration: underline; /* Subrayado */
-    color: inherit; /* Usa el color de texto del diseño actual */
-    padding-left: 30px;
-    padding-top: 60px;
-    text-align: right;
-}
-
-.underquote{
+.inside.maxi{
     font-size: 1.4em;
-    padding-top: 30px;
-    padding-left: 30px;
-    max-width: 60%;
+
 }
 
-div .image-container {
+/* Separador */
+.separator {
+    height: 1px; /* Define altura explícita */
+    background-color: #333; /* Define color */
+    width: 100%; /* Asegura que ocupa todo el ancho */
+    margin: 20px 0; /* Espaciado superior e inferior */
+    padding-bottom: 1px;
+    display: block; /* Asegura visibilidad */
+}
+
+/* Contenedor para las columnas anidadas */
+.nested-columns {
     display: flex;
-    aspect-ratio: 1/1.2; /* Relación de aspecto 2:1 */;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    background-color:transparent;
-}
-  
-.entry-left {
-    flex: 1; /* Ocupa una parte del espacio */
-    max-width: 80%; /* Ancho máximo */
+    gap: 20px;
+    flex-wrap: wrap;
+    flex: 1;
+    width: 90%;
 }
 
-.entry-left img {
-position: relative; /* Cambia a relativo para que la imagen se vea */
-width: 100%; /* Imagen ocupa todo el ancho disponible */
-height: auto; /* Mantiene la proporción */
-object-fit: cover; /* Se asegura de que la imagen sea visible completa */
-opacity: 1;
+.nested-left {
+    flex: 1.8;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    background-color: transparent;
+    margin: 0;
 }
-  
-.italic {
-    font-style: italic; /* Aplica estilo cursiva */
+
+.nested-left img {
+    position: relative; /* Cambia a relativo para que la imagen se vea */
+    width: 100%; /* Imagen ocupa todo el ancho disponible */
+    height: auto; /* Mantiene la proporción */
+    object-fit: contain; /* Se asegura de que la imagen sea visible completa */
 }
-  
-.entry-right {
-    flex: 1.2; /* Ocupa el doble de espacio que la izquierda */
+
+/* Columna derecha anidada */
+.nested-right {
+    flex: 2.2;
     display: flex;
     flex-direction: column;
-    max-width: 90%; /* Ancho máximo */
-    align-items: stretch;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: transparent;
+    
 }
 
-.entry-right p {
-    text-align: left;
-    width: 90%;
-    margin-left: 30px;
-}
-
-@media screen and (max-width: 1200px) {
-.entry-left img {
-
-    width: 100%; /* Imagen ocupa todo el ancho disponible */
-}}
-
+/* Media Queries para pantallas medianas */
 @media screen and (max-width: 900px) {
-
-section{
-    width: 100%; /* La sección ocupa el 66% del ancho del main */
-    padding-left: 40px;
-    padding-right: 40px;
-}
-.entry-right p {
-    text-align: left;
-    width: 90%;
-    margin-left: 30px;
+    html, body {
+        overflow-y: auto; /* Activa scroll vertical */
     }
 
-.entry-left img {
+    section {
+        height: auto; /* Permite que la sección crezca con el contenido */
+    }
 
-    width: 100%; /* Imagen ocupa todo el ancho disponible */
+    .left-column {
+        flex: 0.5; /* Reduce progresivamente el tamaño del tercio izquierdo */
+        max-width: 20%; /* Limita su ancho a un 20% */
+    }
 
+    .right-column {
+        flex: 2.5; /* El contenido derecho gana espacio */
+        max-width: 80%;
+    }
+
+    .nested-columns {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
 }
 
-}
-
+/* Media Queries para pantallas pequeñas */
 @media screen and (max-width: 600px) {
+    html, body {
+        overflow-y: auto; /* Activa scroll vertical */
+    }
 
-.entry{
-    flex-direction: column;
-    width: 100%;
+    section {
+        flex-direction: column;
+        height: auto; /* Permite que la sección crezca con el contenido */
+    }
+
+    .left-column {
+        display: none; /* Oculta la columna izquierda */
+    }
+
+    .right-column {
+        flex: 1;
+        max-width: 100%; /* Ocupa todo el ancho */
+        padding-right: 40px;
+        padding-left: 40px;
+        padding-top: 10px;
+    }
+
+    .nested-columns {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nested-left {
+        width: 100%; /* Imagen ocupa todo el ancho */
+        background-color: transparent;
+    }
+
+    .nested-left img {
+        position: relative;
+        width: 100%; /* Imagen ocupa todo el ancho disponible */
+        height: auto; /* Mantiene la proporción */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .right-column p,
+    .right-column h2,
+    .separator {
+        width: 100%; /* Ocupan todo el ancho */
+        margin-left: 0px; /* Separación con el borde izquierdo */
+    }
+
+    .right-column p {
+        text-align: left; /* Texto alineado a la izquierda */
+        font-size: 1rem;
+    }
+
+    .right-column h2 {
+        text-align: left; /* Título alineado a la izquierda */
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+
+    .separator {
+        height: 1px;
+        background-color: #333;
+    }
 }
 
-.entry-left {
-    max-width: 100%; /* Ancho máximo */
-}
-
-.entry-right {
-    max-width: 100%; /* Ancho máximo */
-}
-.entry-right p{
-    width: 100%; /* Ancho máximo */
-    padding: 0px;
-    padding-top: 20px;
-    margin: 0px;
-}
-
-.underquote{
-    font-size: 1.2em;
-    padding-top: 30px;
-    padding-left: 0px;
-    max-width: 100%;
-}
-
-}

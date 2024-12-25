@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     const transitionDuration = 500; // Duración de la transición en milisegundos
 
@@ -30,13 +29,3 @@ document.addEventListener('DOMContentLoaded', function () {
         body.style.opacity = 1; // Recuperar opacidad gradualmente
     };
 });
-
-window.addEventListener('pageshow', (event) => {
-    if (event.persisted) {
-        // Si la página viene del caché, recarga la página.
-        window.location.reload();
-    }
-});
-
-
-

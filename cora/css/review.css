@@ -9,7 +9,7 @@ html, body {
     width: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    background-color: #efefef;
+    background-color: var(--background-color);
 }
 
 /* Aplica el degradado en la parte superior del contenedor */
@@ -20,7 +20,7 @@ main::before {
     left: 0;
     width: 100%;
     height: 13%; /* Ajusta la altura para que el desvanecimiento sea sutil */
-    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #efefef 100%);
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, var(--background-color) 100%);
     pointer-events: none;
     z-index: 1;
 }
@@ -46,7 +46,7 @@ h2 {
     font-family: 'CormorantRegular', Arial, sans-serif;
     font-weight: normal;
     text-transform: uppercase;
-    color: #e6876e;
+    color: var(--salmon-color);
     text-align: left;
 }
 
@@ -56,13 +56,13 @@ h3 {
     font-family: 'CormorantRegular', Arial, sans-serif;
     font-weight: normal;
     text-transform: uppercase;
-    color: #333333;
+    color: var(--text-color);
     text-align: left;
 }
 
 p{
     font-family: 'CormorantRegular', Arial, sans-serif;
-    color: #333333;
+    color: var(--text-color);
     width: 100%; /* Ocupa todo el ancho disponible */
     margin: 0;
     text-align: left; /* Justifica el texto a la izquierda */
@@ -70,7 +70,7 @@ p{
 }
 
 .name{
-    color: #333333;
+    color: var(--text-color);
 }
 
 .month{
@@ -82,8 +82,8 @@ p{
 }
 
 .separator {
-    border-top: 1px solid #333; /* Borde delgado exacto */
-    background-color: #333333; /* Define color */
+    border-top: 1px solid var(--text-color); /* Borde delgado exacto */
+    background-color: var(--text-color); /* Define color */
     width: 100%; /* Asegura que ocupa todo el ancho */
     display: block;
     padding-right: 100px;
@@ -97,7 +97,7 @@ p{
     flex-direction: row; /* Asegura que las columnas estén en fila horizontal */
     justify-content: space-between; /* Distribuye el espacio entre los elementos */
     align-items: flex-start; /* Alinea los elementos en la parte superior */
-    color: #333; /* Color del texto */
+    color: var(--text-color); /* Color del texto */
     padding-top: 20px;
     padding-bottom: 30px;
   }

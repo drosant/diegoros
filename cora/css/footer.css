@@ -4,9 +4,9 @@
   }
 
 footer {
-    background-color: #adc4b9;
+    background-color: var(--green-color);
     font-family: 'TTTravelsMedium';
-    color: #333333;
+    color: var(--text-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,7 +19,7 @@ footer {
 
 /* Estilos comunes para el texto en el footer */
 footer p, footer a {
-    color: #333333;
+    color: var(--text-color);
     font-size: 11px;
     letter-spacing: 0.23em;
     text-decoration: none;
@@ -37,7 +37,7 @@ footer p, footer a {
 }
 
 .salmon-background{
-    background-color: #e6876e;
+    background-color: var(--salmon-color);
 }
 
 
