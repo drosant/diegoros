@@ -47,6 +47,7 @@ h2{
     font-weight: normal;
     color: var(--text-color);
     cursor: default; /* Esto fuerza el puntero estándar, desactivando la mano */
+    padding: 0 2px; /* Espacio adicional a la izquierda y derecha */
 }
 
 .countries {
