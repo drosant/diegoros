@@ -36,9 +36,10 @@ h2{
     font-family: 'CormorantRegular', Arial, sans-serif;
     font-weight: normal;
     text-transform: uppercase;
-    color: var(--salmon-color);
+    color: var(--green-text-color);
     text-align: left;
-    padding-bottom: 20px;
+    padding-top: 50px;
+    padding-right: 80px;
 }
 
 .countries a{
