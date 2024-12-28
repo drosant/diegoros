@@ -218,7 +218,7 @@ main::before {
 
 #division-final h2{
     font-family: 'TTTravelsBold';
-    font-size: clamp(1em, 2.3vw, 3.1em);
+    font-size: clamp(1em, 2.3vw, 1.5em);
     color: var(--text-color);
     font-weight: Bold;
     letter-spacing: 0.25em;
@@ -230,7 +230,7 @@ main::before {
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
-    gap: 50px;
+    gap: 70px;
 }
 
 #division-final .column {
