@@ -117,7 +117,7 @@ main::before {
 .vertical-carousel-container {
     position: fixed;
     top: 0px;
-    left: 20%; /* Desplaza el carrusel un 20% desde el lado izquierdo de la pantalla */
+    left: 32%; /* Desplaza el carrusel un 20% desde el lado izquierdo de la pantalla */
     width: 33.33%; /* Un tercio del ancho de la pantalla */
     height: 100vh; /* Ocupa toda la altura de la pantalla */
     overflow: hidden;
