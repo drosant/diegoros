@@ -1,0 +1,404 @@
+/* Reseteo de márgenes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Activar scroll vertical */
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: var(--background-color);
+    scroll-snap-type: y mandatory; /* Activar snapping vertical */
+    scroll-behavior: smooth; /* Hacer el scroll suave */
+    height: 100%; /* Asegurar que el contenido ocupe toda la altura */
+    margin: 0; /* Elimina márgenes adicionales */
+}
+
+/* Aplicar CormorantRegular en los textos principales */
+p, h2 {
+    font-family: 'CormorantRegular', Arial, sans-serif;
+}
+
+p{
+    background-color: transparent;
+    letter-spacing: 0em;
+}
+
+h2 {
+    letter-spacing: 0.5rem;
+    font-weight: normal;
+    color: var(--green-text-color); /* Color usado en ambas secciones */
+}
+
+section {
+    height: auto;
+    min-height: 100vh; /* Cada sección ocupa toda la altura de la ventana */
+    scroll-snap-align: start; /* Alinea cada sección al inicio al hacer scroll */
+    width: 100%;
+    position: relative;
+    background-color: var(--background-color);
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.underline{
+    text-decoration: underline;
+}
+
+
+/* Aplica el degradado en la parte superior del contenedor */
+main::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 13%; /* Ajusta la altura para que el desvanecimiento sea sutil */
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, var(--background-color) 100%);
+    pointer-events: none;
+    z-index: 3;
+}
+
+.separator {
+    border-top: 1px solid var(--text-color); /* Borde delgado */
+    background-color: var(--text-color); /* Define color */
+    width: calc(100% - 100px); /* Reduce el ancho total en 100px (50px a cada lado) */
+    display: block; /* Asegura que se muestre como un bloque */
+    margin: 0 auto; /* Centra horizontalmente */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+.black{
+    color: var(--text-color);
+}
+
+#section-2 {
+    position: relative;
+    background-color: var(--background-color);
+}
+
+/* Contenedor de la imagen */
+.img2-container {
+    position: absolute;
+    left: 15%; /* Ajusta la posición horizontal */
+    top: 20%; /* Ajusta la posición vertical */
+    height: 70%; /* Altura proporcional */
+    width: auto; /* Mantén la proporción de la imagen */
+    z-index: 1; /* Nivel inferior para que esté detrás */
+}
+
+.img2-container img {
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen manteniendo proporciones */
+}
+
+/* Contenedor del cuadro verde */
+.s2-box {
+    position: absolute; /* Permite posicionamiento libre */
+    top: 35%; /* Ajusta la posición vertical */
+    left: 57%; /* Ajusta la posición horizontal */
+    transform: translateX(-50%); /* Centra horizontalmente respecto al punto de referencia */
+    display: flex;
+    flex-direction: column; /* Alinea el contenido en columna */
+    justify-content: flex-start; /* Alineación vertical */
+    align-items: flex-start; /* Alineación horizontal */
+    background-color: transparent;
+    max-width: 40%; /* Limita el ancho del cuadro */
+    text-align: left; /* Alineación del texto */
+    z-index: 2; /* Coloca el cuadro por encima de la imagen */
+}
+
+/* Título */
+#title-2 {
+    font-family: 'CormorantRegular', Arial, sans-serif;
+    font-size: 5em; /* Tamaño del texto */
+    color: var(--text-color);
+    letter-spacing: 0.13em;
+    line-height: 1em; /* Ajustar el espacio entre líneas */
+    mix-blend-mode: color-burn;
+}
+
+.salmon{
+    color: var(--salmon-color);
+}
+.green{
+    color: var(--green-color);
+}
+
+.boldie{
+    font-weight: bold;
+}
+/* Párrafo */
+.s2-box p {
+    font-family: 'CormorantRegular', serif; /* Tipografía consistente */
+    color: #333; /* Gris oscuro para buen contraste */
+    line-height: 1.5em; /* Espaciado entre líneas */
+    padding-top: 30px;
+    width: 70%;
+    
+}
+
+#section-3 {
+    position: relative;
+    background-color: var(--background-color);
+}
+
+
+/* Contenedor de la imagen */
+.img4-container {
+    position: absolute;
+    height: 70%; /* Altura proporcional */
+    left: 50%;
+    top: 24%;
+    width: auto; /* Mantén la proporción de la imagen */
+    z-index: 1; /* Nivel inferior para que esté detrás */
+}
+
+.img4-container img {
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen manteniendo proporciones */
+}
+/* Contenedor de la imagen */
+.img5-container {
+    position: absolute;
+    height: 65%; /* Altura proporcional */
+    left: 67%;
+    top: 18%;
+    width: auto; /* Mantén la proporción de la imagen */
+    z-index: 1; /* Nivel inferior para que esté detrás */
+}
+
+.img5-container img {
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen manteniendo proporciones */
+}
+
+/* Contenedor del cuadro verde */
+.s3-box {
+    position: absolute; /* Permite posicionamiento libre */
+    top: 3%; /* Ajusta la posición vertical */
+    left: 25%; /* Ajusta la posición horizontal */
+    transform: translateX(-50%); /* Centra horizontalmente respecto al punto de referencia */
+    display: flex;
+    flex-direction: column; /* Alinea el contenido en columna */
+    justify-content: flex-start; /* Alineación vertical */
+    align-items: flex-start; /* Alineación horizontal */
+    background-color:transparent;
+    max-width: 45%; /* Limita el ancho del cuadro */
+    text-align: left; /* Alineación del texto */
+    z-index: 2; /* Coloca el cuadro por encima de la imagen */
+    padding: 100px;
+}
+
+/* Título */
+#title-3 {
+    font-family: 'CormorantRegular', serif; /* Tipografía consistente */
+    font-size: 5em; /* Tamaño del texto */
+    color: var(--text-color); /* Color del texto */
+    margin-bottom: 0.5em; /* Espaciado con el párrafo */
+    letter-spacing: 0.13em;
+    line-height: 1em; /* Ajustar el espacio entre líneas */
+}
+
+/* Párrafo */
+.s3-box p {
+    font-family: 'CormorantRegular', serif; /* Tipografía consistente */
+    color: #333; /* Gris oscuro para buen contraste */
+    line-height: 1.5em; /* Espaciado entre líneas */
+    width:80%;
+    
+}
+
+#section-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    height: auto;
+    min-height: calc(100vh - 135px);
+    width: 100%;
+}
+
+#section-4 .final-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 50px;
+    gap: 50px;
+}
+
+#section-4 .final-container img{
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+}
+#section-4 .final-container .texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 30%;
+    height: auto;
+}
+
+.texto p{
+    width: 100%;
+    height: auto; 
+}
+
+.texto a{
+    width: 100%;
+    font-size: 0.9em;
+    font-family: 'TTTravelsMedium', Arial, sans-serif;
+    letter-spacing: 0.1em;
+    font-weight: bold; /* Negrita */
+    text-decoration: underline; /* Subrayado */
+    color: inherit; /* Usa el color de texto del diseño actual */
+    text-align: right;
+    padding-top: 45px;
+}
+
+.s4-box {
+    position: relative;
+    background-color: transparent;
+    padding-left: 50px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    height: auto;
+}
+
+#title-4 {
+    position: absolute;
+    bottom: 15px;
+    font-family: 'CormorantRegular', serif; /* Tipografía consistente */
+    font-size: 5em; /* Tamaño del texto */
+    color: var(--text-color); /* Color del texto */
+    letter-spacing: 0.13em;
+    line-height: 1em; /* Ajustar el espacio entre líneas */
+}
+
+/* Flechas de navegación minimalistas */
+.navigation-arrows {
+    position: fixed;
+    z-index: 1000; /* Siempre visibles */
+}
+
+#arrow-up {
+    top: 90px; /* Margen desde el borde superior */
+    right: 70px; /* Margen desde el borde derecho */
+    position: fixed;
+}
+
+#arrow-down {
+    bottom: 30px; /* Margen desde el borde inferior */
+    right: 70px; /* Margen desde el borde derecho */
+    position: fixed;
+}
+
+/* Estilo de las flechas */
+.arrow {
+    background: none; /* Sin fondo */
+    color: rgb(213, 211, 211);
+    border: none; /* Sin borde */
+    font-size: 1em; /* Tamaño de fuente */
+    font-family: 'CormorantRegular', Arial, sans-serif; /* Fuente personalizada */
+    letter-spacing: 0em;
+    cursor: pointer;
+    transition: opacity 1s ease, color 1s ease; /* Transiciones suaves */
+    opacity: 1; /* Opacidad inicial visible */
+    animation: bounce 2s infinite; /* Animación sutil */
+}
+
+.arrow.hidden {
+    opacity: 0; /* Ocultar la flecha con opacidad */
+    pointer-events: none; /* Evitar clics mientras está oculta */
+}
+
+.arrow:hover {
+    color: rgba(0, 0, 0, 0.9); /* Color más oscuro al pasar el mouse */
+}
+
+.arrow:focus {
+    outline: none; /* Sin contorno al hacer clic */
+}
+
+.arrow:active {
+    transform: translateY(1px); /* Sutil desplazamiento al hacer clic */
+}
+
+/* Animación de bote */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Posición inicial */
+    }
+    50% {
+        transform: translateY(-5px); /* Elevar ligeramente */
+    }
+}
+
+/* Estado inicial: opacidad cero y desplazado hacia abajo */
+.fade-out {
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+/* Estado visible: opacidad completa y posición final */
+.fade-in {
+    opacity: 1;
+    transition: opacity 1.2s ease-in-out;
+}
+
+
+
+
+
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 1400px) {
+
+}
+
+@media (max-width:1200px){
+
+
+}
+
+@media (max-width: 1000px){
+
+}
+
+
+@media (max-width: 600px) {
+
+    
+}
+

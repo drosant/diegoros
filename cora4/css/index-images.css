@@ -1,0 +1,46 @@
+#section-1 {
+    position: relative; /* Necesario para que los elementos hijos absolutos se posicionen respecto a esta sección */
+}
+
+.image_container img {
+    width: 100px; /* Fijar el ancho a 100px */
+    height: auto; /* Mantener la proporción de la imagen */
+    position: absolute; /* Permitir posicionamiento mediante coordenadas */
+    top: 50%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustar el origen para que quede exactamente centrado */
+    z-index: 1;
+}
+
+.tagline {
+    color: var(--text-color);
+    font-size: 8em;
+    font-family: 'CormorantRegular', Arial, sans-serif;
+    font-weight: normal;
+    text-transform: none;
+    letter-spacing: 0.23em;
+    line-height: 0.7em; /* Ajustar el espacio entre líneas */
+    text-align: center; /* Centrar el texto horizontalmente */
+    position: absolute;
+    top: 50%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Centrar ambos ejes */
+    z-index: 2;
+    mix-blend-mode: color-burn;
+}
+
+
+/* Clase para activar el efecto */
+.color-burn {
+    mix-blend-mode: color-burn; /* Efecto de mezcla */
+}
+
+.word {
+    opacity: 0; /* Oculto inicialmente */
+    transition: opacity 1s ease-in; /* Duración de la transición */
+}
+
+#division {
+    position: relative; /* Asegura que tenga un contexto de apilamiento */
+    z-index: 2; /* Coloca esta sección encima de las imágenes */
+}

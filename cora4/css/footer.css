@@ -1,0 +1,91 @@
+/* Footer */
+* {
+    user-select: none; /* Desactiva la selección de texto */
+  }
+
+footer {
+    position: relative;
+    background-color: var(--green-color);
+    font-family: 'TTTravelsMedium';
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    height: 105px;
+    margin-top: 30px;
+    font-size: 11px;
+    text-transform: uppercase; /* Mayúsculas para todo el footer */
+    z-index: 4; 
+}
+
+/* Estilos comunes para el texto en el footer */
+footer p, footer a {
+    color: var(--text-color);
+    font-size: 11px;
+    letter-spacing: 0.23em;
+    text-decoration: none;
+    font-family: 'TTTravelsMedium';
+    font-weight: 500; /* Aplica un peso de 500 a todos los enlaces y párrafos */
+}
+
+.upper {
+    padding-bottom: 10px;
+}
+
+/* Clase para negrita */
+.bold {
+    font-weight: 700;
+}
+
+.salmon-background{
+    background-color: var(--salmon-color);
+}
+
+
+/* Estructura de columnas en el footer */
+.footer-left {
+    width: 33.33%; /* La columna izquierda ocupa un tercio */
+    text-align: left;
+    gap: 30px;
+}
+
+.footer-right {
+    width: 66.67%; /* La columna derecha ocupa dos tercios */
+    text-align: left;
+}
+
+/* Subrayado permanente para enlaces en footer-right */
+.footer-right a.underline {
+    text-decoration: underline;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 900px) {
+    footer {
+        font-size: 10px; /* Reduce el tamaño de la fuente */
+        padding: 20px; /* Reduce el padding para mantener proporción */
+    }
+
+    footer p, footer a {
+        font-size: 10px; /* Reduce el tamaño de texto en enlaces y párrafos */
+        letter-spacing: 0.2em; /* Ajusta el espaciado entre letras */
+    }
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    footer {
+        font-size: 9px; /* Reduce el tamaño de la fuente */
+        padding: 40px; /* Reduce el padding para mantener proporción */
+    }
+
+    footer p, footer a {
+        font-size: 9px; /* Reduce el tamaño de texto en enlaces y párrafos */
+        letter-spacing: 0.2em; /* Ajusta el espaciado entre letras */
+    }
+}
