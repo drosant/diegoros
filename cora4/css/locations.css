@@ -95,11 +95,12 @@ main::before {
 }
 
 .destination-name {
-    font-family: "CarmorantRegular", "Serif";
+    font-family: "CormorantRegular", "Serif";
     font-size: 1rem;
+    font-weight: normal;
     letter-spacing: 0.23em;
     position: absolute;
-    color: white;
+    color: var(--background-color);
     text-align: center;
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -135,8 +136,8 @@ main::before {
 }
 
 .carousel-item-text {
-    font-family: "CarmorantRegular", "Serif";
-    font-size: 1rem;
+    font-family: "CormorantRegular", "Serif";
+    font-size: 1em;
     letter-spacing: 0.23em;
     padding: 10px 30px;
     margin: 0;
@@ -145,6 +146,47 @@ main::before {
     width: 100%;
     text-align: left;
     font-weight: normal;
+}
+
+.green{
+    color: var(--green-color);
+}
+
+.salmon{
+    color: var(--salmon-color);
+}
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+}
+
+.text-container h2{
+
+    font-family: "CormorantRegular", "Serif";
+    font-size: 1.2em;
+    font-weight: normal;
+    letter-spacing: 0.23em;
+    line-height: 1em;
+    color: #000000;
+    text-align: left;
+    padding-right: 218px;
+    margin-left: auto;
+}
+
+.text-container a{
+    font-size: 0.9em;
+    font-family: 'TTTravelsMedium', Arial, sans-serif;
+    letter-spacing: 0.1em;
+    font-weight: bold; /* Negrita */
+    text-decoration: underline; /* Subrayado */
+    color: inherit; /* Usa el color de texto del diseño actual */
+    text-align: left;
+    padding-right: 404px;
+    margin-left: auto;
+    padding-top: 20px;
 }
 
 @keyframes scroll-vertical {

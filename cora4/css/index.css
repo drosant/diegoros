@@ -98,16 +98,17 @@ main::before {
 }
 
 #section-2 {
-    position: relative;
+    position: flex;
+    flex-direction: row;
     background-color: var(--background-color);
+    height: 100vh;
 }
 
 /* Contenedor de la imagen */
 .img2-container {
-    position: absolute;
-    left: 15%; /* Ajusta la posición horizontal */
-    top: 20%; /* Ajusta la posición vertical */
-    height: 70%; /* Altura proporcional */
+    padding-left: 50px;
+    padding-top: 100px;
+    height: 85%; /* Altura proporcional */
     width: auto; /* Mantén la proporción de la imagen */
     z-index: 1; /* Nivel inferior para que esté detrás */
 }
@@ -121,7 +122,7 @@ main::before {
 .s2-box {
     position: absolute; /* Permite posicionamiento libre */
     top: 35%; /* Ajusta la posición vertical */
-    left: 57%; /* Ajusta la posición horizontal */
+    left: 63%; /* Ajusta la posición horizontal */
     transform: translateX(-50%); /* Centra horizontalmente respecto al punto de referencia */
     display: flex;
     flex-direction: column; /* Alinea el contenido en columna */
@@ -164,17 +165,53 @@ main::before {
 }
 
 #section-3 {
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
     background-color: var(--background-color);
+    height: 100vh;
+}
+
+/* Contenedor del cuadro verde */
+.s3-box {
+    display: flex;
+    flex-direction: column; /* Alinea el contenido en columna */
+    justify-content: flex-start; /* Alineación vertical */
+    align-items: flex-start; /* Alineación horizontal */
+    background-color:transparent;
+    text-align: left; /* Alineación del texto */
+    padding-top: 125px;
+    padding-left: 50px;
+    z-index: 2; /* Coloca el cuadro por encima de la imagen */
+    width: 50%;
+}
+
+/* Título */
+#title-3 {
+    font-family: 'CormorantRegular', serif; /* Tipografía consistente */
+    font-size: 5em; /* Tamaño del texto */
+    color: var(--text-color); /* Color del texto */
+    margin-bottom: 0.5em; /* Espaciado con el párrafo */
+    letter-spacing: 0.13em;
+    line-height: 1em; /* Ajustar el espacio entre líneas */
+    width: 60%;
+}
+
+/* Párrafo */
+.s3-box p {
+    font-family: 'CormorantRegular', serif; /* Tipografía consistente */
+    color: #333; /* Gris oscuro para buen contraste */
+    line-height: 1.5em; /* Espaciado entre líneas */
+    width:60%;
+    
 }
 
 
 /* Contenedor de la imagen */
 .img4-container {
-    position: absolute;
-    height: 70%; /* Altura proporcional */
-    left: 50%;
-    top: 24%;
+    height: 90%; /* Altura proporcional */
+    padding-top: 125px;
     width: auto; /* Mantén la proporción de la imagen */
     z-index: 1; /* Nivel inferior para que esté detrás */
 }
@@ -196,42 +233,6 @@ main::before {
 .img5-container img {
     height: 100%;
     object-fit: cover; /* Ajusta la imagen manteniendo proporciones */
-}
-
-/* Contenedor del cuadro verde */
-.s3-box {
-    position: absolute; /* Permite posicionamiento libre */
-    top: 3%; /* Ajusta la posición vertical */
-    left: 25%; /* Ajusta la posición horizontal */
-    transform: translateX(-50%); /* Centra horizontalmente respecto al punto de referencia */
-    display: flex;
-    flex-direction: column; /* Alinea el contenido en columna */
-    justify-content: flex-start; /* Alineación vertical */
-    align-items: flex-start; /* Alineación horizontal */
-    background-color:transparent;
-    max-width: 45%; /* Limita el ancho del cuadro */
-    text-align: left; /* Alineación del texto */
-    z-index: 2; /* Coloca el cuadro por encima de la imagen */
-    padding: 100px;
-}
-
-/* Título */
-#title-3 {
-    font-family: 'CormorantRegular', serif; /* Tipografía consistente */
-    font-size: 5em; /* Tamaño del texto */
-    color: var(--text-color); /* Color del texto */
-    margin-bottom: 0.5em; /* Espaciado con el párrafo */
-    letter-spacing: 0.13em;
-    line-height: 1em; /* Ajustar el espacio entre líneas */
-}
-
-/* Párrafo */
-.s3-box p {
-    font-family: 'CormorantRegular', serif; /* Tipografía consistente */
-    color: #333; /* Gris oscuro para buen contraste */
-    line-height: 1.5em; /* Espaciado entre líneas */
-    width:80%;
-    
 }
 
 #section-4 {
