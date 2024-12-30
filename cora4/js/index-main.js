@@ -104,8 +104,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // Configuración para cada palabra
 const wordSettings = [
     { selector: '.word.dream', initDelayTime: 1300 }, // Dream
-    { selector: '.word.design', initDelayTime: 3500 }, // Design
-    { selector: '.word.live', initDelayTime: 2300 } // Live
+    { selector: '.word.design', initDelayTime: 2300 }, // Design
+    { selector: '.word.live', initDelayTime: 3500 } // Live
 ];
 
 // Función para iniciar la animación de cada palabra
