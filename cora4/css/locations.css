@@ -137,9 +137,8 @@ main::before {
 
 .carousel-item-text {
     font-family: "CormorantRegular", "Serif";
-    font-size: 1em;
-    letter-spacing: 0.23em;
-    padding: 10px 30px;
+    font-size: 1.1em;
+    padding: 7px 30px;
     margin: 0;
     color: #000000;
     background: transparent;
@@ -166,13 +165,12 @@ main::before {
 .text-container h2{
 
     font-family: "CormorantRegular", "Serif";
-    font-size: 1.2em;
+    letter-spacing: 0.5rem;
+    color: var(--green-text-color);
     font-weight: normal;
-    letter-spacing: 0.23em;
     line-height: 1em;
-    color: #000000;
     text-align: left;
-    padding-right: 218px;
+    padding-right: 185px;
     margin-left: auto;
 }
 
@@ -184,7 +182,7 @@ main::before {
     text-decoration: underline; /* Subrayado */
     color: inherit; /* Usa el color de texto del diseño actual */
     text-align: left;
-    padding-right: 404px;
+    padding-right: 595px;
     margin-left: auto;
     padding-top: 20px;
 }

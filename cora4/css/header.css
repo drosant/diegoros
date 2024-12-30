@@ -22,7 +22,7 @@ header {
 /* Logo */
 .logo {
     flex-grow: 1;
-    font-size: 1.3em;
+    font-size: 1.2em;
     text-align: left; /* Alineado a la izquierda en pantallas grandes */
 }
 
@@ -59,10 +59,6 @@ nav ul {
 nav ul .active {
     color: var(--green-text-color);
     text-decoration: underline;
-}
-
-nav a:hover {
-    color: var(--green-text-color);
 }
 
 nav ul li a {

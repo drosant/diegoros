@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "piscina-viaje.jpg",
         "pueblo-viaje.jpg",
         "selva-viaje.jpg",
-        "tren-viaje.jpg",
         "velero-viaje.jpg"
     ];
 
