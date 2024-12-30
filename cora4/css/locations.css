@@ -124,7 +124,7 @@ main::before {
     height: 100vh; /* Ocupa toda la altura de la pantalla */
     overflow: hidden;
     background: transparent;
-    z-index: 0; /* Asegura que se superponga sobre el header y el carrusel de imágenes */
+    z-index: 2; /* Asegura que se superponga sobre el header y el carrusel de imágenes */
     pointer-events: none;
 }
 
