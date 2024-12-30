@@ -5,8 +5,8 @@
 }
 
 html, body {
-    height: 100%;
     width: 100%;
+    height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
     background-color: var(--background-color);
@@ -14,7 +14,9 @@ html, body {
 
 main{
     display: flex;
-    height: 100%;
+    flex-direction: column; /* Si necesitas alinear elementos verticalmente */
+    min-height: 100vh; /* Asegura que ocupa al menos la altura de la pantalla */
+    height: 100%; /* Ocupa todo el espacio disponible */
 }
 
 /* Aplica el degradado en la parte superior del contenedor */
@@ -35,12 +37,14 @@ main::before {
 }
 
 .main_section {
-    min-height: calc(100vh - 115px);
-    position: relative;
+    height: 100%; /* Ajustar para ocupar toda la altura disponible */
+    min-height: 100vh; /* Garantiza que siempre ocupe el viewport */
+    display: flex;
+    flex-direction: column;
 }
 
 .carousel-container {
-    position: relative;
+    display: flex;
     width: 100%;
     height: 500px;
     overflow: hidden;
@@ -60,8 +64,6 @@ main::before {
 /* Otros estilos permanecen igual */
 
 .carousel-item {
-    position: relative;
-    flex-shrink: 0;
     width: 210px;
     height: 73%;
     margin-right: 20px;
@@ -96,9 +98,8 @@ main::before {
 
 .destination-name {
     font-family: "CormorantRegular", "Serif";
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: normal;
-    letter-spacing: 0.23em;
     position: absolute;
     color: var(--background-color);
     text-align: center;
@@ -123,7 +124,7 @@ main::before {
     height: 100vh; /* Ocupa toda la altura de la pantalla */
     overflow: hidden;
     background: transparent;
-    z-index: 2; /* Asegura que se superponga sobre el header y el carrusel de imágenes */
+    z-index: 0; /* Asegura que se superponga sobre el header y el carrusel de imágenes */
     pointer-events: none;
 }
 
