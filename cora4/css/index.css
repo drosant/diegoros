@@ -291,104 +291,96 @@ main::before {
     width: 48%;
 }
 
-/* Contenedor de la imagen */
-.img4-container {
-    height: 90%; /* Altura proporcional */
-    padding-top: 125px;
-    width: auto; /* Mantén la proporción de la imagen */
-    z-index: 1; /* Nivel inferior para que esté detrás */
-}
-
-.img4-container img {
-    height: 100%;
-    object-fit: cover; /* Ajusta la imagen manteniendo proporciones */
-}
-/* Contenedor de la imagen */
-.img5-container {
-    position: absolute;
-    height: 65%; /* Altura proporcional */
-    left: 67%;
-    top: 18%;
-    width: auto; /* Mantén la proporción de la imagen */
-    z-index: 1; /* Nivel inferior para que esté detrás */
-}
-
-.img5-container img {
-    height: 100%;
-    object-fit: cover; /* Ajusta la imagen manteniendo proporciones */
-}
-
 #section-4 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--background-color);
-    height: auto;
-    min-height: calc(100vh - 135px);
-    width: 100%;
-}
-
-#section-4 .final-container{
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 50px;
-    gap: 50px;
+    background-color: var(--background-color);
+    width: calc(100% - 100px);
+    height: 100vh;
 }
 
-#section-4 .final-container img{
-    width: 70%;
-    height: auto;
-    object-fit: cover;
-}
-#section-4 .final-container .texto{
+#left-4{
+    width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 30%;
-    height: auto;
-}
-
-.texto p{
-    width: 100%;
-    height: auto; 
-}
-
-.texto a{
-    width: 100%;
-    font-size: 0.9em;
-    font-family: 'TTTravelsMedium', Arial, sans-serif;
-    letter-spacing: 0.1em;
-    font-weight: bold; /* Negrita */
-    text-decoration: underline; /* Subrayado */
-    color: inherit; /* Usa el color de texto del diseño actual */
-    text-align: right;
-    padding-top: 45px;
-}
-
-.s4-box {
-    position: relative;
     background-color: transparent;
-    padding-left: 50px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    width: 100%;
-    height: auto;
 }
 
-#title-4 {
-    position: absolute;
-    bottom: 15px;
-    font-family: 'CormorantRegular', serif; /* Tipografía consistente */
-    font-size: 5em; /* Tamaño del texto */
-    color: var(--text-color); /* Color del texto */
-    letter-spacing: 0.13em;
-    line-height: 1em; /* Ajustar el espacio entre líneas */
+#right-4{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    background-color:transparent;
+    padding-left: 70px;
 }
+
+#container-1-4{
+    margin-top: 115px;
+    width: 75%;
+    height: 77%;
+    background-color: transparent;
+    z-index: 1;
+
+}
+
+#container-2-4 {
+    position: absolute;
+    height: 45%;
+    width: 16%;
+    top: 33%; /* Ajusta la posición según tus necesidades */
+    left: 30%; /* También ajusta si no debe estar alineado */
+    z-index: 2; /* Más arriba */
+    background-color: turquoise;
+  }
+  
+
+#container-2-4 img{
+    width: 100%;    
+    height: 100%;
+    object-fit: cover;
+  }
+#container-1-4 img{
+    width: 100%;    
+    height: 100%;
+    object-fit: cover;
+  }
+
+/* Título */
+#title-4 {
+    font-family: 'CormorantRegular', serif; /* Tipografía consistente */
+    font-size: 4em; /* Tamaño del texto */
+    color: var(--text-color); /* Color del texto */
+    letter-spacing: 0.03em;
+    line-height: 1em; /* Ajustar el espacio entre líneas */
+    width: 100%;
+    padding-top: 200px;
+}
+
+
+#lets-talk-4{
+    text-align: left;
+    padding-top: 50px;
+    padding-left: 115px;
+
+}
+
+#first-4{
+    padding-top: 50px;
+    padding-left: 115px;
+    width: 80%;
+}
+#second-4{
+    padding-top: 50px;
+    padding-left: 115px;
+    width: 70%;
+}
+
 
 /* Flechas de navegación minimalistas */
 .navigation-arrows {

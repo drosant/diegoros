@@ -58,14 +58,14 @@ main::before {
     height: 400px;
     overflow: hidden;
     transition: opacity 2s ease;
-    margin-top: 79px;
+    margin-top: 83px;
 }
 
 
 /* Otros estilos permanecen igual */
 
 .carousel-item {
-    width: 230px;
+    width: 260px;
     height: 90%;
     margin-right: 20px;
     margin-left: 20px;
@@ -88,9 +88,11 @@ main::before {
 .carousel-image {
     width: auto;
     height: 100%;
+    width: 100%;
     opacity: 0;
     transition: opacity 2s ease, filter 0.5s ease;
     display: block;
+    object-fit: cover;
 }
 
 .carousel-item:hover .carousel-image {
@@ -201,7 +203,7 @@ main::before {
     margin-bottom: 0px;
     margin-left: 50px;
     margin-right: 50px;
-    margin-top: 30px;
+    margin-top: 26px;
 }
 
 @keyframes scroll-vertical {
