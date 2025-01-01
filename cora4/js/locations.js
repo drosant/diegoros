@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     carousel.innerHTML += carousel.innerHTML;
 
     // Variable de exageración para controlar la magnitud de las variaciones
-    const exaggerate = 2; // Ajusta este valor para aumentar o disminuir la variación
+    const exaggerate = 0; // Ajusta este valor para aumentar o disminuir la variación
 
     // Lazy load usando Intersection Observer
     const observerOptions = {

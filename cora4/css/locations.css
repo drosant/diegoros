@@ -43,15 +43,6 @@ main::before {
     flex-direction: column;
 }
 
-.carousel-container {
-    display: flex;
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-    transition: opacity 2s ease;
-    margin-top: 140px;
-}
-
 .carousel {
     display: flex;
     align-items: center;
@@ -61,11 +52,21 @@ main::before {
     transition: opacity 2s ease;
 }
 
+.carousel-container {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    transition: opacity 2s ease;
+    margin-top: 79px;
+}
+
+
 /* Otros estilos permanecen igual */
 
 .carousel-item {
-    width: 210px;
-    height: 73%;
+    width: 230px;
+    height: 90%;
     margin-right: 20px;
     margin-left: 20px;
     display: flex;
@@ -99,6 +100,7 @@ main::before {
 .destination-name {
     font-family: "CormorantRegular", "Serif";
     font-size: 1.1rem;
+    letter-spacing: 0.1em;
     font-weight: normal;
     position: absolute;
     color: var(--background-color);
@@ -139,7 +141,8 @@ main::before {
 .carousel-item-text {
     font-family: "CormorantRegular", "Serif";
     font-size: 1.1em;
-    padding: 7px 30px;
+    letter-spacing: 0.1em;
+    padding: 9px 30px;
     margin: 0;
     color: #000000;
     background: transparent;
@@ -165,27 +168,40 @@ main::before {
 
 .text-container h2{
 
-    font-family: "CormorantRegular", "Serif";
+    font-family: 'TTTravelsMedium', Arial, sans-serif;
+    font-size: 2em;
     letter-spacing: 0.5rem;
-    color: var(--green-text-color);
+    color: var(--text-color);
     font-weight: normal;
     line-height: 1em;
     text-align: left;
-    padding-right: 55px;
+    padding-right: 50px;
+    padding-top: 40px;
     margin-left: auto;
 }
 
-.text-container a{
-    font-size: 0.9em;
-    font-family: 'TTTravelsMedium', Arial, sans-serif;
-    letter-spacing: 0.1em;
-    font-weight: bold; /* Negrita */
-    text-decoration: underline; /* Subrayado */
-    color: inherit; /* Usa el color de texto del diseño actual */
-    text-align: left;
-    padding-right: 467px;
+#lets-talk{
+    color: var(--green-text-color); /* Usa el color de texto del diseño actual */
+    padding-right: 55px;
     margin-left: auto;
     padding-top: 20px;
+}
+
+.boldie{
+    font-family: 'TTTravelsBold', Arial, sans-serif;
+    font-weight: bold;
+
+}
+
+.separator {
+    border-top: 1px solid var(--text-color); /* Borde delgado */
+    background-color: var(--text-color); /* Define color */
+    display: block; /* Asegura que se muestre como un bloque */
+    margin: 0 auto; /* Centra horizontalmente */
+    margin-bottom: 0px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 30px;
 }
 
 @keyframes scroll-vertical {

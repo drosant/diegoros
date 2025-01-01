@@ -9,7 +9,7 @@ header {
     align-items: center;
     padding: 30px;
     padding-left: 50px;
-    padding-right: 50px;
+    padding-right: 60px;
     background-color: transparent; /* Fondo transparente */
     color: var(--text-color); /* Letra gris oscuro */
     height: auto; /* Altura ajustable según contenido */
@@ -44,7 +44,7 @@ header {
 
 /* Navegación */
 nav {
-    margin-right: 20px;
+    margin-right: 0px;
 }
 
 nav ul {

@@ -26,6 +26,31 @@
     src: url('../fonts/CormorantGaramond-Medium.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'CormorantBoldItalic';
+    src: url('../fonts/CormorantGaramond-BoldItalic.ttf') format('truetype');
+}
+
+.lets-talk{
+    width: 100%;
+    font-size: 0.8em;
+    font-family: 'TTTravelsMedium', Arial, sans-serif;
+    letter-spacing: 0.1em;
+    font-weight: bold; /* Negrita */
+    text-decoration: underline; /* Subrayado */
+    color: inherit; /* Usa el color de texto del diseño actual */
+    text-align: right;
+}
+
+.italic{
+    font-family: 'CormorantBoldItalic', serif;
+    font-weight: bold; /* Negrita */
+    font-style: italic; /* Cursiva */
+    font-size: 1.3em;
+    letter-spacing: 0.05em;
+    line-height: 1.2em;
+}
+
 .bold {
     font-weight: bold;
     font-family: 'TTTravelsBold'; /* Fuente para "CORA" */
@@ -59,8 +84,8 @@ h4{
 }
 
 p{
-    font-size: 1.1em;
-    line-height: 1.5em; /* Espaciado entre líneas */
+    font-size: 1em;
+    line-height: 1.2em; /* Espaciado entre líneas */
 }
 
 a{
