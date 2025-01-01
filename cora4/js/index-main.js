@@ -38,6 +38,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let currentImageIndex = Math.floor(Math.random() * imageList.length); // Imagen inicial aleatoria
 
+    // Nueva función para precargar imágenes
+    function preloadImage(src, callback) {
+        const img = new Image();
+        img.src = `images/index/${src}`;
+        img.onload = () => {
+            callback(img); // Llama al callback cuando la imagen está cargada
+        };
+    }
+
     function getRandomInRange(min, max) {
         return Math.random() * (max - min) + min;
     }
@@ -54,37 +63,39 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function createAndShowImage() {
-        const img = document.createElement("img");
         const currentImage = imageList[currentImageIndex]; // Obtener la imagen actual
-        img.src = `images/index/${currentImage}`;
-        img.alt = "Image";
-        img.style.width = `${getRandomInRange(minInitialSize, maxInitialSize)}px`;
-        img.style.opacity = "0"; // Inicialmente invisible
-        img.style.transition = `opacity ${imageFadeInTime / 1000}s ease-in-out`;
-        img.style.position = "absolute";
-        img.style.zIndex = "1";
 
-        const randomLeft = getPositionWithOffset(leftInit, rightInit, initXOffset);
-        const randomTop = getPositionWithOffset(topInit, bottomInit, initYOffset);
-        img.style.left = `${randomLeft}%`;
-        img.style.top = `${randomTop}%`;
+        // Precargar la imagen antes de mostrarla
+        preloadImage(currentImage, (loadedImage) => {
+            loadedImage.alt = "Image";
+            loadedImage.style.width = `${getRandomInRange(minInitialSize, maxInitialSize)}px`;
+            loadedImage.style.opacity = "0"; // Inicialmente invisible
+            loadedImage.style.transition = `opacity ${imageFadeInTime / 1000}s ease-in-out`;
+            loadedImage.style.position = "absolute";
+            loadedImage.style.zIndex = "1";
 
-        // Añadir la imagen al contenedor
-        imageContainer.appendChild(img);
+            const randomLeft = getPositionWithOffset(leftInit, rightInit, initXOffset);
+            const randomTop = getPositionWithOffset(topInit, bottomInit, initYOffset);
+            loadedImage.style.left = `${randomLeft}%`;
+            loadedImage.style.top = `${randomTop}%`;
 
-        // Forzar al navegador a procesar el estado inicial antes de aplicar el fade-in
-        requestAnimationFrame(() => {
+            // Añadir la imagen al contenedor
+            imageContainer.appendChild(loadedImage);
+
+            // Forzar al navegador a procesar el estado inicial antes de aplicar el fade-in
             requestAnimationFrame(() => {
-                img.style.opacity = "1"; // Cambiar a opacidad visible
+                requestAnimationFrame(() => {
+                    loadedImage.style.opacity = "1"; // Cambiar a opacidad visible
+                });
             });
-        });
 
-        setTimeout(() => {
-            img.style.opacity = "0"; // Desaparece con fade-out
             setTimeout(() => {
-                img.remove(); // Elimina la imagen del DOM después de fade-out
-            }, imageFadeInTime);
-        }, imageHoldTime);
+                loadedImage.style.opacity = "0"; // Desaparece con fade-out
+                setTimeout(() => {
+                    loadedImage.remove(); // Elimina la imagen del DOM después de fade-out
+                }, imageFadeInTime);
+            }, imageHoldTime);
+        });
 
         // Actualizar el índice de la imagen para la próxima
         currentImageIndex = (currentImageIndex + 1) % imageList.length;
@@ -125,8 +136,3 @@ function animateWords(words) {
 window.addEventListener('load', () => {
     animateWords(wordSettings);
 });
-
-
-
-
-
