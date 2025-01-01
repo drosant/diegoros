@@ -183,7 +183,6 @@ main::before {
 }
 
 #lets-talk{
-    color: var(--green-text-color); /* Usa el color de texto del diseño actual */
     padding-right: 55px;
     margin-left: auto;
     padding-top: 20px;

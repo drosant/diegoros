@@ -91,12 +91,6 @@ p{
 }
 
 .entry-right a{
-    font-size: 0.9em;
-    font-family: 'TTTravelsMedium', Arial, sans-serif;
-    letter-spacing: 0.1em;
-    font-weight: bold; /* Negrita */
-    text-decoration: underline; /* Subrayado */
-    color: inherit; /* Usa el color de texto del diseño actual */
     padding-left: 30px;
     padding-top: 60px;
     text-align: right;

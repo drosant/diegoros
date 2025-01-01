@@ -179,14 +179,15 @@ textarea:focus {
 }
 
 button{
-    font-size: 0.9em;
-    font-family: 'TTTravelsMedium', Arial, sans-serif;
     background: none; /* Sin fondo */
     border: none; /* Sin borde */
     font-weight: bold; /* Negrita */
     text-decoration: underline; /* Subrayado */
-    color: inherit; /* Usa el color de texto del diseño actual */
     cursor: pointer; /* Muestra el puntero de clic */
+}
+
+#salmon{
+    color:var(--text-color);
 }
 
 .success-message{

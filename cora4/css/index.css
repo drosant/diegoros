@@ -198,10 +198,6 @@ main::before {
     font-family: 'TTTravelsBold', Arial, sans-serif;
 }
 
-#lets-talk-2{
-    color: var(--green-text-color);
-}
-
 #section-3 {
     display: flex;
     flex-direction: row;
@@ -409,7 +405,7 @@ main::before {
 /* Estilo de las flechas */
 .arrow {
     background: none; /* Sin fondo */
-    color: rgb(213, 211, 211);
+    color: var(--green-color);
     border: none; /* Sin borde */
     font-size: 1em; /* Tamaño de fuente */
     font-family: 'CormorantRegular', Arial, sans-serif; /* Fuente personalizada */
