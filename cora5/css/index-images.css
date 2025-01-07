@@ -1,5 +1,10 @@
 #section-1 {
-    position: relative; /* Necesario para que los elementos hijos absolutos se posicionen respecto a esta sección */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: var(--background-color);
+    height: 100vh;
+    width: calc(100% - 100px); /* Reduce el ancho total en 100px (50px a cada lado) */
 }
 
 .image_container img {
@@ -13,22 +18,18 @@
 }
 
 .tagline {
-    width: 40%;
     color: var(--text-color);
-    font-size: 8em;
+    font-size: 1.6em;
     font-family: 'CormorantRegular', Arial, sans-serif;
     font-weight: normal;
     text-transform: none;
     letter-spacing: 0.23em;
-    line-height: 0.7em; /* Ajustar el espacio entre líneas */
-    text-align: center; /* Centrar el texto horizontalmente */
-    position: absolute;
-    top: 50%; /* Centrar verticalmente */
-    left: 50%; /* Centrar horizontalmente */
-    transform: translate(-50%, -50%); /* Centrar ambos ejes */
-    z-index: 2;
-    mix-blend-mode: color-burn;
+    line-height: 0.8em; /* Ajustar el espacio entre líneas */
+    text-align: left; /* Centrar el texto horizontalmente */
+    z-index: 3;
+    padding-bottom: 60px;
 }
+
 
 
 /* Clase para activar el efecto */
