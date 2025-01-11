@@ -146,16 +146,12 @@ opacity: 1;
 }
 
 
-
-
-
 @media screen and (max-width: 1200px) {
+
 .entry-left img {
 
     width: 100%; /* Imagen ocupa todo el ancho disponible */
-}}
-
-@media screen and (max-width: 900px) {
+}
 
 section{
     width: 100%; /* La sección ocupa el 66% del ancho del main */

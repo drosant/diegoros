@@ -57,16 +57,27 @@
 
 }
 
-@media screen and (max-width: 1400px) {
-    .tagline{
-        font-size: 1.4em;
+@media screen and (max-width: 1405px) {
+
+    .tagline {
+        font-size: 1.5em;
     }
 
 }
 
-@media screen and (max-width: 1024px){
-    .tagline{
-        font-size: 1.3em;
+@media screen and (max-width: 1200px){
+    #section-1 {
+        justify-content: center;
+        align-items: flex-end;
+    }    
+    .tagline {
+        font-size: 1.5em;
+        letter-spacing: 0.23em;
+        line-height: 0.8em; /* Ajustar el espacio entre líneas */
+        text-align: left; /* Centrar el texto horizontalmente */
+        z-index: 3;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
 }
