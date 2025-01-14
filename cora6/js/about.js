@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Ruta base de las imágenes
     const imageFolder = "images/about/carousel/";
+    
+    // Lista de imágenes disponibles (según tu captura)
     const images = ["viaje-safari.jpg", "viaje-paz.jpeg"];
-
+    
     // Tiempo de permanencia en milisegundos
-    const displayTime = 6500;
+    const displayTime = 6500; // 5 segundos
 
     // Selecciona el contenedor de la imagen
     const imageContainer = document.querySelector(".down .image-container");
@@ -12,45 +14,33 @@ document.addEventListener("DOMContentLoaded", function () {
     // Índice para controlar qué imagen está cargada
     let currentIndex = 0;
 
-    // Aplica estilo inicial al contenedor
+    // Aplica estilo al contenedor para las transiciones
     imageContainer.style.position = "relative";
     imageContainer.style.overflow = "hidden";
     imageContainer.style.transition = "opacity 2s";
     imageContainer.style.opacity = 1;
 
-    // Función para ajustar la altura del contenedor
-    function adjustHeight() {
-        const aspectRatio = 1 / 1.2; // Aspect ratio de la imagen
-        const width = imageContainer.offsetWidth; // Ancho del contenedor
-        imageContainer.style.height = `${width * aspectRatio}px`; // Calcula la altura
-    }
-
     // Función para cambiar la imagen
     function changeImage() {
-        imageContainer.style.opacity = 0; // Transición de opacidad a 0
+        // Inicia la transición de opacidad a 0
+        imageContainer.style.opacity = 0;
 
+        // Espera a que la opacidad termine de disminuir
         setTimeout(() => {
             // Cambia la imagen mostrada
-            imageContainer.innerHTML = `<img src="${imageFolder}${images[currentIndex]}" alt="Descripción de la imagen" style="width: 100%; height: auto; object-fit: cover;">`;
+            imageContainer.innerHTML = `<img src="${imageFolder}${images[currentIndex]}" alt="Descripción de la imagen">`;
 
-            // Ajusta la altura después de cambiar la imagen
-            adjustHeight();
-
-            // Cambia al siguiente índice
+            // Cambia al siguiente índice, vuelve al inicio si es el último
             currentIndex = (currentIndex + 1) % images.length;
 
-            // Restaura la opacidad
+            // Restaura la opacidad para hacer visible la nueva imagen
             imageContainer.style.opacity = 1;
-        }, 2000); // Duración de la transición de opacidad
+        }, 2000); // La duración de la transición (1 segundo)
     }
 
-    // Inicializa la primera imagen y ajusta la altura
+    // Inicializa la primera imagen
     changeImage();
 
     // Cambia la imagen según el tiempo definido
     setInterval(changeImage, displayTime);
-
-    // Ajusta la altura al cargar la página y al redimensionar la ventana
-    window.addEventListener('resize', adjustHeight);
-    window.addEventListener('load', adjustHeight);
 });
