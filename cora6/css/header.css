@@ -130,11 +130,11 @@ nav ul li a {
         width: 100%; 
         background-color: var(--background-color);
         flex-direction: column; 
-        padding: 10px 0; 
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+        padding: 10px 0px; 
         z-index: 1000;
         opacity: 0; /* Comienza con opacidad 0 */
         transition: opacity 1s ease; /* Transición suave en 1 segundo */
+        border-bottom: 1px solid var(--text-color);
     }
 
     nav ul.active {

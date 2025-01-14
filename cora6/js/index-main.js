@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Configuraciones para diferentes anchos de pantalla
     const screenSettings = {
         "4k": {
-            initialDelay: 5000,
+            initialDelay: 1000,
             imageFadeInTime: 1000,
             imageHoldTime: 7500,
             imageInterval: 1500,
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
             initYOffset: 0,
         },
         "1440px": {
-            initialDelay: 5000,
+            initialDelay: 1000,
             imageFadeInTime: 1000,
             imageHoldTime: 6000,
             imageInterval: 1500,
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
             initYOffset: 0,
         },
         "1024px": {
-            initialDelay: 5000,
+            initialDelay: 1000,
             imageFadeInTime: 1000,
             imageHoldTime: 6000,
             imageInterval: 1500,
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
             initYOffset: 0,
         },
         "768px": {
-            initialDelay: 5000,
+            initialDelay: 1000,
             imageFadeInTime: 1000,
             imageHoldTime: 4500,
             imageInterval: 1500,
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
             initYOffset: 0,
         },
         "425px": {
-            initialDelay: 5000,
+            initialDelay: 1000,
             imageFadeInTime: 1000,
             imageHoldTime: 4500,
             imageInterval: 1500,

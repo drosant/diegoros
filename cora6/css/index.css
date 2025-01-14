@@ -590,7 +590,7 @@ main::before {
         letter-spacing: 0.03em;
         line-height: 1em; /* Ajustar el espacio entre líneas */
         width: 48%;
-        padding-top: 70px;
+        padding-top: 40px;
     }
     
     #lets-talk-3{
@@ -649,7 +649,7 @@ main::before {
     #title-4 {
         font-size: 4.5em; /* Tamaño del texto */
         width: 100%;
-        padding-top: 70px;
+        padding-top: 40px;
     }
     
     
