@@ -24,13 +24,22 @@ menuToggle.addEventListener('click', () => {
     }
 });
 
-// Ocultar menú y restaurar fondo al hacer clic fuera del menú
+// Ocultar menú y restaurar fondo al hacer clic fuera del menú, evitando conflictos
 document.addEventListener('click', (event) => {
-    if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+    if (
+        !navMenu.contains(event.target) && // Clic fuera del menú
+        !menuToggle.contains(event.target) && // Clic fuera del botón toggle
+        navMenu.style.display === 'flex' // Solo si el menú está abierto
+    ) {
         navMenu.style.opacity = '0';
         setTimeout(() => {
             navMenu.style.display = 'none';
             header.style.backgroundColor = 'transparent'; // Fondo transparente
         }, 1000); // Espera a que termine la transición
     }
+});
+
+// Prevenir cierres no deseados al interactuar con elementos del header
+header.addEventListener('click', (event) => {
+    event.stopPropagation(); // Evita que el clic en el header cierre el menú
 });
