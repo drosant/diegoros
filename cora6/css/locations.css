@@ -193,6 +193,7 @@ section {
     padding-right: 55px;
     margin-left: auto;
     padding-top: 10px;
+    user-select: none; 
 }
 
 .boldie{
