@@ -28,7 +28,7 @@ main::before {
 main {
     display: flex; /* Flexbox para organizar los elementos */
 }
-
+  
 section {
     padding-top: 145px;
     padding-right: 50px;
@@ -39,18 +39,18 @@ section {
     display: flex; /* Flexbox en la sección para alinear los hijos */
     flex-direction: column; /* Asegura que los elementos estén en columna */
 }
-
+  
 h2 {
     letter-spacing: 0.5rem;
     padding-bottom: 20px;
     font-family: 'CormorantRegular', Arial, sans-serif;
     font-weight: normal;
     text-transform: uppercase;
-    color: var(--green-text-color);
+    color:  var(--green-text-color);
     text-align: left;
 }
 
-p {
+p{
     font-family: 'CormorantRegular', Arial, sans-serif;
     color: var(--text-color);
     width: 100%; /* Ocupa todo el ancho disponible */
@@ -77,9 +77,9 @@ p {
     color: var(--text-color); /* Color del texto */
     padding-top: 20px;
     padding-bottom: 60px;
-}
+  }
 
-.quote {
+.quote{
     font-size: 1em;
     text-transform: none;
     letter-spacing: 0.1em;
@@ -90,50 +90,47 @@ p {
     font-weight: normal;
 }
 
-.entry-right a {
+.entry-right a{
     padding-left: 30px;
     padding-top: 60px;
     text-align: right;
 }
 
-.underquote {
+.underquote{
     font-size: 1.4em;
     padding-top: 30px;
     padding-left: 30px;
     max-width: 85%;
 }
 
-
-/* Actualización para la imagen y su contenedor */
 div .image-container {
-    display: grid;
-    place-items: center; /* Centra la imagen en el contenedor */
-    aspect-ratio: 1 / 1.2; /* Mantiene la proporción de la imagen */
+    display: flex;
+    aspect-ratio: 1/1.2; /* Relación de aspecto 2:1 */;
     width: 100%;
-    background-color: transparent;
-    overflow: hidden; /* Oculta contenido fuera de los límites */
+    justify-content: center;
+    align-items: center;
+    background-color:transparent;
 }
-
+  
 .entry-left {
     flex: 1; /* Ocupa una parte del espacio */
     max-width: 80%; /* Ancho máximo */
 }
 
 .entry-left img {
-    width: 100%; /* Imagen ocupa todo el ancho disponible */
-    height: auto; /* Mantiene la proporción */
-    object-fit: cover; /* Asegura que la imagen sea visible completa */
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out; /* Transición suave al cambiar imágenes */
+position: relative; /* Cambia a relativo para que la imagen se vea */
+width: 100%; /* Imagen ocupa todo el ancho disponible */
+height: auto; /* Mantiene la proporción */
+object-fit: cover; /* Se asegura de que la imagen sea visible completa */
+opacity: 1;
 }
-
+  
 .italic {
     font-family: 'CormorantBoldItalic', serif;
     font-weight: bold; /* Negrita */
     font-style: italic; /* Cursiva */
     letter-spacing: 0.05em;
 }
-
 .entry-right {
     flex: 1.2; /* Ocupa el doble de espacio que la izquierda */
     display: flex;
@@ -148,54 +145,65 @@ div .image-container {
     margin-left: 30px;
 }
 
+
 @media screen and (max-width: 1200px) {
-    .entry-left img {
-        width: 100%; /* Imagen ocupa todo el ancho disponible */
+
+.entry-left img {
+
+    width: 100%; /* Imagen ocupa todo el ancho disponible */
+}
+
+section{
+    width: 100%; /* La sección ocupa el 66% del ancho del main */
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.entry-right p {
+    text-align: left;
+    width: 90%;
+    margin-left: 30px;
     }
 
-    section {
-        width: 100%; /* La sección ocupa el 100% del ancho del main */
-        padding-left: 40px;
-        padding-right: 40px;
-    }
+.entry-left img {
 
-    .entry-right p {
-        text-align: left;
-        width: 90%;
-        margin-left: 30px;
-    }
+    width: 100%; /* Imagen ocupa todo el ancho disponible */
+
+}
+
 }
 
 @media screen and (max-width: 600px) {
-    .entry {
-        flex-direction: column;
-        width: 100%;
-    }
 
-    .entry-left {
-        max-width: 100%; /* Ancho máximo */
-        padding-bottom: 20px;
-    }
+.entry{
+    flex-direction: column;
+    width: 100%;
+}
 
-    .entry-right {
-        max-width: 100%; /* Ancho máximo */
-    }
+.entry-left {
+    max-width: 100%; /* Ancho máximo */
+    padding-bottom: 20px;
+}
 
-    .entry-right p {
-        width: 100%; /* Ancho máximo */
-        padding: 0px;
-        padding-top: 20px;
-        margin: 0px;
-    }
+.entry-right {
+    max-width: 100%; /* Ancho máximo */
+}
+.entry-right p{
+    width: 100%; /* Ancho máximo */
+    padding: 0px;
+    padding-top: 20px;
+    margin: 0px;
+}
 
-    .quote {
-        padding-right: 0px;
-    }
+.quote{
+    padding-right: 0px;
 
-    .underquote {
-        font-size: 1.2em;
-        padding-top: 40px;
-        padding-left: 0px;
-        max-width: 100%;
-    }
+}
+
+.underquote{
+    font-size: 1.2em;
+    padding-top: 40px;
+    padding-left: 0px;
+    max-width: 100%;
+}
+
 }
