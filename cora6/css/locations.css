@@ -145,6 +145,7 @@ section {
     background: transparent;
     z-index: 2; /* Asegura que se superponga sobre el header y el carrusel de imágenes */
     pointer-events: none;
+    user-select: none; 
 }
 
 .vertical-carousel {
@@ -166,6 +167,7 @@ section {
     width: 100%;
     text-align: left;
     font-weight: normal;
+    user-select: none; 
 }
 
 .green{
