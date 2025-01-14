@@ -687,7 +687,7 @@ main::before {
 
 @media screen and (max-width: 600px) {
     #bienvenidos {
-        font-size: 1.8em;
+        font-size: 1.5em;
         padding-top: 0px;
         padding-bottom: 10px;
     }

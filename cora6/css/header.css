@@ -118,7 +118,7 @@ nav ul li a {
 
     .logo {
         text-align: left; 
-        font-size: 1em; 
+        font-size: 1.2em; 
         padding-left: 20px;
     }
 
@@ -158,7 +158,7 @@ nav ul li a {
 
     .menu-toggle {
         display: block; 
-        font-size: 1em;
+        font-size: 1.2em;
         background: none;
         border: none;
         text-decoration: none;
