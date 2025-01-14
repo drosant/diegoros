@@ -5,16 +5,18 @@
 }
 
 html, body {
-    height: 100%;
     width: 100%;
+    height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
     background-color: var(--background-color);
 }
 
 main{
-    padding-right: 50px;
-    padding-left: 50px;
+    display: flex;
+    flex-direction: column; /* Si necesitas alinear elementos verticalmente */
+    min-height: 100vh; /* Asegura que ocupa al menos la altura de la pantalla */
+    height: 100%; /* Ocupa todo el espacio disponible */
 }
 
 /* Aplica el degradado en la parte superior del contenedor */
@@ -24,205 +26,260 @@ main::before {
     top: 0;
     left: 0;
     width: 100%;
-    height: 13%; /* Ajusta la altura para que el desvanecimiento sea sutil */
-    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, var(--background-color) 100%);
+    height: 20%; /* Ajusta la altura para que el desvanecimiento sea sutil */
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 10%, var(--background-color) 100%);
     pointer-events: none;
     z-index: 3;
 }
 
-h2{
-    padding-top: 145px;
-    width: 66.67%; /* La sección ocupa el 66% del ancho del main */
-    margin-left: auto; /* Desplaza la sección hacia la derecha */
-    letter-spacing: 0.5rem;
-    font-family: 'CormorantRegular', Arial, sans-serif;
-    font-weight: normal;
-    text-transform: uppercase;
-    color: var(--green-text-color);
-    text-align: left;
-    padding-bottom: 20px;
+* {
+    transition: opacity 2s ease;
 }
 
-h4{
-    font-family: 'CormorantRegular', Arial, sans-serif;
-    font-weight: normal;
-    color: var(--text-color);
+section {
+    height: auto;
+    min-height: 100vh; /* Cada sección ocupa toda la altura de la ventana */
+    scroll-snap-align: start; /* Alinea cada sección al inicio al hacer scroll */
+    width: 100%;
+    position: relative;
+    background-color: var(--background-color);
 }
 
-.separator {
-    border-top: 1px solid var(--text-color); /* Borde delgado exacto */
-    background-color: var(--text-color); /* Define color */
-    width: 66.67%; /* Asegura que ocupa todo el ancho */
-    margin-bottom: 30px;
-    padding-bottom: 0px;
-    padding-right: 30px;
-    display: block; /* Asegura visibilidad */
-    margin-left: auto;
-}
-
-section{
+.main_section {
+    height: 100vh; /* Ajustar para ocupar toda la altura disponible */ /* Garantiza que siempre ocupe el viewport */
     display: flex;
-    flex-direction: row;
-    padding-bottom: 60px;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.top-section {
+    display: flex;
+    padding-top: 100px;
+    height: 60%;
     width: 100%;
+    min-width: 100vh;
+    overflow: hidden;
+    transition: opacity 2s ease;
 }
 
-.section-1 h4{
+.bottom-section{
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    max-width: 33.33%; /* Asegura que no exceda el 66.67% */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    margin: 0;
-    text-align: left; /* Justifica el texto a la izquierda */
-
+    height: 30%;
 }
 
-.section-1 .image-container{
-    width: 100%;
-    max-width: 66.67%; /* Asegura que no exceda el 66.67% */
-    align-items: flex-start;
-    background-color: transparent;
-}
-
-.section-1 img{
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.section-2 h4{
-    width: 100%;
-    max-width: 33.33%; /* Asegura que no exceda el 66.67% */
-    margin: 0;
-    text-align: left; /* Justifica el texto a la izquierda */
-    padding-left: 30px;
-
-}
-
-.section-2 .image-container{
-    width: 100%;
-    max-width: 60%; /* Asegura que no exceda el 66.67% */
-    align-items: flex-start;
-    background-color: transparent;
-}
-
-.section-2 img{
-    width: 100%;
-    height: auto;
-    display: block;
+.carousel {
+    display: flex;
+    align-items: center;
+    height: 97%;
+    transition: none; /* Sin transición para evitar problemas de salto */
+    will-change: transform;
+    transition: opacity 2s ease;
 }
 
 
-.section-3 .grid {
-    display: grid;
-    width: 92.66%;
-    grid-template-columns: 1fr 1.7fr 1fr 1.7fr; /* 4 columnas iguales */
-    gap: 67px; /* Espaciado entre elementos */
-    align-items: center; /* Alinear elementos verticalmente */
-    justify-items: stretch; /* Centrar contenido en cada celda */
+/* Otros estilos permanecen igual */
+
+.carousel-item {
+    width: 270px;
+    height: 100%;
+    margin-right: 20px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: opacity 2s ease;
 }
 
-.section-3 h4{
-    width: 100%; /* Ocupa todo el ancho disponible */
-    margin: 0;
-    text-align: left; /* Justifica el texto a la izquierda */
-    justify-self: start; /* Posiciona el texto al extremo derecho de su celda */
-    align-self: start;
-
-}
-
-.section-3 .image-container{
-    width: 100%;
-    aspect-ratio: 1.0 / 1.5; /* Relación de aspecto 1:2 (ancho:alto) */
-    align-items: flex-start;
-    background-color: transparent;
-}
-
-.section-3 img{
+.image-container {
+    display: flex;
     width: 100%;
     height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-image {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 2s ease, filter 0.5s ease;
+    display: block;
     object-fit: cover;
 }
 
-
-/* Media Queries para tamaños medianos */
-@media screen and (max-width: 1200px) {
-    
-
-    .section-3 .grid {
-        grid-template-columns: 1fr 2.7fr 1fr 2.7fr; /* 4 columnas iguales */
-    }
+.carousel-item:hover .carousel-image {
+    filter: brightness(0.7);
 }
 
-@media screen and (max-width: 900px){
-    main{
-        padding-right: 40px;
-        padding-left: 40px;
-    }
-
-    .section-3 .grid {
-        width: 100%;
-    }
-
-    .section-3 .grid {
-        display: grid;
-        width: 100%;
-        grid-template-columns: 1fr 1fr; /* Define dos columnas con diferentes anchos */
-        grid-template-rows: 1fr 1fr; /* Ajusta automáticamente la altura de las filas */
-        gap: 50px; /* Espaciado entre elementos */
-        grid-template-areas: 
-            "text1 img1"  /* Primera fila: texto y su imagen */
-            "img2 text2"; /* Segunda fila: imagen y su texto (swapeados) */;
-    }
-    
-    .section-3 .grid > :nth-child(1) {
-        grid-area: text1; /* Primera celda (texto de la fila 1) */
-    }
-    
-    .section-3 .grid > :nth-child(2) {
-        grid-area: img1; /* Segunda celda (imagen de la fila 1) */
-    }
-    
-    .section-3 .grid > :nth-child(3) {
-        grid-area: text2; /* Cuarta celda (texto de la fila 2) */
-    }
-    
-    .section-3 .grid > :nth-child(4) {
-        grid-area: img2; /* Tercera celda (imagen de la fila 2) */
-    }
+.destination-name {
+    font-family: "CormorantRegular", "Serif";
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    position: absolute;
+    color: var(--background-color);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
 }
 
-/* Media Queries para tamaños pequeños */
-@media screen and (max-width: 600px) {
-    h2{
-        width: 100%; 
-    }
-
-    .separator {
-
-        width: 100%; /* Asegura que ocupa todo el ancho */
-    }
-    
-    .section-1 img{
-        width: 100%;
-        padding-left: 20px;
-    }
-
-    .section-2 h4{
-        max-width: 30%; /* Asegura que no exceda el 66.67% */
-    }
-    
-    .section-2 .image-container{
-        max-width: 70%; /* Asegura que no exceda el 66.67% */
-    }
-
-
+.carousel-item:hover .destination-name {
+    opacity: 1;
 }
 
 
-@media screen and (max-width: 400px) {
 
+/* VERTICAL CAROUSEL */
+
+.vertical-carousel-container {
+    position: fixed;
+    top: 0px;
+    left: 32%; /* Desplaza el carrusel un 20% desde el lado izquierdo de la pantalla */
+    width: 33.33%; /* Un tercio del ancho de la pantalla */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    overflow: hidden;
+    background: transparent;
+    z-index: 2; /* Asegura que se superponga sobre el header y el carrusel de imágenes */
+    pointer-events: none;
+    user-select: none; 
+}
+
+.vertical-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    animation: scroll-vertical 15s linear infinite;
+}
+
+.carousel-item-text {
+    font-family: "CormorantRegular", "Serif";
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+    padding: 9px 30px;
+    margin: 0;
+    color: #000000;
+    background: transparent;
+    width: 100%;
+    text-align: left;
+    font-weight: normal;
+    user-select: none; 
+}
+
+.green{
+    color: var(--green-color);
+}
+
+.salmon{
+    color: var(--salmon-color);
+}
+
+.bottom-section h2{
+
+    font-family: 'TTTravelsMedium', Arial, sans-serif;
+    font-size: 2.0rem;
+    letter-spacing: 0.23em; /* Asegúrate de que esto sea correcto */
+    line-height: 1.4em;
+    color: var(--text-color);
+    font-weight: normal;
+    text-align: left;
+    padding-right: 50px;
+    margin-left: auto;
+}
+
+#lets-talk{
+    padding-right: 55px;
+    margin-left: auto;
+    padding-top: 10px;
+    user-select: none; 
+}
+
+.boldie{
+    font-family: 'TTTravelsBold', Arial, sans-serif;
+    font-weight: bold;
 
 }
+
+.separator {
+    border-top: 1px solid var(--text-color); /* Borde delgado */
+    background-color: var(--text-color); /* Define color */
+    display: block; /* Asegura que se muestre como un bloque */
+    margin: 0 auto; /* Centra horizontalmente */
+    margin-bottom: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+@keyframes scroll-vertical {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@media screen and (max-width: 1400px){
+    .bottom-section h2{
+        font-size: 1.8rem;
+        letter-spacing: 0.23em; /* Asegúrate de que esto sea correcto */
+        line-height: 1.4em;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .bottom-section h2{
+        font-size: 1.6rem;
+        letter-spacing: 0.23em; /* Asegúrate de que esto sea correcto */
+        line-height: 1.4em;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .bottom-section h2{
+        font-size: 1.2rem;
+        letter-spacing: 0.23em; /* Asegúrate de que esto sea correcto */
+        line-height: 1.4em;
+    }
+}
+
+@media screen and (max-width: 790px){
+    .bottom-section h2{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .vertical-carousel-container {
+        position: fixed;
+        top: 0px;
+        left: 30px; /* Desplaza el carrusel un 20% desde el lado izquierdo de la pantalla */
+        width: 33.33%; /* Un tercio del ancho de la pantalla */
+        height: 100vh; /* Ocupa toda la altura de la pantalla */
+        overflow: hidden;
+        background: transparent;
+        z-index: 2; /* Asegura que se superponga sobre el header y el carrusel de imágenes */
+        pointer-events: none;
+    }
+
+    .carousel-item {
+        pointer-events: none; /* Desactiva interacción */
+    }
+
+    .carousel-image {
+        user-select: none; /* Evita la selección de texto o imágenes */
+    }
+
+}
+
+
+
+
 
 
 

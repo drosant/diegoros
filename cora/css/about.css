@@ -91,12 +91,6 @@ p{
 }
 
 .entry-right a{
-    font-size: 0.9em;
-    font-family: 'TTTravelsMedium', Arial, sans-serif;
-    letter-spacing: 0.1em;
-    font-weight: bold; /* Negrita */
-    text-decoration: underline; /* Subrayado */
-    color: inherit; /* Usa el color de texto del diseño actual */
     padding-left: 30px;
     padding-top: 60px;
     text-align: right;
@@ -106,7 +100,7 @@ p{
     font-size: 1.4em;
     padding-top: 30px;
     padding-left: 30px;
-    max-width: 60%;
+    max-width: 85%;
 }
 
 div .image-container {
@@ -132,9 +126,11 @@ opacity: 1;
 }
   
 .italic {
-    font-style: italic; /* Aplica estilo cursiva */
+    font-family: 'CormorantBoldItalic', serif;
+    font-weight: bold; /* Negrita */
+    font-style: italic; /* Cursiva */
+    letter-spacing: 0.05em;
 }
-  
 .entry-right {
     flex: 1.2; /* Ocupa el doble de espacio que la izquierda */
     display: flex;
@@ -149,13 +145,13 @@ opacity: 1;
     margin-left: 30px;
 }
 
+
 @media screen and (max-width: 1200px) {
+
 .entry-left img {
 
     width: 100%; /* Imagen ocupa todo el ancho disponible */
-}}
-
-@media screen and (max-width: 900px) {
+}
 
 section{
     width: 100%; /* La sección ocupa el 66% del ancho del main */
@@ -185,6 +181,7 @@ section{
 
 .entry-left {
     max-width: 100%; /* Ancho máximo */
+    padding-bottom: 20px;
 }
 
 .entry-right {
@@ -197,9 +194,14 @@ section{
     margin: 0px;
 }
 
+.quote{
+    padding-right: 0px;
+
+}
+
 .underquote{
     font-size: 1.2em;
-    padding-top: 30px;
+    padding-top: 40px;
     padding-left: 0px;
     max-width: 100%;
 }

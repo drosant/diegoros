@@ -85,7 +85,7 @@ form.addEventListener('submit', async function (event) {
         // Si la acción tiene éxito, mostrar el mensaje de éxito
         successMessage.textContent = '¡Gracias por contactar con nosotros! Nos pondremos en contacto contigo lo antes posible.';
         successMessage.style.display = 'block';
-        successMessage.style.color = '#8dceb2';
+        successMessage.style.color = '#819885';
     } catch (error) {
         // Si la validación o la acción falla, mostrar el mensaje de error
         successMessage.textContent = error.message || 'Ha habido un error. Por favor, inténtalo de nuevo o escríbenos a info@coratravelstudio.com';

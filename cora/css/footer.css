@@ -4,6 +4,7 @@
   }
 
 footer {
+    position: relative;
     background-color: var(--green-color);
     font-family: 'TTTravelsMedium';
     color: var(--text-color);
@@ -15,6 +16,7 @@ footer {
     margin-top: 30px;
     font-size: 11px;
     text-transform: uppercase; /* Mayúsculas para todo el footer */
+    z-index: 4; 
 }
 
 /* Estilos comunes para el texto en el footer */

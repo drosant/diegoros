@@ -31,7 +31,7 @@ main {
   
 section {
     padding-top: 145px;
-    padding-right: 50px;
+    padding-right: 43px;
     padding-left: 12px;
     height: auto;
     width: 66.67%; /* La sección ocupa el 66% del ancho del main */
@@ -86,7 +86,6 @@ p{
     background-color: var(--text-color); /* Define color */
     width: 100%; /* Asegura que ocupa todo el ancho */
     display: block;
-    padding-right: 100px;
     margin-top: 1px;
     margin-bottom: 30px;
 }

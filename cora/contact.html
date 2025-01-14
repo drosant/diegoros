@@ -13,18 +13,20 @@
 </head>
 <body>
     <!-- Cabecera -->
+  
     <header>
         <h1 class="logo">
             <a href="index.html">
                 <span class="bold">CORA</span> <span class="medium">TRAVEL STUDIO</span>
             </a>
         </h1>
+        <button class="menu-toggle" aria-label="Menu">&#9776;</button>
         <nav>
             <ul>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="locations.html">LOCATIONS</a></li>
-                <li><a href="review.html">REVIEW</a></li>
-                <li><a href="contact.html" class="active salmon">CONTACT</a></li>
+                <li><a href="about.html">ETHOS</a></li>
+                <li><a href="locations.html">DESTINOS</a></li>
+                <li><a href="review.html">VIAJEROS</a></li>
+                <li><a href="contact.html" class="active salmon">CONTACTO</a></li>
             </ul>
         </nav>
     </header>
@@ -32,12 +34,11 @@
     <!-- Sección principal -->
     <main>
         <section>
-            <h2 class="title">GET IN TOUCH</h2>
+            <h2 class="title">TE ESCUCHAMOS</h2>
             <div class="separator"></div>
             <div class="entry">
                 <p class="description">
-                    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
+                    ¡Cuéntanos qué viaje tienes en mente! Queremos saber cuáles son tus sueños viajeros, esos destinos que te inspiran y las experiencias que imaginas vivir. Nos encargaremos de contactar contigo y ayudarte a transformar esas ideas en un viaje único, inolvidable y hecho por y para ti. Si lo prefieres, también puedes escribirnos a info@coratravelstudio.com.
                 </p>
                 <form action="#" method="post">
                     <div class="form-section">
@@ -66,7 +67,7 @@
                         <div class="fine-line"></div>
                     </div>
                     <div class="send-section">
-                        <button type="submit" class="submit-btn">SEND →</button>
+                        <button id="salmon" type="submit" class="submit-btn lets-talk">ENVIAR →</button>
                     </div>
                 </form>
                 <p class="success-message">¡Gracias por contactar con nosotros! Nos pondremos en contacto contigo lo antes posible.</p>
@@ -93,5 +94,6 @@
     <script src="js/transitions.js"></script> 
     <script src="js/fading.js"></script> 
     <script src="js/send.js"></script> 
+    <script src="js/header.js"></script> 
 </body>
 </html>

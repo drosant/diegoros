@@ -58,7 +58,7 @@ main {
   
 section {
     padding-top: 145px;
-    padding-right: 50px;
+    padding-right: 43px;
     padding-left: 12px;
     min-height: calc(100vh - 135px);
     width: 66.67%; /* La sección ocupa el 66% del ancho del main */
@@ -122,7 +122,6 @@ textarea:focus {
     background-color: var(--text-color); /* Define color */
     width: 100%; /* Asegura que ocupa todo el ancho */
     display: block;
-    padding-right: 100px;
     margin-bottom: 20px;
     margin-top: 1px;
 }
@@ -180,14 +179,15 @@ textarea:focus {
 }
 
 button{
-    font-size: 0.9em;
-    font-family: 'TTTravelsMedium', Arial, sans-serif;
     background: none; /* Sin fondo */
     border: none; /* Sin borde */
     font-weight: bold; /* Negrita */
     text-decoration: underline; /* Subrayado */
-    color: inherit; /* Usa el color de texto del diseño actual */
     cursor: pointer; /* Muestra el puntero de clic */
+}
+
+#salmon{
+    color:var(--text-color);
 }
 
 .success-message{
