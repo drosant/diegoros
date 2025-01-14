@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
             initYOffset: 0,
         },
         "768px": {
-            initialDelay: 1000,
+            initialDelay: 200,
             imageFadeInTime: 1000,
             imageHoldTime: 4500,
             imageInterval: 1500,
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
             initYOffset: 0,
         },
         "425px": {
-            initialDelay: 1000,
+            initialDelay: 200,
             imageFadeInTime: 1000,
             imageHoldTime: 4500,
             imageInterval: 1500,
