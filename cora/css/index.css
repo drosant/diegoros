@@ -663,7 +663,7 @@ main::before {
     #lets-talk-4{
         text-align: left;
         padding-top: 50px;
-        padding-bottom: 70px;
+        padding-bottom: 0px;
         padding-left: 0px;
     
     }
