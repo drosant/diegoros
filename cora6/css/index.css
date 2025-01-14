@@ -776,7 +776,7 @@ main::before {
         color: var(--text-color); /* Color del texto */
         letter-spacing: 0.03em;
         line-height: 1em; /* Ajustar el espacio entre líneas */
-        width: 70%;
+        width: 80%;
         padding-top: 40px;
     }
     
