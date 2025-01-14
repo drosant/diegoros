@@ -63,14 +63,7 @@ h1 {
 
 .medium {
     color: var(--text-color);
-    transition: color 1.3s ease; /* Transición suave al aplicar y quitar hover */
 }
-
-.medium:hover {
-    color: var(--green-color);
-    transition: color 1.6s ease; /* Efecto suave de transición */
-}
-
 
 
 
