@@ -19,6 +19,10 @@ header {
     z-index: 1000; /* Para asegurarse de que el header esté siempre encima */
 }
 
+.menu-toggle {
+    display: none; /* Oculta el menú hamburguesa inicialmente */
+}
+
 /* Logo */
 .logo {
     flex-grow: 1;
@@ -26,7 +30,7 @@ header {
     text-align: left; /* Alineado a la izquierda en pantallas grandes */
 }
 
-.active.salmon{
+.active.salmon {
     color: var(--salmon-color);
 }
 
@@ -83,6 +87,7 @@ nav ul li a {
     .logo {
         text-align: center; /* Centra el logo */
         margin-bottom: 10px; /* Espaciado entre el logo y el menú */
+        font-size: 1.2em; /* Reduce el tamaño del logo */
     }
 
     nav ul {
@@ -99,30 +104,71 @@ nav ul li a {
         letter-spacing: 0.2em; /* Reduce el espaciado entre letras */
     }
 
-
-    .logo {
-        font-size: 1.2em; /* Reduce el tamaño del logo */
-    }
 }
 
-/* Media Queries para tamaños pequeños */
 @media screen and (max-width: 600px) {
-    nav ul {
-        gap: 20px; /* Reduce el espacio entre elementos */
+    header {
+        flex-direction: row; 
+        justify-content: flex-start; 
+        align-items: flex-start;
+        padding: 20px; 
+        height: auto; 
+        background-color: transparent;
     }
 
-    nav{
-        margin-right: 0px;
-        margin-left: 0px;
+    .logo {
+        text-align: left; 
+        font-size: 1em; 
+        padding-left: 20px;
+    }
+
+    nav ul {
+        display: none; /* Oculta el menú inicialmente */
+        position: absolute; 
+        top: 100%; 
+        left: 0;
+        width: 100%; 
+        background-color: var(--background-color);
+        flex-direction: column; 
+        padding: 10px 0; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+        z-index: 1000;
+        opacity: 0; /* Comienza con opacidad 0 */
+        transition: opacity 1s ease; /* Transición suave en 1 segundo */
+    }
+
+    nav ul.active {
+        display: flex; /* Muestra el menú cuando está activo */
+        opacity: 1; /* Opacidad completa cuando está activo */
+    }
+
+    nav ul li {
+        margin: 0; /* Sin márgenes */
+        padding: 10px 40px; /* Espaciado interno */
+        width: 100%;
     }
 
     nav ul li a {
-        font-size: 10px; /* Reduce el tamaño de la fuente */
-        letter-spacing: 0.2em; /* Reduce el espaciado entre letras */
+        font-size: 0.9em; 
+        color: var(--text-color);
+        text-align: left;
+        width: 100%; /* Ocupa todo el ancho disponible */
     }
 
-    .logo {
-        font-size: 1em; /* Reduce el tamaño del logo */
+    .menu-toggle {
+        display: block; 
+        font-size: 1em;
+        background: none;
+        border: none;
+        text-decoration: none;
+        cursor: pointer;
+        color: var(--text-color);
+        padding-right: 20px;
+        font-weight: normal;
+    }
+
+    .menu-toggle:focus {
+        outline: none; 
     }
 }
 
@@ -131,9 +177,9 @@ nav ul li a {
     nav ul {
         gap: 15px; /* Reduce el espacio entre elementos */
     }
+
     nav ul li a {
-        font-size: 10px; /* Reduce el tamaño de la fuente */
+        font-size: 0.9em; /* Reduce el tamaño de la fuente */
         letter-spacing: 0.2em; /* Reduce el espaciado entre letras */
     }
-
 }
