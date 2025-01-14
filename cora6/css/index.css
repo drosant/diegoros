@@ -744,6 +744,9 @@ main::before {
 
     #section-3 {
         width: calc(100% - 80px);
+        height: auto;
+        min-height: 100px;
+        padding-bottom: 80px;
     }
     
     #left-3{

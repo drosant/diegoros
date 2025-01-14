@@ -119,6 +119,11 @@ a{
     a{
         font-size: 1em;
     }
+
+    .italic{
+        font-size: 1.3em;
+
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -144,6 +149,11 @@ a{
     a{
         font-size: 0.9em;
     }
+
+    .italic{
+        font-size: 1.2em;
+
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -164,6 +174,11 @@ a{
     
     p{
         font-size: 1em;
+    }
+
+    .italic{
+        font-size: 1.2em;
+
     }
 
     a{

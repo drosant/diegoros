@@ -146,6 +146,7 @@ nav ul li a {
         margin: 0; /* Sin márgenes */
         padding: 10px 40px; /* Espaciado interno */
         width: 100%;
+        padding-right: 40px;
     }
 
     nav ul li a {

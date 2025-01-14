@@ -221,6 +221,60 @@ section {
     }
 }
 
+@media screen and (max-width: 1400px){
+    .bottom-section h2{
+        font-size: 1.8rem;
+        letter-spacing: 0.23em; /* Asegúrate de que esto sea correcto */
+        line-height: 1.4em;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .bottom-section h2{
+        font-size: 1.6rem;
+        letter-spacing: 0.23em; /* Asegúrate de que esto sea correcto */
+        line-height: 1.4em;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .bottom-section h2{
+        font-size: 1.2rem;
+        letter-spacing: 0.23em; /* Asegúrate de que esto sea correcto */
+        line-height: 1.4em;
+    }
+}
+
+@media screen and (max-width: 790px){
+    .bottom-section h2{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .vertical-carousel-container {
+        position: fixed;
+        top: 0px;
+        left: 30px; /* Desplaza el carrusel un 20% desde el lado izquierdo de la pantalla */
+        width: 33.33%; /* Un tercio del ancho de la pantalla */
+        height: 100vh; /* Ocupa toda la altura de la pantalla */
+        overflow: hidden;
+        background: transparent;
+        z-index: 2; /* Asegura que se superponga sobre el header y el carrusel de imágenes */
+        pointer-events: none;
+    }
+
+    .carousel-item {
+        pointer-events: none; /* Desactiva interacción */
+    }
+
+    .carousel-image {
+        user-select: none; /* Evita la selección de texto o imágenes */
+    }
+
+}
+
+
 
 
 

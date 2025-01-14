@@ -181,6 +181,7 @@ section{
 
 .entry-left {
     max-width: 100%; /* Ancho máximo */
+    padding-bottom: 20px;
 }
 
 .entry-right {
@@ -193,9 +194,14 @@ section{
     margin: 0px;
 }
 
+.quote{
+    padding-right: 0px;
+
+}
+
 .underquote{
     font-size: 1.2em;
-    padding-top: 30px;
+    padding-top: 20px;
     padding-left: 0px;
     max-width: 100%;
 }
