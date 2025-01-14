@@ -250,7 +250,7 @@ section {
 
 @media screen and (max-width: 790px){
     .bottom-section h2{
-        display: none;
+        font-size: 0.8rem;
     }
 }
 
