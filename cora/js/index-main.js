@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const imageContainer = document.querySelector(".image_container");
 
     const imageList = [
-        "viaje-recibimiento.webp",
         "viaje-recibimiento2.webp",
         "viaje-rio.webp",
         "viaje-safari.webp",
