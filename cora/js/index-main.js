@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "viaje-masaje.webp",
         "viaje-mercado.webp",
         "viaje-mercado2.webp",
-        "viaje-montaña.webp",
+        "viaje-mountain.webp",
         "viaje-mujer.webp",
         "viaje-nature.webp",
         "viaje-noche.webp",

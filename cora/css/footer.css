@@ -19,6 +19,11 @@ footer {
     z-index: 4; 
 }
 
+/* Estilo normal (en una línea) */
+.break {
+    display: inline;
+}
+
 /* Estilos comunes para el texto en el footer */
 footer p, footer a {
     color: var(--text-color);
@@ -79,12 +84,34 @@ footer p, footer a {
 
 /* Media query para pantallas pequeñas */
 @media screen and (max-width: 600px) {
+
+    .upper .bold{
+        font-size:1.2em;
+        font-weight: 500;
+        font-family: 'TTTravelsMedium'; /* Fuente para "Travel Studio" */
+        letter-spacing: 0.23em; /* Aplicar el mismo spacing */
+    }
+
+    .break {
+        display: block; /* Cambia el guion a una nueva línea */
+        text-align: center; /* Opcional, centra los elementos */
+        margin: 5px 0; /* Espaciado opcional */
+        opacity: 0;
+    }
+
+    .footer-text{
+        font-size:1.2em;
+    }
     
     footer {
         height: auto;
         flex-direction: column;
         font-size: 9px; /* Reduce el tamaño de la fuente */
         padding: 40px; /* Reduce el padding para mantener proporción */
+    }
+
+    .upper{
+        padding-bottom: 15px;
     }
 
     .footer-left {
