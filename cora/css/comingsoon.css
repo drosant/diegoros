@@ -17,11 +17,11 @@ body, html {
 
 .fade-in {
     opacity: 0; /* Empieza invisible */
-    transition: opacity 3s ease-in; /* Duración y suavidad de la transición */
 }
 
 .fade-in.visible {
     opacity: 1; /* Se hace visible */
+    transition: opacity 3s ease-in; /* Duración y suavidad de la transición */
 }
 
 
