@@ -68,7 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "viaje-camarero.webp",
         "viaje-canoa.webp",
         "viaje-cascada.webp",
-        "viaje-cascada2.webp",
         "viaje-chicas.webp",
         "viaje-cielo.webp",
         "viaje-cocina2.webp",
