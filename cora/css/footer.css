@@ -79,13 +79,29 @@ footer p, footer a {
 
 /* Media query para pantallas pequeñas */
 @media screen and (max-width: 600px) {
+    
     footer {
+        height: auto;
+        flex-direction: column;
         font-size: 9px; /* Reduce el tamaño de la fuente */
         padding: 40px; /* Reduce el padding para mantener proporción */
+    }
+
+    .footer-left {
+        width: 100%; /* La columna izquierda ocupa un tercio */
+        text-align: left;
+        padding-bottom: 15px;
+    }
+    
+    .footer-right {
+        width: 100%; /* La columna derecha ocupa dos tercios */
+        text-align: left;
     }
 
     footer p, footer a {
         font-size: 9px; /* Reduce el tamaño de texto en enlaces y párrafos */
         letter-spacing: 0.2em; /* Ajusta el espaciado entre letras */
     }
+
+
 }
