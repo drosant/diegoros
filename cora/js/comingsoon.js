@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     const countdownElement = document.getElementById("countdown");
-    const launchDate = new Date("2025-01-19:00:00").getTime(); // Cambia la fecha al día de lanzamiento
+    const launchDate = new Date("2025-01-19T00:00:00").getTime(); // Cambia la fecha al día de lanzamiento
 
     function updateCountdown() {
         const now = new Date().getTime();
