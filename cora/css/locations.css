@@ -266,7 +266,7 @@ section {
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 470px){
     .bottom-section h2{
         font-size: 0.6rem;
     }
