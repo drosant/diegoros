@@ -148,6 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
             initXOffset: 0,
             initYOffset: 0,
         }
+        
     };
 
     let currentSettings = screenSettings["1440px"]; // Configuración por defecto
@@ -166,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (window.matchMedia("(min-width: 768px)").matches) {
             currentSettings = screenSettings["768px"];
             console.log("768px Activated");
-        } else if (window.matchMedia("(min-width: 425px)").matches) {
+        } else if (window.matchMedia("(min-width: 300px)").matches) {
             currentSettings = screenSettings["425px"];
             console.log("425px Activated");
         }
