@@ -69,21 +69,10 @@ footer p, footer a {
     text-decoration: underline;
 }
 
-/* Media query para pantallas pequeñas */
-@media screen and (max-width: 900px) {
-    footer {
-        font-size: 10px; /* Reduce el tamaño de la fuente */
-        padding: 20px; /* Reduce el padding para mantener proporción */
-    }
 
-    footer p, footer a {
-        font-size: 10px; /* Reduce el tamaño de texto en enlaces y párrafos */
-        letter-spacing: 0.2em; /* Ajusta el espaciado entre letras */
-    }
-}
 
 /* Media query para pantallas pequeñas */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
 
     .upper .bold{
         font-size:1.2em;
@@ -108,6 +97,7 @@ footer p, footer a {
         flex-direction: column;
         font-size: 9px; /* Reduce el tamaño de la fuente */
         padding: 40px; /* Reduce el padding para mantener proporción */
+        padding-left: 50px;
     }
 
     .upper{
@@ -128,6 +118,14 @@ footer p, footer a {
     footer p, footer a {
         font-size: 9px; /* Reduce el tamaño de texto en enlaces y párrafos */
         letter-spacing: 0.2em; /* Ajusta el espaciado entre letras */
+    }
+
+
+}
+
+@media screen and (max-width: 600) {
+    footer {
+        padding-left: 40px;
     }
 
 

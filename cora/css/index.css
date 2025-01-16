@@ -285,7 +285,8 @@ main::before {
     align-items: flex-start;
     background-color: var(--background-color);
     width: calc(100% - 100px);
-    height: 100vh;
+    min-height: 100px;
+    height: calc(100vh - 135px)
 }
 
 #left-4{
@@ -438,6 +439,7 @@ main::before {
 
 /* Media query para pantallas más pequeñas */
 @media screen and (max-width: 1405px) {
+
     #bienvenidos {
         font-size: 2.3rem;
     }
@@ -624,6 +626,7 @@ main::before {
         flex-direction: column;
         height: auto;
     }
+
     
     #left-4{
         width: 100%;
