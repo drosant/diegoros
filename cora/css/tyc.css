@@ -21,7 +21,7 @@ section{
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    padding: 40px;
+    padding: 20px;
 }
 
 section p, li{
@@ -39,6 +39,7 @@ h1{
     font-size: 1.3rem;
     letter-spacing: 0.23em;
 }
+
 
 ul{
     padding-left: 60px;
