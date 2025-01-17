@@ -712,7 +712,7 @@ main::before {
         flex-direction: row;
         height: 400px;
         width: 100%;
-        padding-top: 115px;
+        padding-top: 30px;
     
     }
 
@@ -763,7 +763,7 @@ main::before {
         width: calc(100% - 50px);
         height: auto;
         min-height: 100px;
-        padding-bottom: 80px;
+        padding-bottom: 40px;
     }
     
     #left-3{
@@ -794,23 +794,23 @@ main::before {
         letter-spacing: 0.03em;
         line-height: 1em; /* Ajustar el espacio entre líneas */
         width: 80%;
-        padding-top: 40px;
+        padding-top: 30px;
     }
     
     #lets-talk-3{
         text-align: left;
-        padding-top: 40px;
+        padding-top: 30px;
         padding-left: 0px;
     
     }
     
     #first-3{
-        padding-top: 40px;
+        padding-top: 30px;
         padding-left: 0px;
         width: 100%;
     }
     #second-3{
-        padding-top: 40px;
+        padding-top: 30px;
         padding-left: 0px;
         width: 100%;
     }
@@ -837,25 +837,25 @@ main::before {
     #title-4 {
         font-size: 3.2em; /* Tamaño del texto */
         width: 100%;
-        padding-top: 40px;
+        padding-top: 30px;
     }
     
     
     #lets-talk-4{
         text-align: left;
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 30px;
+        padding-bottom: 30px;
         padding-left: 0px;
     
     }
     
     #first-4{
-        padding-top: 40px;
+        padding-top: 30px;
         padding-left: 0px;
         width: 100%;
     }
     #second-4{
-        padding-top: 40px;
+        padding-top: 30px;
         padding-left: 0px;
         width: 100%;
     }
