@@ -2,11 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const imageContainer = document.querySelector(".image_container");
 
     const imageList = [
-        "viaje-rio.webp", "viaje-safari2.webp", "viaje-safari3.webp", "viaje-safari4.webp", 
+        "viaje-safari2.webp", "viaje-safari4.webp", 
         "viaje-safari5.webp", "viaje-salon.webp", "viaje-sanubari.webp", "viaje-selva.webp", "viaje-silla.webp", 
         "viaje-sillas2.webp", "viaje-sombrilla.webp", "viaje-sombrilla2.webp", "viaje-sombrilla3.webp", "viaje-surf.webp", 
         "viaje-surf1.webp", "viaje-susurro.webp", "viaje-terraza.webp", "viaje-ventana.webp", "viaje-ventana2.webp", 
-        "viaje-flor2.webp", "viaje-gafas.webp", "viaje-hoguera.webp", 
+        "viaje-flor2.webp", "viaje-hoguera.webp", 
         "viaje-invierno.webp", "viaje-jardin.webp", "viaje-korea.webp", "viaje-letras.webp", "viaje-mar.webp", 
         "viaje-masaje.webp", "viaje-mercado.webp", "viaje-mercado2.webp", "viaje-mountain.webp", "viaje-mujer.webp", 
         "viaje-nature.webp", "viaje-noche.webp", "viaje-nomadic.webp", "viaje-oceano.webp", "viaje-paisaje.webp", 
