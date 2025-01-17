@@ -259,7 +259,7 @@ section {
 
 @media screen and (max-width: 790px){
     .vertical-carousel-container {
-        left: 30px; /* Desplaza el carrusel un 20% desde el lado izquierdo de la pantalla */
+        left: 23px; /* Desplaza el carrusel un 20% desde el lado izquierdo de la pantalla */
     }
 
     .bottom-section h2{
@@ -267,11 +267,48 @@ section {
     }
 }
 
+@media screen and (max-width: 600px){
+    .vertical-carousel-container {
+        left: 0px; /* Desplaza el carrusel un 20% desde el lado izquierdo de la pantalla */
+    }
+
+    .separator {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .bottom-section h2{
+        padding-right: 25px;
+    }
+
+    #lets-talk{
+        padding-right: 25px;
+
+    }
+
+
+}
+
 @media screen and (max-width: 470px){
     .bottom-section h2{
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
 }
+
+@media screen and (max-width: 450px){
+    .bottom-section h2{
+        font-size: 0.75rem;
+    }
+
+}
+
+@media screen and (max-width: 360px){
+    .bottom-section h2{
+        font-size: 0.60rem;
+    }
+
+}
+
 
 
 

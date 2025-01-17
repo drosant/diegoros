@@ -146,6 +146,7 @@ opacity: 1;
 }
 
 
+
 @media screen and (max-width: 1200px) {
 
 .entry-left img {
@@ -155,9 +156,16 @@ opacity: 1;
 
 section{
     width: 100%; /* La sección ocupa el 66% del ancho del main */
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
+
+.entry-right #lets-talk{
+    padding-right: 25px;
+
+}
+
+
 .entry-right p {
     text-align: left;
     width: 90%;
@@ -168,6 +176,10 @@ section{
 
     width: 100%; /* Imagen ocupa todo el ancho disponible */
 
+}
+
+.quote{
+    padding-right: 25px;
 }
 
 }

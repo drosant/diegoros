@@ -141,6 +141,11 @@ p{
 
   @media screen and (max-width: 600px) {
 
+    section{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
     .review{
         flex-direction: column;
         width: 100%;

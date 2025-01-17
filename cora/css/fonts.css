@@ -124,6 +124,11 @@ a{
         font-size: 1.3em;
 
     }
+
+    .lets-talk{
+        font-size: 0.8em;
+    }
+
 }
 
 @media screen and (max-width: 900px) {
@@ -154,6 +159,17 @@ a{
         font-size: 1.2em;
 
     }
+
+    .lets-talk{
+        font-size: 0.75em;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .lets-talk{
+        font-size: 0.7em;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -184,4 +200,28 @@ a{
     a{
         font-size: 0.9em;
     }
+
+    .lets-talk{
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .lets-talk{
+        font-size: 0.65em;
+    }
+
+    p{
+        font-size: 1.1em;
+    }
+
+    a{
+        font-size: 0.8em;
+    }
+
+    .italic{
+        font-size: 1.1em;
+
+    }
+
 }
