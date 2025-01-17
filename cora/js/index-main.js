@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
             leftInit: 8,
             rightInit: 92,
             topInit: 40,
-            bottomInit: 62,
+            bottomInit: 60,
             initXOffset: 0,
             initYOffset: 0,
         },
