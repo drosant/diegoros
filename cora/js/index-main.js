@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const imageContainer = document.querySelector(".image_container");
 
     const imageList = [
-        "viaje-safari2.webp", "viaje-safari4.webp", 
-        "viaje-safari5.webp", "viaje-salon.webp", "viaje-sanubari.webp", "viaje-selva.webp", "viaje-silla.webp", 
+        "viaje-safari4.webp", 
+        "viaje-salon.webp", "viaje-sanubari.webp", "viaje-selva.webp", "viaje-silla.webp", 
         "viaje-sillas2.webp", "viaje-sombrilla.webp", "viaje-sombrilla2.webp", "viaje-sombrilla3.webp", "viaje-surf.webp", 
         "viaje-surf1.webp", "viaje-susurro.webp", "viaje-terraza.webp", "viaje-ventana.webp", "viaje-ventana2.webp", 
         "viaje-flor2.webp", "viaje-hoguera.webp", 
