@@ -156,8 +156,8 @@ opacity: 1;
 
 section{
     width: 100%; /* La sección ocupa el 66% del ancho del main */
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .entry-right #lets-talk{
@@ -179,12 +179,17 @@ section{
 }
 
 .quote{
-    padding-right: 25px;
+    padding-right: 40px;
 }
 
 }
 
 @media screen and (max-width: 600px) {
+
+section{
+    padding-left: 25px;
+    padding-right: 25px;
+}
 
 .entry{
     flex-direction: column;
