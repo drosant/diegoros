@@ -102,19 +102,14 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateSettings() {
         if (window.matchMedia("(min-width: 2560px)").matches) {
             currentSettings = screenSettings["4k"];
-            console.log("4k Activated");
         } else if (window.matchMedia("(min-width: 1440px)").matches) {
             currentSettings = screenSettings["1440px"];
-            console.log("1440px Activated");
         } else if (window.matchMedia("(min-width: 1024px)").matches) {
             currentSettings = screenSettings["1024px"];
-            console.log("1024px Activated");
         } else if (window.matchMedia("(min-width: 768px)").matches) {
             currentSettings = screenSettings["768px"];
-            console.log("768px Activated");
         } else if (window.matchMedia("(min-width: 300px)").matches) {
             currentSettings = screenSettings["425px"];
-            console.log("425px Activated");
         }
     }
 
