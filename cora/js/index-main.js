@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
             leftInit: 17,
             rightInit: 83,
             topInit: 35,
-            bottomInit: 65,
+            bottomInit: 60,
             initXOffset: 0,
             initYOffset: 0,
         }
