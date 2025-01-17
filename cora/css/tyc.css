@@ -34,10 +34,14 @@ section p, li{
 
 }
 
-h1{
+section h1{
     font-family: 'TTTravelsMedium', Arial, sans-serif;
     font-size: 1.3rem;
     letter-spacing: 0.23em;
+}
+
+section h2{
+    letter-spacing: 0.20em;
 }
 
 
