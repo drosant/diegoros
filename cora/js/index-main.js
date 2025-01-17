@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "viaje-surf1.webp", "viaje-susurro.webp", "viaje-terraza.webp", "viaje-ventana.webp", "viaje-ventana2.webp", 
         "viaje-flor2.webp", "viaje-hoguera.webp", 
         "viaje-invierno.webp", "viaje-jardin.webp", "viaje-korea.webp", "viaje-letras.webp", "viaje-mar.webp", 
-        "viaje-masaje.webp", "viaje-mercado.webp", "viaje-mercado2.webp", "viaje-mountain.webp", "viaje-mujer.webp", 
+        "viaje-masaje.webp", "viaje-mercado.webp", "viaje-mercado2.webp", "viaje-mountain.webp",  
         "viaje-nature.webp", "viaje-noche.webp", "viaje-nomadic.webp", "viaje-oceano.webp", "viaje-paisaje.webp", 
         "viaje-palmera.webp", "viaje-palmeras2.webp", "viaje-piscina2.webp", "viaje-planta.webp", 
         "viaje-playa.webp", "viaje-playa2.webp", "viaje-pool.webp", "viaje-postre.webp", "viaje-agua.webp", 
