@@ -128,3 +128,19 @@ footer p, footer a {
         padding-left: 25px;
     }
 }
+
+@media screen and (max-width: 384px) {
+    footer {
+        padding-left: 25px;
+    }
+
+    footer p, footer a {
+        font-size: 8px; /* Reduce el tamaño de texto en enlaces y párrafos */
+        letter-spacing: 0.2em; /* Ajusta el espaciado entre letras */
+    }
+
+    .footer-text{
+        font-size:1.1em;
+    }
+}
+
