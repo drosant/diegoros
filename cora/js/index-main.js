@@ -2,80 +2,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const imageContainer = document.querySelector(".image_container");
 
     const imageList = [
-        "viaje-rio.webp",
-        "viaje-safari.webp",
-        "viaje-safari2.webp",
-        "viaje-safari3.webp",
-        "viaje-safari4.webp",
-        "viaje-safari5.webp",
-        "viaje-salon.webp",
-        "viaje-sanubari.webp",
-        "viaje-selva.webp",
-        "viaje-silla.webp",
-        "viaje-sillas2.webp",
-        "viaje-sombrilla.webp",
-        "viaje-sombrilla2.webp",
-        "viaje-sombrilla3.webp",
-        "viaje-surf.webp",
-        "viaje-surf1.webp",
-        "viaje-susurro.webp",
-        "viaje-terraza.webp",
-        "viaje-ventana.webp",
-        "viaje-ventana2.webp",
-        "viaje-flor2.webp",
-        "viaje-flores.webp",
-        "viaje-gafas.webp",
-        "viaje-granja.webp",
-        "viaje-hoguera.webp",
-        "viaje-invierno.webp",
-        "viaje-jardin.webp",
-        "viaje-korea.webp",
-        "viaje-letras.webp",
-        "viaje-mar.webp",
-        "viaje-masaje.webp",
-        "viaje-mercado.webp",
-        "viaje-mercado2.webp",
-        "viaje-mountain.webp",
-        "viaje-mujer.webp",
-        "viaje-nature.webp",
-        "viaje-noche.webp",
-        "viaje-nomadic.webp",
-        "viaje-oceano.webp",
-        "viaje-paisaje.webp",
-        "viaje-palmera.webp",
-        "viaje-palmeras2.webp",
-        "viaje-piscina.webp",
-        "viaje-piscina2.webp",
-        "viaje-planta.webp",
-        "viaje-playa.webp",
-        "viaje-playa2.webp",
-        "viaje-pool.webp",
-        "viaje-postre.webp",
-        "viaje-agua.webp",
-        "viaje-almuerzo.webp",
-        "viaje-almuerzo2.webp",
-        "viaje-arcos.webp",
-        "viaje-asia.webp",
-        "viaje-asia2.webp",
-        "viaje-banco.webp",
-        "viaje-bar.webp",
-        "viaje-calle.webp",
-        "viaje-camarero.webp",
-        "viaje-canoa.webp",
-        "viaje-cascada.webp",
-        "viaje-chicas.webp",
-        "viaje-cocina2.webp",
-        "viaje-coco.webp",
-        "viaje-corazon.webp",
-        "viaje-ducha.webp",
-        "viaje-dunas.webp",
-        "viaje-dunas2.webp",
-        "viaje-escultura.webp",
-        "viaje-flor.webp",
+        "viaje-rio.webp", "viaje-safari.webp", "viaje-safari2.webp", "viaje-safari3.webp", "viaje-safari4.webp", 
+        "viaje-safari5.webp", "viaje-salon.webp", "viaje-sanubari.webp", "viaje-selva.webp", "viaje-silla.webp", 
+        "viaje-sillas2.webp", "viaje-sombrilla.webp", "viaje-sombrilla2.webp", "viaje-sombrilla3.webp", "viaje-surf.webp", 
+        "viaje-surf1.webp", "viaje-susurro.webp", "viaje-terraza.webp", "viaje-ventana.webp", "viaje-ventana2.webp", 
+        "viaje-flor2.webp", "viaje-flores.webp", "viaje-gafas.webp", "viaje-granja.webp", "viaje-hoguera.webp", 
+        "viaje-invierno.webp", "viaje-jardin.webp", "viaje-korea.webp", "viaje-letras.webp", "viaje-mar.webp", 
+        "viaje-masaje.webp", "viaje-mercado.webp", "viaje-mercado2.webp", "viaje-mountain.webp", "viaje-mujer.webp", 
+        "viaje-nature.webp", "viaje-noche.webp", "viaje-nomadic.webp", "viaje-oceano.webp", "viaje-paisaje.webp", 
+        "viaje-palmera.webp", "viaje-palmeras2.webp", "viaje-piscina.webp", "viaje-piscina2.webp", "viaje-planta.webp", 
+        "viaje-playa.webp", "viaje-playa2.webp", "viaje-pool.webp", "viaje-postre.webp", "viaje-agua.webp", 
+        "viaje-almuerzo.webp", "viaje-almuerzo2.webp", "viaje-arcos.webp", "viaje-asia.webp", "viaje-asia2.webp", 
+        "viaje-banco.webp", "viaje-bar.webp", "viaje-calle.webp", "viaje-camarero.webp", "viaje-canoa.webp", 
+        "viaje-cascada.webp", "viaje-chicas.webp", "viaje-cocina2.webp", "viaje-coco.webp", "viaje-corazon.webp", 
+        "viaje-ducha.webp", "viaje-dunas.webp", "viaje-dunas2.webp", "viaje-escultura.webp", "viaje-flor.webp", 
         "velero-viaje.webp"
     ];
-    
-  
+
+    let remainingImages = [...imageList]; // Copia de la lista original de imágenes
+
     // Configuraciones para diferentes anchos de pantalla
     const screenSettings = {
         "4k": {
@@ -102,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
             leftInit: 8,
             rightInit: 92,
             topInit: 40,
-            bottomInit: 65,
+            bottomInit: 62,
             initXOffset: 0,
             initYOffset: 0,
         },
@@ -200,10 +145,20 @@ document.addEventListener("DOMContentLoaded", () => {
         return getRandomInRange(finalMin, finalMax);
     }
 
-    let currentImageIndex = Math.floor(Math.random() * imageList.length); // Imagen inicial aleatoria
+    function getRandomImage() {
+        if (remainingImages.length === 0) {
+            // Si ya no quedan imágenes, reiniciar la lista de imágenes
+            remainingImages = [...imageList];
+        }
+        const randomIndex = Math.floor(Math.random() * remainingImages.length);
+        const selectedImage = remainingImages[randomIndex];
+        // Eliminar la imagen seleccionada para evitar repeticiones
+        remainingImages.splice(randomIndex, 1);
+        return selectedImage;
+    }
 
     function createAndShowImage() {
-        const currentImage = imageList[currentImageIndex];
+        const currentImage = getRandomImage(); // Selección aleatoria de imagen
 
         preloadImage(currentImage, (loadedImage) => {
             loadedImage.alt = "Image";
@@ -246,8 +201,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 }, imageFadeInTime);
             }, imageHoldTime);
         });
-
-        currentImageIndex = (currentImageIndex + 1) % imageList.length;
     }
 
     setTimeout(() => {
