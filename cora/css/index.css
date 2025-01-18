@@ -763,7 +763,7 @@ main::before {
         width: calc(100% - 50px);
         height: auto;
         min-height: 100px;
-        padding-bottom: 40px;
+        padding-bottom: 70px;
     }
     
     #left-3{
@@ -874,6 +874,42 @@ main::before {
 
     #title-4{
         font-size:2.9em;
+    }
+
+    #top-section{
+        height: 45%;
+    
+    }
+
+
+
+}
+
+@media screen and (max-width: 384px) {
+
+    #section-2{
+        width: calc(100% - 20px);
+    }
+
+    #section-3 {
+        width: calc(100% - 20px);
+    }
+
+    #section-4 {
+        width: calc(100% - 20px);
+    }
+
+    #title-3{
+        font-size:2.7em;
+    }
+
+    #title-4{
+        font-size:2.7em;
+    }
+
+    #top-section{
+        height: 40%;
+    
     }
 
 

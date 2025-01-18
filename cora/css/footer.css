@@ -131,7 +131,7 @@ footer p, footer a {
 
 @media screen and (max-width: 384px) {
     footer {
-        padding-left: 25px;
+        padding-left: 10px;
     }
 
     footer p, footer a {

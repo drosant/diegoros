@@ -191,10 +191,12 @@ nav ul li a {
 
     .logo {
         font-size: 0.8em; 
+        padding-left: 5px;
     }
 
     .menu-toggle {
         font-size: 0.8em;
+        padding-right: 5px;
     }
 
     nav ul {
@@ -204,5 +206,11 @@ nav ul li a {
     nav ul li a {
         font-size: 0.6em; /* Reduce el tamaño de la fuente */
         letter-spacing: 0.2em; /* Reduce el espaciado entre letras */
+    }
+
+    nav ul li {
+        padding: 7px 10px; /* Espaciado interno */
+        width: 100%;
+        padding-right: 40px;
     }
 }

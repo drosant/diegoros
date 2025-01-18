@@ -302,9 +302,30 @@ section {
 
 }
 
-@media screen and (max-width: 360px){
+@media screen and (max-width: 384px){
     .bottom-section h2{
-        font-size: 0.60rem;
+        font-size: 0.7rem;
+    }
+
+    .separator {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .bottom-section h2{
+        padding-right: 10px;
+    }
+
+    #lets-talk{
+        padding-right: 10px;
+
+    }
+
+}
+
+@media screen and (max-width: 350px){
+    .bottom-section h2{
+        font-size: 0.65rem;
     }
 
 }

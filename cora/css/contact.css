@@ -280,3 +280,13 @@ form{
 
 
 }
+
+@media screen and (max-width: 384px) {
+
+    section{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+}
