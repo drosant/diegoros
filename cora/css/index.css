@@ -116,8 +116,6 @@ main::before {
 }
 
 #section-2 {
-    position: flex;
-    flex-direction: row;
     background-color: var(--background-color);
     height: 100vh;
     width: calc(100% - 100px); /* Reduce el ancho total en 100px (50px a cada lado) */
@@ -471,7 +469,7 @@ main::before {
 
     section {
         height: auto;
-        min-height: none;
+        min-height: 100px;
         scroll-snap-align: none;
         width: 100vw;
         background-color: var(--background-color);
@@ -889,6 +887,9 @@ main::before {
     
     }
 
+    .inter{
+        opacity: 0;
+    }
 
 
 }
