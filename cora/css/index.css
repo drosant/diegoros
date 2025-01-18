@@ -443,6 +443,14 @@ main::before {
     #bienvenidos {
         font-size: 2.3rem;
     }
+
+    #title-3 {
+        font-size: 3.4em; /* Tamaño del texto */
+    }
+
+    #title-4 {
+        font-size: 3.4em; /* Tamaño del texto */
+    }
 }
 
 @media screen and (max-width:1200px){
