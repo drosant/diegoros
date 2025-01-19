@@ -26,6 +26,10 @@ footer {
     scroll-snap-align: none; /* Excluye el footer del snapping */
 }
 
+img {
+    pointer-events: none;
+}
+
 /* Aplicar CormorantRegular en los textos principales */
 p, h2 {
     font-family: 'CormorantRegular', Arial, sans-serif;
