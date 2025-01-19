@@ -58,6 +58,10 @@ p{
     text-align: left; /* Justifica el texto a la izquierda */
 }
 
+img {
+    pointer-events: none;
+}
+
 .separator {
     border-top: 1px solid var(--text-color); /* Borde delgado exacto */
     background-color: var(--text-color); /* Define color */
