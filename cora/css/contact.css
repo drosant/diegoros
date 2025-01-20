@@ -144,6 +144,10 @@ textarea:focus {
     padding-bottom: 30px;
   }
 
+.datos{
+    padding-top: 50px;
+}
+
   label{
     font-size: 1.1em;
     padding-top: 20px;
