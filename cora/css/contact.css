@@ -146,6 +146,8 @@ textarea:focus {
 
 .datos{
     padding-top: 50px;
+    user-select: text;
+
 }
 
   label{
