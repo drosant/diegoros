@@ -17,6 +17,11 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000; 
+    pointer-events: none;
+}
+
+header * {
+    pointer-events: auto; /* Permite la interacción con los elementos internos del header */
 }
 
 .menu-toggle {
