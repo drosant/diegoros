@@ -19,14 +19,14 @@ main::before {
     top: 0;
     left: 0;
     width: 100%;
-    height: 13%; /* Ajusta la altura para que el desvanecimiento sea sutil */
+    height: 13%; 
     background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, var(--background-color) 100%);
     pointer-events: none;
     z-index: 1;
 }
 
 main {
-    display: flex; /* Flexbox para organizar los elementos */
+    display: flex; 
 }
   
 section {
@@ -34,10 +34,10 @@ section {
     padding-right: 43px;
     padding-left: 12px;
     height: auto;
-    width: 66.67%; /* La sección ocupa el 66% del ancho del main */
-    margin-left: auto; /* Desplaza la sección hacia la derecha */
-    display: flex; /* Flexbox en la sección para alinear los hijos */
-    flex-direction: column; /* Asegura que los elementos estén en columna */
+    width: 66.67%; 
+    margin-left: auto; 
+    display: flex; 
+    flex-direction: column; 
 }
   
 h2 {
@@ -63,9 +63,9 @@ h3 {
 p{
     font-family: 'CormorantRegular', Arial, sans-serif;
     color: var(--text-color);
-    width: 100%; /* Ocupa todo el ancho disponible */
+    width: 100%; 
     margin: 0;
-    text-align: left; /* Justifica el texto a la izquierda */
+    text-align: left; 
     line-height: 1.4;
 }
 
@@ -83,9 +83,9 @@ p{
 }
 
 .separator {
-    border-top: 1px solid var(--text-color); /* Borde delgado exacto */
-    background-color: var(--text-color); /* Define color */
-    width: 100%; /* Asegura que ocupa todo el ancho */
+    border-top: 1px solid var(--text-color); 
+    background-color: var(--text-color); 
+    width: 100%; 
     display: block;
     margin-top: 1px;
     margin-bottom: 30px;
@@ -94,28 +94,28 @@ p{
 .review {
     width: 90%;
     display: flex;
-    flex-direction: row; /* Asegura que las columnas estén en fila horizontal */
-    justify-content: space-between; /* Distribuye el espacio entre los elementos */
-    align-items: flex-start; /* Alinea los elementos en la parte superior */
-    color: var(--text-color); /* Color del texto */
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    color: var(--text-color); 
     padding-top: 20px;
     padding-bottom: 30px;
   }
   
   .review-left {
-    flex: 1; /* Ocupa una parte del espacio */
-    max-width: 80%; /* Ancho máximo */
+    flex: 1; 
+    max-width: 80%; 
   }
   
   .review-left p {
-    width: 100%; /* Ocupa todo el ancho disponible */
+    width: 100%; 
     margin: 0;
-    text-align: left; /* Justifica el texto a la izquierda */
+    text-align: left; 
   }
   
   .review-right {
-    flex: 1.2; /* Ocupa el doble de espacio que la izquierda */
-    max-width: 90%; /* Ancho máximo */
+    flex: 1.2; 
+    max-width: 90%; 
   }
   
   .review-right p {
@@ -128,7 +128,7 @@ p{
   @media screen and (max-width: 900px) {
 
     section{
-        width: 100%; /* La sección ocupa el 66% del ancho del main */
+        width: 100%; 
         padding-left: 40px;
         padding-right: 40px;
     }
@@ -161,7 +161,7 @@ p{
     }
 
     .review-right p {
-        width: 100%; /* Ancho máximo */
+        width: 100%; 
         padding: 0px;
         padding-top: 20px;
         padding-bottom: 20px;

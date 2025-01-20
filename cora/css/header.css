@@ -10,24 +10,24 @@ header {
     padding: 30px;
     padding-left: 50px;
     padding-right: 60px;
-    background-color: transparent; /* Fondo transparente */
-    color: var(--text-color); /* Letra gris oscuro */
-    height: auto; /* Altura ajustable según contenido */
+    background-color: transparent; 
+    color: var(--text-color); 
+    height: auto; 
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Para asegurarse de que el header esté siempre encima */
+    z-index: 1000; 
 }
 
 .menu-toggle {
-    display: none; /* Oculta el menú hamburguesa inicialmente */
+    display: none; 
 }
 
 /* Logo */
 .logo {
     flex-grow: 1;
     font-size: 1.2em;
-    text-align: left; /* Alineado a la izquierda en pantallas grandes */
+    text-align: left; 
 }
 
 .active.salmon {
@@ -55,7 +55,7 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 35px;
-    justify-content: flex-end; /* Alineado a la derecha en pantallas grandes */
+    justify-content: flex-end; 
     padding: 0;
     margin: 0;
 }
@@ -77,31 +77,31 @@ nav ul li a {
 /* Media Queries para tamaños medianos */
 @media screen and (max-width: 1200px) {
     header {
-        flex-direction: column; /* Cambia a diseño vertical */
-        justify-content: center; /* Centra contenido verticalmente */
-        align-items: center; /* Centra contenido horizontalmente */
-        padding: 20px; /* Reduce padding */
-        height: auto; /* Ajusta altura dinámicamente */
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        padding: 20px; 
+        height: auto; 
     }
 
     .logo {
-        text-align: center; /* Centra el logo */
-        margin-bottom: 10px; /* Espaciado entre el logo y el menú */
-        font-size: 1.2em; /* Reduce el tamaño del logo */
+        text-align: center; 
+        margin-bottom: 10px; 
+        font-size: 1.2em; 
     }
 
     nav ul {
-        display: flex; /* Mantiene disposición horizontal */
-        flex-direction: row; /* Asegura que estén en línea */
-        gap: 40px; /* Espaciado entre los elementos */
-        justify-content: center; /* Centra el menú horizontalmente */
+        display: flex; 
+        flex-direction: row; 
+        gap: 40px; 
+        justify-content: center; 
         align-items: center;
         margin: 0;
     }
 
     nav ul li a {
-        font-size: 0.75em; /* Reduce el tamaño de la fuente */
-        letter-spacing: 0.2em; /* Reduce el espaciado entre letras */
+        font-size: 0.75em;
+        letter-spacing: 0.2em;
     }
 
 }
@@ -125,7 +125,7 @@ nav ul li a {
     }
 
     nav ul {
-        display: none; /* Oculta el menú inicialmente */
+        display: none;
         position: absolute; 
         top: 100%; 
         left: 0;
@@ -134,19 +134,19 @@ nav ul li a {
         flex-direction: column; 
         padding: 10px 0px; 
         z-index: 1000;
-        opacity: 0; /* Comienza con opacidad 0 */
-        transition: opacity 1s ease; /* Transición suave en 1 segundo */
+        opacity: 0; 
+        transition: opacity 1s ease; 
         border-bottom: 1px solid var(--text-color);
     }
 
     nav ul.active {
-        display: flex; /* Muestra el menú cuando está activo */
-        opacity: 1; /* Opacidad completa cuando está activo */
+        display: flex; 
+        opacity: 1; 
     }
 
     nav ul li {
-        margin: 0; /* Sin márgenes */
-        padding: 7px 25px; /* Espaciado interno */
+        margin: 0; 
+        padding: 7px 25px; 
         width: 100%;
         padding-right: 40px;
     }
@@ -155,7 +155,7 @@ nav ul li a {
         font-size: 0.8em; 
         color: var(--text-color);
         text-align: left;
-        width: 100%; /* Ocupa todo el ancho disponible */
+        width: 100%; 
     }
 
     .menu-toggle {
@@ -178,12 +178,12 @@ nav ul li a {
 
 @media screen and (max-width: 400px) {
     nav ul {
-        gap: 15px; /* Reduce el espacio entre elementos */
+        gap: 15px; 
     }
 
     nav ul li a {
-        font-size: 0.9em; /* Reduce el tamaño de la fuente */
-        letter-spacing: 0.2em; /* Reduce el espaciado entre letras */
+        font-size: 0.9em; 
+        letter-spacing: 0.2em; 
     }
 }
 
@@ -200,16 +200,16 @@ nav ul li a {
     }
 
     nav ul {
-        gap: 15px; /* Reduce el espacio entre elementos */
+        gap: 15px;
     }
 
     nav ul li a {
-        font-size: 0.6em; /* Reduce el tamaño de la fuente */
-        letter-spacing: 0.2em; /* Reduce el espaciado entre letras */
+        font-size: 0.6em; 
+        letter-spacing: 0.2em; 
     }
 
     nav ul li {
-        padding: 7px 10px; /* Espaciado interno */
+        padding: 7px 10px;  
         width: 100%;
         padding-right: 40px;
     }

@@ -4,14 +4,13 @@
     box-sizing: border-box;
 }
 
-/* Activar scroll vertical */
 body, html {
     height: 100%;
     width: 100vw;
     overflow-x: hidden;
     overflow-y: auto;
     background-color: var(--background-color);
-    margin: 0; /* Elimina márgenes adicionales */
+    margin: 0; 
 }
 
 section{
@@ -30,16 +29,16 @@ section{
 section p, li{
     font-family: 'CormorantRegular', Arial, sans-serif;
     color: var(--text-color);
-    width: 100%; /* Ocupa todo el ancho disponible */
+    width: 100%;
     margin: 0;
-    text-align: left; /* Justifica el texto a la izquierda */
+    text-align: left;
     line-height: 1.1;
 
 }
 
 section h1{
     font-weight: 500;
-    font-family: 'TTTravelsMedium', 'Arial'; /* Fuente para "Travel Studio" */
+    font-family: 'TTTravelsMedium', 'Arial';
     font-size: 1.3rem;
     letter-spacing: 0.23em;
 }

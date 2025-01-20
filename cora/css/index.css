@@ -1,36 +1,33 @@
-/* Reseteo de márgenes */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Activar scroll vertical */
 body, html {
     height: 100%;
     width: 100vw;
     overflow-x: hidden;
     overflow-y: auto;
     background-color: var(--background-color);
-    height: 100%; /* Asegurar que el contenido ocupe toda la altura */
-    margin: 0; /* Elimina márgenes adicionales */
+    height: 100%; 
+    margin: 0; 
 }
 
 body{
-    scroll-snap-type: y mandatory; /* Activar snapping vertical */
-    scroll-behavior: smooth; /* Hacer el scroll suave */
+    scroll-snap-type: y mandatory; 
+    scroll-behavior: smooth; 
 
 }
 
 footer {
-    scroll-snap-align: none; /* Excluye el footer del snapping */
+    scroll-snap-align: none; 
 }
 
 img {
     pointer-events: none;
 }
 
-/* Aplicar CormorantRegular en los textos principales */
 p, h2 {
     font-family: 'CormorantRegular', Arial, sans-serif;
 }
@@ -42,7 +39,7 @@ p{
 
 h2 {
     font-weight: normal;
-    color: var(--green-text-color); /* Color usado en ambas secciones */
+    color: var(--green-text-color); 
 }
 
 .black{
@@ -63,8 +60,8 @@ h2 {
 
 section {
     height: auto;
-    min-height: 100vh; /* Cada sección ocupa toda la altura de la ventana */
-    scroll-snap-align: start; /* Alinea cada sección al inicio al hacer scroll */
+    min-height: 100vh; 
+    scroll-snap-align: start; 
     width: 100vw;
     position: relative;
     background-color: var(--background-color);
@@ -91,24 +88,23 @@ main {
     text-decoration: underline;
 }
 
-/* Aplica el degradado en la parte superior del contenedor */
 main::before {
     content: "";
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 13%; /* Ajusta la altura para que el desvanecimiento sea sutil */
+    height: 13%; 
     background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, var(--background-color) 100%);
     pointer-events: none;
     z-index: 3;
 }
 
 .separator {
-    border-top: 1px solid var(--text-color); /* Borde delgado */
-    background-color: var(--text-color); /* Define color */
-    display: block; /* Asegura que se muestre como un bloque */
-    margin: 0 auto; /* Centra horizontalmente */
+    border-top: 1px solid var(--text-color); 
+    background-color: var(--text-color); 
+    display: block;
+    margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -122,7 +118,7 @@ main::before {
 #section-2 {
     background-color: var(--background-color);
     height: 100vh;
-    width: calc(100% - 100px); /* Reduce el ancho total en 100px (50px a cada lado) */
+    width: calc(100% - 100px);
 
 }
 
@@ -144,9 +140,9 @@ main::before {
 
 #container-1-2 img,
 #container-2-2 img {
-    width: 100%; /* Ajusta el ancho */
-    height: 100%; /* Ajusta la altura */
-    object-fit: cover; /* Mantiene las proporciones */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
 }
 
 
@@ -160,25 +156,25 @@ main::before {
 
 #bottom-section{
     display: flex;
-    flex-direction: row; /* Mantén los elementos en fila */
-    justify-content: space-between; /* Espacia los elementos de manera uniforme */
-    align-items: flex-start; /* Alinea verticalmente al inicio */
-    width: 100%; /* Asegúrate de que ocupe todo el ancho disponible */
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: flex-start;
+    width: 100%;
     height: 30%;
 
 }
 
 #bottom-section #left-2{
-    width: 59%; /* Ajusta el ancho si es necesario */
+    width: 59%; 
     height: 100;
 }
 
 #bottom-section #right-2{
-    width: 41%; /* Ajusta el ancho si es necesario */
-    display: flex; /* Activa flexbox */
+    width: 41%; 
+    display: flex; 
     flex-direction: column;
-    justify-content: flex-end; /* Mueve todo el contenido al extremo derecho */
-    align-items: flex-start; /* Alinea verticalmente al inicio */
+    justify-content: flex-end; 
+    align-items: flex-start; 
 }
 
 #first-2{
@@ -195,10 +191,10 @@ main::before {
 #bienvenidos {
     font-family: 'TTTravelsMedium', Arial, sans-serif;
     font-size: 2.8rem;
-    letter-spacing: 0.23em; /* Asegúrate de que esto sea correcto */
+    letter-spacing: 0.23em; 
     line-height: 1.4em;
     color: var(--text-color);
-    text-align: left; /* El texto dentro del bloque estará alineado a la izquierda */
+    text-align: left; 
     opacity: 1;
   
 }
@@ -253,11 +249,11 @@ main::before {
 
 /* Título */
 #title-3 {
-    font-family: 'CormorantRegular', serif; /* Tipografía consistente */
-    font-size: 4em; /* Tamaño del texto */
-    color: var(--text-color); /* Color del texto */
+    font-family: 'CormorantRegular', serif; 
+    font-size: 4em; 
+    color: var(--text-color); 
     letter-spacing: 0.03em;
-    line-height: 1em; /* Ajustar el espacio entre líneas */
+    line-height: 1em; 
     width: 60%;
     padding-top: 115px;
 }
@@ -328,11 +324,11 @@ main::before {
 
 /* Título */
 #title-4 {
-    font-family: 'CormorantRegular', serif; /* Tipografía consistente */
-    font-size: 4em; /* Tamaño del texto */
-    color: var(--text-color); /* Color del texto */
+    font-family: 'CormorantRegular', serif; 
+    font-size: 4em; 
+    color: var(--text-color); 
     letter-spacing: 0.03em;
-    line-height: 1em; /* Ajustar el espacio entre líneas */
+    line-height: 1em; 
     width: 100%;
     padding-top: 115px;
 }
@@ -360,15 +356,15 @@ main::before {
 /* Flechas de navegación minimalistas */
 .navigation-arrows {
     position: fixed;
-    z-index: 1000; /* Siempre visibles */
+    z-index: 1000; 
 }
 
 #arrow-up {
     font-family: 'TTTravelsMedium', Arial, sans-serif;
     font-size: 1.2em;
     font-weight: bold;
-    top: 65px; /* Margen desde el borde superior */
-    right: 62px; /* Margen desde el borde derecho */
+    top: 65px; 
+    right: 62px; 
     position: fixed;
 }
 
@@ -376,49 +372,49 @@ main::before {
     font-family: 'TTTravelsMedium', Arial, sans-serif;
     font-size: 1.2em;
     font-weight: bold;
-    bottom: 10px; /* Margen desde el borde inferior */
-    right: 62px; /* Margen desde el borde derecho */
+    bottom: 10px; 
+    right: 62px; 
     position: fixed;
 }
 
 /* Estilo de las flechas */
 .arrow {
-    background: none; /* Sin fondo */
+    background: none; 
     color: var(--green-color);
-    border: none; /* Sin borde */
-    font-size: 1em; /* Tamaño de fuente */
-    font-family: 'CormorantRegular', Arial, sans-serif; /* Fuente personalizada */
+    border: none; 
+    font-size: 1em; 
+    font-family: 'CormorantRegular', Arial, sans-serif; 
     letter-spacing: 0em;
     cursor: pointer;
-    transition: opacity 1s ease, color 1s ease; /* Transiciones suaves */
-    opacity: 1; /* Opacidad inicial visible */
-    animation: bounce 2s infinite; /* Animación sutil */
+    transition: opacity 1s ease, color 1s ease; 
+    opacity: 1; 
+    animation: bounce 2s infinite; 
 }
 
 .arrow.hidden {
-    opacity: 0; /* Ocultar la flecha con opacidad */
-    pointer-events: none; /* Evitar clics mientras está oculta */
+    opacity: 0; 
+    pointer-events: none; 
 }
 
 .arrow:hover {
-    color: rgba(0, 0, 0, 0.9); /* Color más oscuro al pasar el mouse */
+    color: rgba(0, 0, 0, 0.9); 
 }
 
 .arrow:focus {
-    outline: none; /* Sin contorno al hacer clic */
+    outline: none; 
 }
 
 .arrow:active {
-    transform: translateY(1px); /* Sutil desplazamiento al hacer clic */
+    transform: translateY(1px); 
 }
 
 /* Animación de bote */
 @keyframes bounce {
     0%, 100% {
-        transform: translateY(0); /* Posición inicial */
+        transform: translateY(0); 
     }
     50% {
-        transform: translateY(-5px); /* Elevar ligeramente */
+        transform: translateY(-5px); 
     }
 }
 
@@ -447,18 +443,18 @@ main::before {
     }
 
     #title-3 {
-        font-size: 3.4em; /* Tamaño del texto */
+        font-size: 3.4em; 
     }
 
     #title-4 {
-        font-size: 3.4em; /* Tamaño del texto */
+        font-size: 3.4em; 
     }
 }
 
 @media screen and (max-width:1200px){
     .fade-in, .fade-out {
         opacity: 1;
-        transition: none; /* Elimina las transiciones */
+        transition: none; 
     }
     
     body{
@@ -512,10 +508,10 @@ main::before {
 
     #bottom-section{
         display: flex;
-        flex-direction: column; /* Mantén los elementos en fila */
-        justify-content: flex-start; /* Espacia los elementos de manera uniforme */
-        align-items: flex-start; /* Alinea verticalmente al inicio */
-        width: 100%; /* Asegúrate de que ocupe todo el ancho disponible */
+        flex-direction: column; 
+        justify-content: flex-start; 
+        align-items: flex-start;
+        width: 100%; 
         height: auto;
     
     }
@@ -528,19 +524,19 @@ main::before {
     #bottom-section #left-2{
         display: flex;
         flex-direction: column;
-        width: 100%; /* Ajusta el ancho si es necesario */
+        width: 100%; 
         height: auto;
-        order: 2; /* Invertir orden */
+        order: 2; 
     }
     
     #bottom-section #right-2{
-        width: 100%; /* Ajusta el ancho si es necesario */
+        width: 100%; 
         height: auto;
-        display: flex; /* Activa flexbox */
+        display: flex; 
         flex-direction: row;
-        justify-content: flex-start; /* Mueve todo el contenido al extremo derecho */
-        align-items: flex-start; /* Alinea verticalmente al inicio */
-        order: 1; /* Invertir orden */
+        justify-content: flex-start; 
+        align-items: flex-start; 
+        order: 1;
     }
     
     #first-2{
@@ -557,7 +553,7 @@ main::before {
         padding-top: 20px;
         text-align: left;
     }
-    /* Estilo de las flechas */
+
     .arrow {
         display: none;
     }
@@ -601,13 +597,12 @@ main::before {
     
     }
     
-    /* Título */
     #title-3 {
-        font-family: 'CormorantRegular', serif; /* Tipografía consistente */
-        font-size: 4.5em; /* Tamaño del texto */
-        color: var(--text-color); /* Color del texto */
+        font-family: 'CormorantRegular', serif; 
+        font-size: 4.5em; 
+        color: var(--text-color);
         letter-spacing: 0.03em;
-        line-height: 1em; /* Ajustar el espacio entre líneas */
+        line-height: 1em;
         width: 48%;
         padding-top: 40px;
     }
@@ -667,7 +662,7 @@ main::before {
     
     /* Título */
     #title-4 {
-        font-size: 4.5em; /* Tamaño del texto */
+        font-size: 4.5em;
         width: 100%;
         padding-top: 40px;
     }
@@ -745,10 +740,10 @@ main::before {
 
     #bottom-section{
         display: flex;
-        flex-direction: column; /* Mantén los elementos en fila */
-        justify-content: flex-start; /* Espacia los elementos de manera uniforme */
-        align-items: flex-start; /* Alinea verticalmente al inicio */
-        width: 100%; /* Asegúrate de que ocupe todo el ancho disponible */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
         height: auto;
     
     }
@@ -798,11 +793,11 @@ main::before {
     
     /* Título */
     #title-3 {
-        font-family: 'CormorantRegular', serif; /* Tipografía consistente */
-        font-size: 3.2em; /* Tamaño del texto */
-        color: var(--text-color); /* Color del texto */
+        font-family: 'CormorantRegular', serif; 
+        font-size: 3.2em; 
+        color: var(--text-color); 
         letter-spacing: 0.03em;
-        line-height: 1em; /* Ajustar el espacio entre líneas */
+        line-height: 1em; 
         width: 80%;
         padding-top: 30px;
     }
@@ -845,7 +840,7 @@ main::before {
     
     /* Título */
     #title-4 {
-        font-size: 3.2em; /* Tamaño del texto */
+        font-size: 3.2em; 
         width: 100%;
         padding-top: 30px;
     }

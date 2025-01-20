@@ -1,7 +1,7 @@
 /* El body empieza con opacidad 0 para que aparezca gradualmente */
 body {
     opacity: 0;
-    transition: opacity 0.5s ease-in-out; /* Duración y suavidad de la transición */
+    transition: opacity 0.5s ease-in-out; 
 }
 
 /* Aseguramos que cuando el body tenga opacidad 0, todo el contenido se desvanezca */

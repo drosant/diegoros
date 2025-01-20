@@ -4,31 +4,31 @@
     box-sizing: border-box;
 }
 
-/* Eliminar el fondo y aplicar estilos personalizados al autocompletar */
+
 input:-webkit-autofill {
-    background-color: transparent !important; /* Fondo transparente */
-    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important; /* Fondo transparente */
-    -webkit-text-fill-color: inherit !important; /* Hereda el color del texto */
-    font-family: 'CormorantRegular' !important; /* Hereda la fuente del formulario */
-    font-size: 1em !important; /* Hereda el tamaño de la fuente */
-    transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s; /* Previene parpadeos */
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important; 
+    -webkit-text-fill-color: inherit !important;
+    font-family: 'CormorantRegular' !important;
+    font-size: 1em !important;
+    transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
 }
 
 /* Compatibilidad con otros navegadores */
 input:-moz-autofill {
     background-color: transparent !important;
     -moz-box-shadow: 0 0 0px 1000px transparent inset !important;
-    color: inherit !important; /* Hereda el color del texto */
-    font-family: 'CormorantRegular' !important; /* Hereda la fuente del formulario */
-    font-size: 1em !important; /* Hereda el tamaño de la fuente */
+    color: inherit !important;
+    font-family: 'CormorantRegular' !important;
+    font-size: 1em !important;
 }
 
 input:-ms-autofill {
     background-color: transparent !important;
     -ms-box-shadow: 0 0 0px 1000px transparent inset !important;
-    color: inherit !important; /* Hereda el color del texto */
-    font-family: 'CormorantRegular' !important; /* Hereda la fuente del formulario */
-    font-size: 1em !important; /* Hereda el tamaño de la fuente */
+    color: inherit !important;
+    font-family: 'CormorantRegular' !important;
+    font-size: 1em !important;
 }
 
 
@@ -46,14 +46,14 @@ main::before {
     top: 0;
     left: 0;
     width: 100%;
-    height: 13%; /* Ajusta la altura para que el desvanecimiento sea sutil */
+    height: 13%;
     background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, var(--background-color) 100%);
     pointer-events: none;
     z-index: 1;
 }
 
 main {
-    display: flex; /* Flexbox para organizar los elementos */
+    display: flex;
 }
   
 section {
@@ -61,10 +61,10 @@ section {
     padding-right: 43px;
     padding-left: 12px;
     min-height: calc(100vh - 135px);
-    width: 66.67%; /* La sección ocupa el 66% del ancho del main */
-    margin-left: auto; /* Desplaza la sección hacia la derecha */
-    display: flex; /* Flexbox en la sección para alinear los hijos */
-    flex-direction: column; /* Asegura que los elementos estén en columna */
+    width: 66.67%;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
     background-color: var(--background-color);
 }
   
@@ -81,9 +81,9 @@ h2 {
 p{
     font-family: 'CormorantRegular', Arial, sans-serif;
     color: var(--text-color);
-    width: 100%; /* Ocupa todo el ancho disponible */
+    width: 100%;
     margin: 0;
-    text-align: left; /* Justifica el texto a la izquierda */
+    text-align: left;
 }
 
 form {
@@ -98,37 +98,37 @@ form {
 
 textarea {
     font-family: 'CormorantRegular', Arial, sans-serif;
-    width: 100%; /* Ocupa todo el ancho disponible */
-    height: 20px; /* Altura inicial */
-    padding: 0px; /* Espaciado interno */
-    border: none; /* Sin borde */
-    border-radius: 0px; /* Bordes redondeados */
-    font-size: 1em; /* Tamaño de fuente consistente */
-    resize: none; /* Permite redimensionar solo verticalmente */
+    width: 100%;
+    height: 20px;
+    padding: 0px;
+    border: none;
+    border-radius: 0px;
+    font-size: 1em;
+    resize: none;
     box-shadow: none;
-    background-color: transparent; /* Fondo transparente */
+    background-color: transparent;
     margin-top: 8px;
 }
 
 /* Estilo del textarea cuando está en foco */
 textarea:focus {
-    border-color: transparent; /* Cambia el color del borde al enfocar */
-    outline: none; /* Elimina el contorno predeterminado */
+    border-color: transparent;
+    outline: none;
     box-shadow: none;
 }
 
 .separator {
-    border-top: 1px solid var(--text-color); /* Borde delgado exacto */
-    background-color: var(--text-color); /* Define color */
-    width: 100%; /* Asegura que ocupa todo el ancho */
+    border-top: 1px solid var(--text-color);
+    background-color: var(--text-color);
+    width: 100%;
     display: block;
     margin-bottom: 20px;
     margin-top: 1px;
 }
 
 .fine-line{
-    border-top: 1px solid var(--text-color); /* Borde delgado exacto */
-    background-color: var(--text-color); /* Define color */
+    border-top: 1px solid var(--text-color);
+    background-color: var(--text-color);
     width: 100%;
     display: block;
 }
@@ -136,10 +136,10 @@ textarea:focus {
 .entry {
     width: 90%;
     display: flex;
-    flex-direction: column; /* Asegura que las columnas estén en fila horizontal */
-    justify-content: start; /* Distribuye el espacio entre los elementos */
-    align-items: flex-start; /* Alinea los elementos en la parte superior */
-    color: var(--text-color); /* Define color */
+    flex-direction: column;
+    justify-content: start; 
+    align-items: flex-start; 
+    color: var(--text-color);
     padding-top: 20px;
     padding-bottom: 30px;
   }
@@ -172,18 +172,18 @@ textarea:focus {
 }
 .send-section{
     display: flex;
-    justify-content: flex-end; /* Envía el contenido a la derecha */
-    align-items: flex-end; /* Envía el contenido hacia abajo */
-    height: 100%; /* Asegúrate de que el contenedor tenga altura */
+    justify-content: flex-end;
+    align-items: flex-end; 
+    height: 100%; 
     width: 40%;
 }
 
 button{
-    background: none; /* Sin fondo */
-    border: none; /* Sin borde */
-    font-weight: bold; /* Negrita */
-    text-decoration: underline; /* Subrayado */
-    cursor: pointer; /* Muestra el puntero de clic */
+    background: none; 
+    border: none;
+    font-weight: bold; 
+    text-decoration: underline;
+    cursor: pointer; 
 }
 
 #salmon{
@@ -211,8 +211,8 @@ button{
     
     .send-section{
         display: flex;
-        justify-content: flex-end; /* Envía el contenido a la derecha */
-        align-items: flex-end; /* Envía el contenido hacia abajo */
+        justify-content: flex-end; 
+        align-items: flex-end; 
         width: 100%;
         padding-top: 60px;
     }
@@ -221,7 +221,7 @@ button{
 
 @media screen and (max-width: 900px) {
     section{
-        width: 100%; /* La sección ocupa el 66% del ancho del main */
+        width: 100%; 
         padding-left: 40px;
         padding-right: 40px;
     }
@@ -241,8 +241,8 @@ button{
     
     .send-section{
         display: flex;
-        justify-content: flex-end; /* Envía el contenido a la derecha */
-        align-items: flex-end; /* Envía el contenido hacia abajo */
+        justify-content: flex-end; 
+        align-items: flex-end;
         width: 100%;
         padding-top: 60px;
     }
@@ -252,7 +252,7 @@ button{
 @media screen and (max-width: 600px) {
 
 section{
-    width: 100%; /* La sección ocupa el 66% del ancho del main */
+    width: 100%; 
     padding-left: 25px;
     padding-right: 25px;
 }
@@ -272,8 +272,8 @@ form{
 
 .send-section{
     display: flex;
-    justify-content: flex-end; /* Envía el contenido a la derecha */
-    align-items: flex-end; /* Envía el contenido hacia abajo */
+    justify-content: flex-end; 
+    align-items: flex-end; 
     width: 100%;
     padding-top: 60px;
 }

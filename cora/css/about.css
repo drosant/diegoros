@@ -12,21 +12,20 @@ html, body {
     background-color: var(--background-color);
 }
 
-/* Aplica el degradado en la parte superior del contenedor */
 main::before {
     content: "";
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 13%; /* Ajusta la altura para que el desvanecimiento sea sutil */
+    height: 13%; 
     background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, var(--background-color) 100%);
     pointer-events: none;
     z-index: 1;
 }
 
 main {
-    display: flex; /* Flexbox para organizar los elementos */
+    display: flex;
 }
   
 section {
@@ -34,10 +33,10 @@ section {
     padding-right: 50px;
     padding-left: 12px;
     height: auto;
-    width: 66.67%; /* La sección ocupa el 66% del ancho del main */
-    margin-left: auto; /* Desplaza la sección hacia la derecha */
-    display: flex; /* Flexbox en la sección para alinear los hijos */
-    flex-direction: column; /* Asegura que los elementos estén en columna */
+    width: 66.67%; 
+    margin-left: auto; 
+    display: flex;
+    flex-direction: column;
 }
   
 h2 {
@@ -53,9 +52,9 @@ h2 {
 p{
     font-family: 'CormorantRegular', Arial, sans-serif;
     color: var(--text-color);
-    width: 100%; /* Ocupa todo el ancho disponible */
+    width: 100%;
     margin: 0;
-    text-align: left; /* Justifica el texto a la izquierda */
+    text-align: left;
 }
 
 img {
@@ -63,9 +62,9 @@ img {
 }
 
 .separator {
-    border-top: 1px solid var(--text-color); /* Borde delgado exacto */
-    background-color: var(--text-color); /* Define color */
-    width: 100%; /* Asegura que ocupa todo el ancho */
+    border-top: 1px solid var(--text-color);
+    background-color: var(--text-color);
+    width: 100%;
     display: block;
     padding-right: 100px;
     margin-bottom: 20px;
@@ -75,10 +74,10 @@ img {
 .entry {
     width: 90%;
     display: flex;
-    flex-direction: row; /* Asegura que las columnas estén en fila horizontal */
-    justify-content: space-between; /* Distribuye el espacio entre los elementos */
-    align-items: flex-start; /* Alinea los elementos en la parte superior */
-    color: var(--text-color); /* Color del texto */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: var(--text-color);
     padding-top: 20px;
     padding-bottom: 60px;
   }
@@ -109,7 +108,7 @@ img {
 
 div .image-container {
     display: flex;
-    aspect-ratio: 1/1.2; /* Relación de aspecto 2:1 */;
+    aspect-ratio: 1/1.2;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -117,29 +116,29 @@ div .image-container {
 }
   
 .entry-left {
-    flex: 1; /* Ocupa una parte del espacio */
-    max-width: 80%; /* Ancho máximo */
+    flex: 1; 
+    max-width: 80%;
 }
 
 .entry-left img {
-position: relative; /* Cambia a relativo para que la imagen se vea */
-width: 100%; /* Imagen ocupa todo el ancho disponible */
-height: auto; /* Mantiene la proporción */
-object-fit: cover; /* Se asegura de que la imagen sea visible completa */
+position: relative;
+width: 100%;
+height: auto; 
+object-fit: cover; 
 opacity: 1;
 }
   
 .italic {
     font-family: 'CormorantBoldItalic', serif;
-    font-weight: bold; /* Negrita */
-    font-style: italic; /* Cursiva */
+    font-weight: bold; 
+    font-style: italic; 
     letter-spacing: 0.05em;
 }
 .entry-right {
-    flex: 1.2; /* Ocupa el doble de espacio que la izquierda */
+    flex: 1.2; 
     display: flex;
     flex-direction: column;
-    max-width: 90%; /* Ancho máximo */
+    max-width: 90%;
     align-items: stretch;
 }
 
@@ -155,11 +154,11 @@ opacity: 1;
 
 .entry-left img {
 
-    width: 100%; /* Imagen ocupa todo el ancho disponible */
+    width: 100%; 
 }
 
 section{
-    width: 100%; /* La sección ocupa el 66% del ancho del main */
+    width: 100%; 
     padding-left: 40px;
     padding-right: 40px;
 }
@@ -178,7 +177,7 @@ section{
 
 .entry-left img {
 
-    width: 100%; /* Imagen ocupa todo el ancho disponible */
+    width: 100%; 
 
 }
 
@@ -201,15 +200,15 @@ section{
 }
 
 .entry-left {
-    max-width: 100%; /* Ancho máximo */
+    max-width: 100%; 
     padding-bottom: 20px;
 }
 
 .entry-right {
-    max-width: 100%; /* Ancho máximo */
+    max-width: 100%; 
 }
 .entry-right p{
-    width: 100%; /* Ancho máximo */
+    width: 100%; 
     padding: 0px;
     padding-top: 20px;
     margin: 0px;

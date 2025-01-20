@@ -4,16 +4,16 @@
     align-items: flex-end;
     background-color: var(--background-color);
     height: 100vh;
-    width: calc(100% - 100px); /* Reduce el ancho total en 100px (50px a cada lado) */
+    width: calc(100% - 100px); 
 }
 
 .image_container img {
-    width: 100px; /* Fijar el ancho a 100px */
-    height: auto; /* Mantener la proporción de la imagen */
-    position: absolute; /* Permitir posicionamiento mediante coordenadas */
-    top: 50%; /* Centrar verticalmente */
-    left: 50%; /* Centrar horizontalmente */
-    transform: translate(-50%, -50%); /* Ajustar el origen para que quede exactamente centrado */
+    width: 100px; 
+    height: auto; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     z-index: 1;
 }
 
@@ -24,8 +24,8 @@
     font-weight: normal;
     text-transform: none;
     letter-spacing: 0.23em;
-    line-height: 0.8em; /* Ajustar el espacio entre líneas */
-    text-align: left; /* Centrar el texto horizontalmente */
+    line-height: 0.8em; 
+    text-align: left; 
     z-index: 3;
     padding-bottom: 60px;
 }
@@ -34,17 +34,17 @@
 
 /* Clase para activar el efecto */
 .color-burn {
-    mix-blend-mode: color-burn; /* Efecto de mezcla */
+    mix-blend-mode: color-burn; 
 }
 
 .word {
-    opacity: 0; /* Oculto inicialmente */
-    transition: opacity 1s ease-in; /* Duración de la transición */
+    opacity: 0; 
+    transition: opacity 1s ease-in; 
 }
 
 #division {
-    position: relative; /* Asegura que tenga un contexto de apilamiento */
-    z-index: 2; /* Coloca esta sección encima de las imágenes */
+    position: relative; 
+    z-index: 2;
 }
 
 /* Media query para pantallas más pequeñas */
@@ -72,8 +72,8 @@
     .tagline {
         font-size: 1.5em;
         letter-spacing: 0.23em;
-        line-height: 0.8em; /* Ajustar el espacio entre líneas */
-        text-align: left; /* Centrar el texto horizontalmente */
+        line-height: 0.8em; 
+        text-align: left; 
         z-index: 3;
         padding-top: 30px;
         padding-bottom: 30px;

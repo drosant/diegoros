@@ -11,17 +11,17 @@ body, html {
     overflow-x: hidden;
     overflow-y: hidden;
     background-color: var(--background-color);
-    height: 100%; /* Asegurar que el contenido ocupe toda la altura */
-    margin: 0; /* Elimina márgenes adicionales */
+    height: 100%; 
+    margin: 0; 
 }
 
 .fade-in {
-    opacity: 0; /* Empieza invisible */
+    opacity: 0; 
 }
 
 .fade-in.visible {
-    opacity: 1; /* Se hace visible */
-    transition: opacity 3s ease-in; /* Duración y suavidad de la transición */
+    opacity: 1; 
+    transition: opacity 3s ease-in;
 }
 
 
@@ -53,12 +53,12 @@ h1 {
 
 .bold {
     color: var(--text-color);
-    transition: color 1.3s ease; /* Transición suave al aplicar y quitar hover */
+    transition: color 1.3s ease;
 }
 
 .bold:hover {
     color: var(--salmon-color);
-    transition: color 1.6s ease; /* Efecto suave de transición */
+    transition: color 1.6s ease;
 }
 
 .medium {

@@ -35,11 +35,11 @@
     font-size: 0.8em;
     font-family: 'TTTravelsMedium', Arial, sans-serif;
     letter-spacing: 0.1em;
-    font-weight: bold; /* Negrita */
-    text-decoration: underline; /* Subrayado */
-    color: var(--green-text-color); /* Usa el color de texto del diseño actual */
+    font-weight: bold;
+    text-decoration: underline;
+    color: var(--green-text-color);
     text-align: right;
-    transition: color 0.5s ease; /* Transiciones suaves */
+    transition: color 0.5s ease;
 }
 
 .lets-talk:hover{
@@ -48,8 +48,8 @@
 
 .italic{
     font-family: 'CormorantBoldItalic', serif;
-    font-weight: bold; /* Negrita */
-    font-style: italic; /* Cursiva */
+    font-weight: bold;
+    font-style: italic;
     font-size: 1.3em;
     letter-spacing: 0.05em;
     line-height: 1.2em;
@@ -57,8 +57,8 @@
 
 .bold {
     font-weight: bold;
-    font-family: 'TTTravelsBold'; /* Fuente para "CORA" */
-    letter-spacing: 0.23em; /* Separación calculada: 52/300 */
+    font-family: 'TTTravelsBold';
+    letter-spacing: 0.23em;
 }
 
 .special{
@@ -67,8 +67,8 @@
 
 .medium {
     font-weight: 500;
-    font-family: 'TTTravelsMedium'; /* Fuente para "Travel Studio" */
-    letter-spacing: 0.23em; /* Aplicar el mismo spacing */
+    font-family: 'TTTravelsMedium';
+    letter-spacing: 0.23em;
 }
 
 
@@ -89,7 +89,7 @@ h4{
 
 p{
     font-size: 1.1em;
-    line-height: 1.2em; /* Espaciado entre líneas */
+    line-height: 1.2em;
 }
 
 a{

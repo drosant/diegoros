@@ -1,6 +1,5 @@
-/* Footer */
 * {
-    user-select: none; /* Desactiva la selección de texto */
+    user-select: none; 
   }
 
 footer {
@@ -15,30 +14,29 @@ footer {
     height: 105px;
     margin-top: 30px;
     font-size: 11px;
-    text-transform: uppercase; /* Mayúsculas para todo el footer */
+    text-transform: uppercase;
     z-index: 4; 
 }
 
-/* Estilo normal (en una línea) */
+
 .break {
     display: inline;
 }
 
-/* Estilos comunes para el texto en el footer */
+
 footer p, footer a {
     color: var(--text-color);
     font-size: 11px;
     letter-spacing: 0.23em;
     text-decoration: none;
     font-family: 'TTTravelsMedium';
-    font-weight: 500; /* Aplica un peso de 500 a todos los enlaces y párrafos */
+    font-weight: 500; 
 }
 
 .upper {
     padding-bottom: 10px;
 }
 
-/* Clase para negrita */
 .bold {
     font-weight: 700;
 }
@@ -48,19 +46,18 @@ footer p, footer a {
 }
 
 
-/* Estructura de columnas en el footer */
 .footer-left {
-    width: 33.33%; /* La columna izquierda ocupa un tercio */
+    width: 33.33%; 
     text-align: left;
     gap: 30px;
 }
 
 .footer-right {
-    width: 66.67%; /* La columna derecha ocupa dos tercios */
+    width: 66.67%; 
     text-align: left;
 }
 
-/* Subrayado permanente para enlaces en footer-right */
+
 .footer-right a.underline {
     text-decoration: underline;
 }
@@ -77,14 +74,14 @@ footer p, footer a {
     .upper .bold{
         font-size:1.2em;
         font-weight: 500;
-        font-family: 'TTTravelsMedium'; /* Fuente para "Travel Studio" */
-        letter-spacing: 0.23em; /* Aplicar el mismo spacing */
+        font-family: 'TTTravelsMedium';
+        letter-spacing: 0.23em;
     }
 
     .break {
-        display: block; /* Cambia el guion a una nueva línea */
-        text-align: center; /* Opcional, centra los elementos */
-        margin: 5px 0; /* Espaciado opcional */
+        display: block; 
+        text-align: center; 
+        margin: 5px 0; 
         opacity: 0;
     }
 
@@ -95,8 +92,8 @@ footer p, footer a {
     footer {
         height: auto;
         flex-direction: column;
-        font-size: 9px; /* Reduce el tamaño de la fuente */
-        padding: 40px; /* Reduce el padding para mantener proporción */
+        font-size: 9px; 
+        padding: 40px; 
         padding-left: 50px;
     }
 
@@ -105,19 +102,19 @@ footer p, footer a {
     }
 
     .footer-left {
-        width: 100%; /* La columna izquierda ocupa un tercio */
+        width: 100%; 
         text-align: left;
         padding-bottom: 15px;
     }
     
     .footer-right {
-        width: 100%; /* La columna derecha ocupa dos tercios */
+        width: 100%; 
         text-align: left;
     }
 
     footer p, footer a {
-        font-size: 9px; /* Reduce el tamaño de texto en enlaces y párrafos */
-        letter-spacing: 0.2em; /* Ajusta el espaciado entre letras */
+        font-size: 9px; 
+        letter-spacing: 0.2em; 
     }
 
 
@@ -135,8 +132,8 @@ footer p, footer a {
     }
 
     footer p, footer a {
-        font-size: 8px; /* Reduce el tamaño de texto en enlaces y párrafos */
-        letter-spacing: 0.2em; /* Ajusta el espaciado entre letras */
+        font-size: 8px;
+        letter-spacing: 0.2em; 
     }
 
     .footer-text{
