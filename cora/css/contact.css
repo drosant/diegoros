@@ -206,6 +206,34 @@ button{
     padding-top: 30px;
 }
 
+.checkbox-container{
+    display: flex;
+    flex-direction: row;
+    text-transform: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+    padding-top: 20px;
+}
+
+.checkbox-container a {
+    color: var(--salmon-color);
+    text-decoration: none;
+}
+
+#terms{
+    width: auto;
+    padding-top: 0;
+    margin-top: 0;
+    margin-right: 10px;
+}
+
+.terminos{
+    text-align: left;
+
+
+}
+
 @media screen and (max-width: 1200px) {
     form{
         flex-direction: column;
