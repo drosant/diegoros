@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
             imageHoldTime: 7500,
             imageInterval: 1500,
             minInitialSize: 240,
-            maxInitialSize: 340,
+            maxInitialSize: 380,
             leftInit: 8,
             rightInit: 92,
             topInit: 38,
