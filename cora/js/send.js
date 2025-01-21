@@ -9,13 +9,14 @@ document.addEventListener("DOMContentLoaded", function () {
         // Recopilar los valores del formulario
         const formData = new FormData(form);
 
+        /*
         // Validar email antes de enviar
         const email = formData.get("email");
         const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         if (!emailPattern.test(email)) {
             showMessage("Formato de email no válido.", "error");
             return;
-        }
+        }*/
 
         // Deshabilitar botón mientras se envía
         toggleSubmitButton(false);
