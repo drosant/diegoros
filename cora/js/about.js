@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const imageFolder = "images/about/carousel/";
     
     // Lista de imágenes disponibles (según tu captura)
-    const images = ["viaje-safari.jpg", "viaje-paz.jpeg"];
+    const images = ["viaje-safari.jpg", "viaje-paz.jpeg", "behind-cora1.webp", "behind-cora2.webp", "behind-cora3.webp"];
     
     // Tiempo de permanencia en milisegundos
     const displayTime = 6500; // 5 segundos
